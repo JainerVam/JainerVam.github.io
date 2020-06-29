@@ -16,7 +16,7 @@
 <meta property="og:description" content="今天突然看到师兄之前发给我的ANN源码链接，出于好奇搜了一下hexo（官方网站文档），决定搞一个自己的（静态）博客，不愧是我哈哈哈。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-26T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-06-28T16:30:52.234Z">
+<meta property="article:modified_time" content="2020-06-29T07:36:33.061Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -187,12 +187,12 @@
         <p>今天突然看到师兄之前发给我的<a href="https://wangliangzhuang.com/2020/02/25/ann/" target="_blank" rel="noopener">ANN</a>源码链接，出于好奇搜了一下<strong>hexo</strong>（官方网站<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档</a>），决定搞一个自己的（静态）博客，不愧是我哈哈哈。</p>
 <a id="more"></a>
 
-<h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><p>作为一个小白，网上的教程简直是我的救命良药。首先是搜<a href="https://www.jianshu.com/p/77db3862595c" target="_blank" rel="noopener">Mac系统下搭建hexo个人博客</a>，帮大忙了，感谢！<br>中间遇到<a href="https://www.jianshu.com/p/59a6bbff4ad2" target="_blank" rel="noopener">npm install失败问题</a>和<a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">hexo d后 ERROR Deployer not found: git</a>问题，不过都通过大佬们提供的方法解决了，再次感谢！<br>另外推荐一个保姆级视频，超级适合小白<a href="手把手教你从0开始搭建自己的个人博客">手把手教你从0开始搭建自己的个人博客</a></p>
+<h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><p>作为一个小白，网上的教程简直是我的救命良药。首先是搜<a href="https://www.jianshu.com/p/77db3862595c" target="_blank" rel="noopener">Mac系统下搭建hexo个人博客</a>，帮大忙了，感谢！<br>中间遇到<a href="https://www.jianshu.com/p/59a6bbff4ad2" target="_blank" rel="noopener">npm install失败问题</a>和<a href="https://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="noopener">hexo d后 ERROR Deployer not found: git</a>问题，不过都通过大佬们提供的方法解决了，再次感谢！<br>另外推荐一个保姆级视频，超级适合小白<a href="手把手教你从0开始搭建自己的个人博客">手把手教你从0开始搭建自己的个人博客</a>。</p>
 <h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><p>有遇到warning，不过不用在意也没关系～<br><a href="https://blog.csdn.net/appleyuchi/article/details/91391178" target="_blank" rel="noopener">On branch master nothing to commit, working tree clean</a></p>
 <h2 id="优化加载速度"><a href="#优化加载速度" class="headerlink" title="优化加载速度"></a>优化加载速度</h2><p>一开始通过仓库访问博客，一直打不开，还以为是我哪些步骤出了问题，结果整了两个多小时，确定只是网页访问慢的问题，枯了。</p>
 <ol>
 <li>参考<a href="https://blog.csdn.net/weixin_30525825/article/details/99506255" target="_blank" rel="noopener">Mac 下GitHub 访问慢解决方案</a>修改hosts也并没有很快www</li>
-<li>后来找到一个方法：<strong>迁移到Gitee</strong>，使用Gitee+Hexo搭建个人博客，结果很直观，起码能打开自己的博客了（是的，我这个菜鸡就是这么容易满足w）。<br>参考：<a href="https://blog.csdn.net/qq_42994651/article/details/104318497" target="_blank" rel="noopener">Hexo访问速度优化——迁移至Gitee</a><br>改起来很简单，只不过<strong>每次上传仓库后，都需要重新部署</strong>，这一点有些麻烦。嘛，可以忽略。</li>
+<li>后来找到一个方法：<strong>迁移到Gitee</strong>，使用Gitee+Hexo搭建个人博客，结果很直观，起码能打开自己的博客了（是的，我这个菜鸡就是这么容易满足w）。<br>参考：<a href="https://blog.csdn.net/qq_42994651/article/details/104318497" target="_blank" rel="noopener">Hexo访问速度优化——迁移至Gitee</a><br>改起来很简单，只不过<strong>每次上传仓库后，都需要重新部署</strong>，步骤：进入仓库–服务–Gitee Pages–更新，这一点有些麻烦。嘛，可以忽略。</li>
 <li>后面更改主题时发现迁移到Gitee之后有些图标不能正常显示，好的，我又回来了。研究一下<strong>hexo+github+coding</strong>方式(<a href="https://www.cnblogs.com/sunhang32/p/11969964.html" target="_blank" rel="noopener">参考1</a>、<a href="https://zhuanlan.zhihu.com/p/111796666?from_voters_page=true" target="_blank" rel="noopener">参考2</a>)<br>coding官网(<a href="https://coding.net/" target="_blank" rel="noopener">https://coding.net/</a>）<br>在<a href="https://cloud.tencent.com/" target="_blank" rel="noopener">腾讯云</a>买了个域名，<a href="https://www.zhihu.com/question/31377141" target="_blank" rel="noopener">github绑定自己的域名</a><br>不得不说这个方法真的麻烦，经常找不到按钮，在暴走的边缘疯狂试探。</li>
 </ol>
 <h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><p>参考：<a href="https://www.jianshu.com/p/191d1e21f7ed/" target="_blank" rel="noopener">Markdown基本语法</a></p>
