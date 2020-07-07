@@ -16,7 +16,7 @@
 <meta property="og:description" content="最近觉着用latex写中文论文好像也挺重要的，于是想配置一下，下面是我个人遇到的一些问题以及解决方法记录，方便以后查阅。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-07-06T16:39:37.589Z">
+<meta property="article:modified_time" content="2020-07-07T11:22:58.664Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="Macbook">
 <meta property="article:tag" content="软件">
@@ -197,6 +197,7 @@
 <li>编译字体问题，Mac 电脑没有黑体和宋体（SimHei//SimSun）<br>解决方法：把Word里的两个字体复制，驾到Mac的字体库，参考<a href="https://zhidao.baidu.com/question/461399222603639005.html" target="_blank" rel="noopener">网页</a>。</li>
 <li>\bfseries不能加黑字体<br> 解决方法：在 documentclass 加<strong>AutoFakeBold=true</strong>，参考<a href="https://m.newsmth.net/article/TeX/326742" target="_blank" rel="noopener">网页</a>。</li>
 <li>xelatex参考文献不能正常显示<br> 解决方法： 涉及到参考文献上的改动的这些编译，需要编译四次，顺序如下：<strong>xelatex-&gt;bibtex-&gt;xelatex-&gt;xelatex</strong>，参考<a href="https://www.douban.com/note/257294314/" target="_blank" rel="noopener">网页</a>。</li>
+<li>官网上下载的是毕业论文模板，章节是双语 \BiChapter{}{} \BiSection{}{}，只使用中文用\chapter{} \section{}</li>
 </ol>
 
       
