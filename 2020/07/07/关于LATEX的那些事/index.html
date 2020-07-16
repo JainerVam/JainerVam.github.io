@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>关于LATEX的那些事 | JanierVan</title>
+  <title>关于LaTex的那些事 | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近觉着用latex写中文论文好像也挺重要的，于是想配置一下，下面是我个人遇到的一些问题以及解决方法记录，方便以后查阅。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于LATEX的那些事">
+<meta property="og:title" content="关于LaTex的那些事">
 <meta property="og:url" content="https://jainervam.github.io/2020/07/07/%E5%85%B3%E4%BA%8ELATEX%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/index.html">
 <meta property="og:site_name" content="JanierVan">
 <meta property="og:description" content="最近觉着用latex写中文论文好像也挺重要的，于是想配置一下，下面是我个人遇到的一些问题以及解决方法记录，方便以后查阅。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-07-07T11:54:31.571Z">
+<meta property="article:modified_time" content="2020-07-16T02:26:41.390Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="Macbook">
 <meta property="article:tag" content="软件">
@@ -173,7 +173,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于LATEX的那些事
+      关于LaTex的那些事
     </h1>
   
 
@@ -195,9 +195,10 @@
 <h2 id="问题集锦"><a href="#问题集锦" class="headerlink" title="问题集锦"></a>问题集锦</h2><ol>
 <li>最重要的，用<strong>XeLaTex</strong>编译中文论文。</li>
 <li>编译字体问题，Mac 电脑没有黑体和宋体（SimHei//SimSun）<br>解决方法：把Word里的两个字体复制，驾到Mac的字体库，参考<a href="https://zhidao.baidu.com/question/461399222603639005.html" target="_blank" rel="noopener">网页</a>。</li>
-<li>\bfseries不能加黑字体<br> 解决方法：在 documentclass 加<strong>AutoFakeBold=true</strong>，参考<a href="https://m.newsmth.net/article/TeX/326742" target="_blank" rel="noopener">网页</a>。</li>
+<li>\bfseries不能<strong>加黑</strong>字体<br> 解决方法：在 documentclass 加<strong>AutoFakeBold=true</strong>，参考<a href="https://m.newsmth.net/article/TeX/326742" target="_blank" rel="noopener">网页</a>。</li>
 <li>xelatex参考文献不能正常显示<br> 解决方法： 涉及到参考文献上的改动的这些编译，需要编译四次，顺序如下：<strong>xelatex-&gt;bibtex-&gt;xelatex-&gt;xelatex</strong>，参考<a href="https://www.douban.com/note/257294314/" target="_blank" rel="noopener">网页</a>。</li>
 <li>官网上下载的是毕业论文模板，章节是双语 <strong>\BiChapter{}{} \BiSection{}{}</strong>，只使用中文用<strong>\chapter{} \section{}</strong></li>
+<li>latex中hyperref对目录和<strong>参考文献</strong>超链接以及颜色的设定，参考<a href="https://blog.csdn.net/jueshu/article/details/89187287" target="_blank" rel="noopener">网页</a></li>
 </ol>
 
       
@@ -343,9 +344,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/07/15/%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%E5%95%8A%E9%98%BF%E5%95%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          准备工作啊阿啊
+        
+      </div>
+    </a>
   
-    <a href="/2020/06/29/%E7%BD%91%E6%98%93%E4%BA%92%E5%A8%B1%E6%A0%A1%E5%9B%AD%E5%A4%A7%E4%BD%BF%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">网易互娱校园大使总结</div>
+  
+    <a href="/2020/07/07/LaTex%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E8%BE%93%E5%85%A5%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LaTex常用数学符号输入方法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -534,6 +544,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">投稿</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">diary</a>
               </li>
             
             <div class="clearfix"></div>
