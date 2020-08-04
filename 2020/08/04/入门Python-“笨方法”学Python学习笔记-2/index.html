@@ -16,7 +16,7 @@
 <meta property="og:description" content="继续学～干巴爹">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-04T07:16:14.230Z">
+<meta property="article:modified_time" content="2020-08-04T07:52:46.967Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="软件">
@@ -190,9 +190,22 @@
 <a id="more"></a>
 
 <h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>“笨方法”学Python 3</p>
-<h2 id="习题13-参数、解包和变量"><a href="#习题13-参数、解包和变量" class="headerlink" title="习题13 参数、解包和变量"></a>习题13 参数、解包和变量</h2><p>这一章看着就好难ww<br>将变量传递给脚本（.py程序）<br>参数（argument）</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys import argv</span><br><span class="line"></span><br><span class="line"><span class="keyword">script</span>, <span class="keyword">first</span>, <span class="keyword">second</span>, <span class="keyword">third</span> = argv</span><br></pre></td></tr></table></figure>
-<p><code>import</code>: 将python的特性引入脚本<br><code>argv</code>: 参数变量<br><code>script, first, second, third = argv</code>: 将argv解包，所有的参数依次赋值给左边的变量<br><code>sys</code>: 模块（module）/库（library）<br>$\color{red}{红色字}$<br><span style="color:red;">红不红？</span></p>
+<h2 id="习题13-参数、解包和变量"><a href="#习题13-参数、解包和变量" class="headerlink" title="习题13 参数、解包和变量"></a>习题13 参数、解包和变量</h2><p><span style="color:yellow;">这一章看着就好难ww</span></p>
+<ol>
+<li><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys import argv</span><br><span class="line"></span><br><span class="line"><span class="keyword">script</span>, <span class="keyword">first</span>, <span class="keyword">second</span>, <span class="keyword">third</span> = argv</span><br></pre></td></tr></table></figure>
+<code>import</code>: 将python的特性引入脚本,将变量传递给脚本（.py程序）<br><code>argv</code>: 参数变量(argument variable)<br><code>script, first, second, third = argv</code>: 将argv解包，所有的参数依次赋值给左边的变量<br><code>sys</code>: 模块（module）/库（library）</li>
+</ol>
+<p><span style="color:red;">运行程序时，必须传递3个命令行参数：如<code>python ex13.py 1st 2nd 3rd</code></span></p>
+<ol start="2">
+<li>argv与input()区别: argv是参数在用户执行命令时输入；input()是在运行脚本过程中输入</li>
+<li>命令行输入的是字符串，如果要数字，需用int()将其转化为整数</li>
+</ol>
+<h2 id="习题14-提示和传递"><a href="#习题14-提示和传递" class="headerlink" title="习题14 提示和传递"></a>习题14 提示和传递</h2><p>这章没有新东西，在<code>input</code>中加了个<code>&#39;&gt;&#39;</code>做提示符</p>
+<h2 id="习题15-读取文件"><a href="#习题15-读取文件" class="headerlink" title="习题15 读取文件"></a>习题15 读取文件</h2><ol>
+<li><code>open</code>: 打开文件，例: <code>txt = open(filename)</code>，返回文件对象</li>
+<li>文件接收命令是使用句点（.），例: <code>txt.read()</code><br><span style="color:red;">好像读完了就完了，没有关闭文件的操作</span></li>
+</ol>
+<h2 id="习题16-读写文件"><a href="#习题16-读写文件" class="headerlink" title="习题16 读写文件"></a>习题16 读写文件</h2><p>与文件相关的命令：<br>• close–关闭文件。跟你编辑器的文件-&gt;保存..一个意思。<br>• read – 读取文件内容。你可以把结果赋给一个变量。<br>• readline–读取文本文件中的一行。<br>• truncate–清空文件，请小心使用该命令。<br>• write(stuff) – 将 stuff 写入文件。</p>
 <hr>
 
       
@@ -367,7 +380,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题13-参数、解包和变量"><span class="toc-number">2.</span> <span class="toc-text">习题13 参数、解包和变量</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题13-参数、解包和变量"><span class="toc-number">2.</span> <span class="toc-text">习题13 参数、解包和变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题14-提示和传递"><span class="toc-number">3.</span> <span class="toc-text">习题14 提示和传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题15-读取文件"><span class="toc-number">4.</span> <span class="toc-text">习题15 读取文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题16-读写文件"><span class="toc-number">5.</span> <span class="toc-text">习题16 读写文件</span></a></li></ol>
                     </div>
                 </span>
             </div>
