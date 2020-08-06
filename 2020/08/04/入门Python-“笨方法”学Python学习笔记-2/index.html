@@ -16,7 +16,7 @@
 <meta property="og:description" content="继续学～干巴爹">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-04T10:22:47.354Z">
+<meta property="article:modified_time" content="2020-08-06T16:40:43.994Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="软件">
@@ -231,6 +231,25 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    print(<span class="string">f"ADDING <span class="subst">&#123;a&#125;</span> + <span class="subst">&#123;b&#125;</span>"</span>)</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line"></span><br><span class="line">age = add(<span class="number">30</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 
 <h2 id="习题22"><a href="#习题22" class="headerlink" title="习题22"></a>习题22</h2><p>第二阶段学习完毕～</p>
+<h2 id="习题23-字符串、字节串和字符编码"><a href="#习题23-字符串、字节串和字符编码" class="headerlink" title="习题23 字符串、字节串和字符编码"></a>习题23 字符串、字节串和字符编码</h2><p><span style="color:blue;">这一章巨难ww</span></p>
+<ol>
+<li>在python中字符串（string）: UTF-8编码的字符序列，是显示和处理文本的基础；字节串（bytes）：用来存储UTF-8字符串的原始字节序列。解码（<code>decode</code>）字节串，编码（<code>encode</code>）字符串</li>
+<li>编码方式：utf-8（Unicode Transformation Format 8Bits）、utf-16、big5等</li>
+<li>命令行参数处理的另一种方式:<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line"><span class="keyword">script</span>, encoding, <span class="keyword">error</span> = sys.argv</span><br></pre></td></tr></table></figure></li>
+<li><code>readline()</code>运行到文件结尾时会返回一个空字符串</li>
+<li><code>if</code>函数，注意缩进</li>
+<li><code>strip()</code>函数：删除空白符， 只能删除开头或是结尾的字符或是字符串。不能删除中间的字符或是字符串。更多见<a href="https://www.cnblogs.com/yyxayz/p/4034299.html" target="_blank" rel="noopener">网页</a></li>
+</ol>
+<p>（2020/8/5）</p>
+<h2 id="习题24-更多的练习"><a href="#习题24-更多的练习" class="headerlink" title="习题24 更多的练习"></a>习题24 更多的练习</h2><p>是前面学习的巩固练习~</p>
+<h2 id="习题25-更多更多的练习"><a href="#习题25-更多更多的练习" class="headerlink" title="习题25 更多更多的练习"></a>习题25 更多更多的练习</h2><ol>
+<li><code>.split()</code>: 将字符串分割，返回一个列表，更多见<a href="https://www.cnblogs.com/yyxayz/p/4034299.html" target="_blank" rel="noopener">网页</a></li>
+<li><code>sorted()</code>: 按首字母排序</li>
+<li><code>.pop(0)</code>: 第一个字符出栈；<code>.pop(-1)</code>: 最后一个字符</li>
+<li><code>from ex25 import *</code>: 把ex25中所有的东西导入进来</li>
+</ol>
+<h2 id="习题26-恭喜你，现在可以考试了！"><a href="#习题26-恭喜你，现在可以考试了！" class="headerlink" title="习题26 恭喜你，现在可以考试了！"></a>习题26 恭喜你，现在可以考试了！</h2><p>好的，恭喜我~</p>
+<p>（2020/8/6）</p>
 <hr>
 
       
@@ -373,6 +392,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/08/07/%E5%85%A5%E9%97%A8Python-%E2%80%9C%E7%AC%A8%E6%96%B9%E6%B3%95%E2%80%9D%E5%AD%A6Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          入门Python--“笨方法”学Python学习笔记-3
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/08/03/%E5%85%A5%E9%97%A8Python--%E2%80%9C%E7%AC%A8%E6%96%B9%E6%B3%95%E2%80%9D%E5%AD%A6Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记</div>
@@ -402,7 +430,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题13-参数、解包和变量"><span class="toc-number">2.</span> <span class="toc-text">习题13 参数、解包和变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题14-提示和传递"><span class="toc-number">3.</span> <span class="toc-text">习题14 提示和传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题15-读取文件"><span class="toc-number">4.</span> <span class="toc-text">习题15 读取文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题16-读写文件"><span class="toc-number">5.</span> <span class="toc-text">习题16 读写文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题17-更多文件操作"><span class="toc-number">6.</span> <span class="toc-text">习题17 更多文件操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题18-命名、变量、代码和函数"><span class="toc-number">7.</span> <span class="toc-text">习题18 命名、变量、代码和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题19-函数和变量"><span class="toc-number">8.</span> <span class="toc-text">习题19 函数和变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题20-函数和文件"><span class="toc-number">9.</span> <span class="toc-text">习题20 函数和文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题21-函数可以返回某些东西"><span class="toc-number">10.</span> <span class="toc-text">习题21 函数可以返回某些东西</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题22"><span class="toc-number">11.</span> <span class="toc-text">习题22</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题13-参数、解包和变量"><span class="toc-number">2.</span> <span class="toc-text">习题13 参数、解包和变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题14-提示和传递"><span class="toc-number">3.</span> <span class="toc-text">习题14 提示和传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题15-读取文件"><span class="toc-number">4.</span> <span class="toc-text">习题15 读取文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题16-读写文件"><span class="toc-number">5.</span> <span class="toc-text">习题16 读写文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题17-更多文件操作"><span class="toc-number">6.</span> <span class="toc-text">习题17 更多文件操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题18-命名、变量、代码和函数"><span class="toc-number">7.</span> <span class="toc-text">习题18 命名、变量、代码和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题19-函数和变量"><span class="toc-number">8.</span> <span class="toc-text">习题19 函数和变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题20-函数和文件"><span class="toc-number">9.</span> <span class="toc-text">习题20 函数和文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题21-函数可以返回某些东西"><span class="toc-number">10.</span> <span class="toc-text">习题21 函数可以返回某些东西</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题22"><span class="toc-number">11.</span> <span class="toc-text">习题22</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题23-字符串、字节串和字符编码"><span class="toc-number">12.</span> <span class="toc-text">习题23 字符串、字节串和字符编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题24-更多的练习"><span class="toc-number">13.</span> <span class="toc-text">习题24 更多的练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题25-更多更多的练习"><span class="toc-number">14.</span> <span class="toc-text">习题25 更多更多的练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题26-恭喜你，现在可以考试了！"><span class="toc-number">15.</span> <span class="toc-text">习题26 恭喜你，现在可以考试了！</span></a></li></ol>
                     </div>
                 </span>
             </div>
