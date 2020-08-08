@@ -16,7 +16,7 @@
 <meta property="og:description" content="继续学～干巴爹">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-08T07:30:57.770Z">
+<meta property="article:modified_time" content="2020-08-08T07:33:32.309Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="软件">
@@ -462,6 +462,95 @@
 <td align="center">垂直制表符</td>
 </tr>
 </tbody></table>
+<h3 id="老式字符串格式"><a href="#老式字符串格式" class="headerlink" title="老式字符串格式"></a>老式字符串格式</h3><table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">描述</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%d</td>
+<td align="center">格式化整数 (不包含浮点数).</td>
+<td align="center">“%d” % 45 == ‘45’</td>
+</tr>
+<tr>
+<td align="center">%i</td>
+<td align="center">与%d相同</td>
+<td align="center">“%i” % 45 == ‘45’</td>
+</tr>
+<tr>
+<td align="center">%o</td>
+<td align="center">8进制数字</td>
+<td align="center">“%o” % 1000 == ‘1750’</td>
+</tr>
+<tr>
+<td align="center">%u</td>
+<td align="center">负数</td>
+<td align="center">“%u” % -1000 == ‘-1000’</td>
+</tr>
+<tr>
+<td align="center">%x</td>
+<td align="center">小写的十六进制数字</td>
+<td align="center">“%x” % 1000 == ‘3e8’</td>
+</tr>
+<tr>
+<td align="center">%X</td>
+<td align="center">大写的十六进制数字</td>
+<td align="center">“%X” % 1000 == ‘3E8’</td>
+</tr>
+<tr>
+<td align="center">%e</td>
+<td align="center">小写 ‘e’的指数标记</td>
+<td align="center">“%e” % 1000 == ‘1.000000e+03’</td>
+</tr>
+<tr>
+<td align="center">%E</td>
+<td align="center">大写 ‘e’的指数标记</td>
+<td align="center">“%E” % 1000 == ‘1.000000E+03’</td>
+</tr>
+<tr>
+<td align="center">%f</td>
+<td align="center">浮点数</td>
+<td align="center">“%f” % 10.34 == ‘10.340000’</td>
+</tr>
+<tr>
+<td align="center">%F</td>
+<td align="center">与%f相同</td>
+<td align="center">“%F” % 10.34 == ‘10.340000’</td>
+</tr>
+<tr>
+<td align="center">%g</td>
+<td align="center">%f 或者 %e中较短的一个</td>
+<td align="center">“%g” % 10.34 == ‘10.34’</td>
+</tr>
+<tr>
+<td align="center">%G</td>
+<td align="center">%F 或者 %E中较短的一个</td>
+<td align="center">“%G” % 10.34 == ‘10.34’</td>
+</tr>
+<tr>
+<td align="center">%c</td>
+<td align="center">字符格式化</td>
+<td align="center">“%c” % 34 == ‘“‘</td>
+</tr>
+<tr>
+<td align="center">%r</td>
+<td align="center">类型格式化</td>
+<td align="center">“%r” % <code>int == &quot;&lt;type &#39;int&#39;&gt;&quot;</code></td>
+</tr>
+<tr>
+<td align="center">%s</td>
+<td align="center">字符串格式</td>
+<td align="center">“%s there” % ‘hi’ == ‘hi there’</td>
+</tr>
+<tr>
+<td align="center">%%</td>
+<td align="center">表示百分号%</td>
+<td align="center">“%g%%” % 10.34 == ‘10.34%’</td>
+</tr>
+</tbody></table>
 <p>（2020/8/6）<br>未完待续～</p>
 <hr>
 
@@ -643,7 +732,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#习题27-记住逻辑关系"><span class="toc-number">1.</span> <span class="toc-text">习题27 记住逻辑关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题28-布尔表达式练习"><span class="toc-number">2.</span> <span class="toc-text">习题28 布尔表达式练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题29-if语句"><span class="toc-number">3.</span> <span class="toc-text">习题29 if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题30-else和if"><span class="toc-number">4.</span> <span class="toc-text">习题30 else和if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题31-做出决定"><span class="toc-number">5.</span> <span class="toc-text">习题31 做出决定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题32-循环和列表"><span class="toc-number">6.</span> <span class="toc-text">习题32 循环和列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题33-while循环"><span class="toc-number">7.</span> <span class="toc-text">习题33 while循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题34-访问列表的元素"><span class="toc-number">8.</span> <span class="toc-text">习题34 访问列表的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题35-分支和函数"><span class="toc-number">9.</span> <span class="toc-text">习题35 分支和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题36-设计和调试"><span class="toc-number">10.</span> <span class="toc-text">习题36 设计和调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句的规则"><span class="toc-number">10.1.</span> <span class="toc-text">if语句的规则:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-number">10.2.</span> <span class="toc-text">调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题37-复习各种符号"><span class="toc-number">11.</span> <span class="toc-text">习题37 复习各种符号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">11.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">11.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串转义序列"><span class="toc-number">11.3.</span> <span class="toc-text">字符串转义序列</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#习题27-记住逻辑关系"><span class="toc-number">1.</span> <span class="toc-text">习题27 记住逻辑关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题28-布尔表达式练习"><span class="toc-number">2.</span> <span class="toc-text">习题28 布尔表达式练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题29-if语句"><span class="toc-number">3.</span> <span class="toc-text">习题29 if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题30-else和if"><span class="toc-number">4.</span> <span class="toc-text">习题30 else和if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题31-做出决定"><span class="toc-number">5.</span> <span class="toc-text">习题31 做出决定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题32-循环和列表"><span class="toc-number">6.</span> <span class="toc-text">习题32 循环和列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题33-while循环"><span class="toc-number">7.</span> <span class="toc-text">习题33 while循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题34-访问列表的元素"><span class="toc-number">8.</span> <span class="toc-text">习题34 访问列表的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题35-分支和函数"><span class="toc-number">9.</span> <span class="toc-text">习题35 分支和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题36-设计和调试"><span class="toc-number">10.</span> <span class="toc-text">习题36 设计和调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句的规则"><span class="toc-number">10.1.</span> <span class="toc-text">if语句的规则:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-number">10.2.</span> <span class="toc-text">调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题37-复习各种符号"><span class="toc-number">11.</span> <span class="toc-text">习题37 复习各种符号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">11.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">11.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串转义序列"><span class="toc-number">11.3.</span> <span class="toc-text">字符串转义序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#老式字符串格式"><span class="toc-number">11.4.</span> <span class="toc-text">老式字符串格式</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
