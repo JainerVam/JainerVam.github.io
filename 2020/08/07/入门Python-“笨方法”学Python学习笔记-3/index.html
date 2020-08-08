@@ -16,7 +16,7 @@
 <meta property="og:description" content="继续学～干巴爹">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-07T13:24:36.160Z">
+<meta property="article:modified_time" content="2020-08-08T07:19:50.521Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="软件">
@@ -306,12 +306,12 @@
 </tr>
 <tr>
 <td align="center">is</td>
-<td align="center">类似==，判断相等</td>
+<td align="center">类似==，判断是否一样</td>
 <td align="center">1 is 1 == True</td>
 </tr>
 <tr>
 <td align="center">lambda</td>
-<td align="center">创建一个无名函数</td>
+<td align="center">创建短匿名函数</td>
 <td align="center">s = lambda y: y ** y; s(3)</td>
 </tr>
 <tr>
@@ -320,23 +320,18 @@
 <td align="center">not True == False</td>
 </tr>
 <tr>
-<td align="center">or</td>
-<td align="center">逻辑或</td>
-<td align="center">or False ==</td>
-</tr>
-<tr>
 <td align="center">pass</td>
-<td align="center">该代码块为空</td>
+<td align="center">空代码块</td>
 <td align="center">def empty(): pass</td>
 </tr>
 <tr>
 <td align="center">print</td>
-<td align="center">打印一个字符串</td>
-<td align="center">print ‘this string’</td>
+<td align="center">打印字符串</td>
+<td align="center">print (‘this string’)</td>
 </tr>
 <tr>
 <td align="center">raise</td>
-<td align="center">代码出错时，抛出一个异常</td>
+<td align="center">出错后引发异常</td>
 <td align="center">raise ValueError(“No”)</td>
 </tr>
 <tr>
@@ -346,7 +341,7 @@
 </tr>
 <tr>
 <td align="center">try</td>
-<td align="center">尝试代签代码块，有异常则进入except代码块</td>
+<td align="center">尝试执行代码块，出错后转到except</td>
 <td align="center">try: pass</td>
 </tr>
 <tr>
@@ -356,13 +351,62 @@
 </tr>
 <tr>
 <td align="center">with</td>
-<td align="center">一个变量的别名</td>
+<td align="center">将表达式作为一个变量，然后执行代码块</td>
 <td align="center">with X as Y: pass</td>
 </tr>
 <tr>
 <td align="center">yield</td>
-<td align="center">暂停， 返回给调用者</td>
+<td align="center">暂停函数，返回到调用函数的代码中</td>
 <td align="center">def X(): yield Y; X().next()</td>
+</tr>
+</tbody></table>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">描述</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">True</td>
+<td align="center">True 布尔值.</td>
+<td align="center">or False ==</td>
+</tr>
+<tr>
+<td align="center">False</td>
+<td align="center">False 布尔值.</td>
+<td align="center">and True ==</td>
+</tr>
+<tr>
+<td align="center">None</td>
+<td align="center">表示 “nothing” 或者”no value”.</td>
+<td align="center">x = None</td>
+</tr>
+<tr>
+<td align="center">strings</td>
+<td align="center">字符串，储存文本信息</td>
+<td align="center">x = “hello”</td>
+</tr>
+<tr>
+<td align="center">numbers</td>
+<td align="center">储存整数</td>
+<td align="center">i = 100</td>
+</tr>
+<tr>
+<td align="center">floats</td>
+<td align="center">储存小数</td>
+<td align="center">i = 10.389</td>
+</tr>
+<tr>
+<td align="center">lists</td>
+<td align="center">储存某种东西的列表</td>
+<td align="center">j = [1,2,3,4]</td>
+</tr>
+<tr>
+<td align="center">dicts</td>
+<td align="center">储存某些东西的键值对</td>
+<td align="center">e = {‘x’: 1, ‘y’: 2}</td>
 </tr>
 </tbody></table>
 <p>（2020/8/6）<br>未完待续～</p>
@@ -546,7 +590,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#习题27-记住逻辑关系"><span class="toc-number">1.</span> <span class="toc-text">习题27 记住逻辑关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题28-布尔表达式练习"><span class="toc-number">2.</span> <span class="toc-text">习题28 布尔表达式练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题29-if语句"><span class="toc-number">3.</span> <span class="toc-text">习题29 if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题30-else和if"><span class="toc-number">4.</span> <span class="toc-text">习题30 else和if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题31-做出决定"><span class="toc-number">5.</span> <span class="toc-text">习题31 做出决定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题32-循环和列表"><span class="toc-number">6.</span> <span class="toc-text">习题32 循环和列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题33-while循环"><span class="toc-number">7.</span> <span class="toc-text">习题33 while循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题34-访问列表的元素"><span class="toc-number">8.</span> <span class="toc-text">习题34 访问列表的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题35-分支和函数"><span class="toc-number">9.</span> <span class="toc-text">习题35 分支和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题36-设计和调试"><span class="toc-number">10.</span> <span class="toc-text">习题36 设计和调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句的规则"><span class="toc-number">10.1.</span> <span class="toc-text">if语句的规则:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-number">10.2.</span> <span class="toc-text">调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题37-复习各种符号"><span class="toc-number">11.</span> <span class="toc-text">习题37 复习各种符号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">11.1.</span> <span class="toc-text">关键字</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#习题27-记住逻辑关系"><span class="toc-number">1.</span> <span class="toc-text">习题27 记住逻辑关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题28-布尔表达式练习"><span class="toc-number">2.</span> <span class="toc-text">习题28 布尔表达式练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题29-if语句"><span class="toc-number">3.</span> <span class="toc-text">习题29 if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题30-else和if"><span class="toc-number">4.</span> <span class="toc-text">习题30 else和if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题31-做出决定"><span class="toc-number">5.</span> <span class="toc-text">习题31 做出决定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题32-循环和列表"><span class="toc-number">6.</span> <span class="toc-text">习题32 循环和列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题33-while循环"><span class="toc-number">7.</span> <span class="toc-text">习题33 while循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题34-访问列表的元素"><span class="toc-number">8.</span> <span class="toc-text">习题34 访问列表的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题35-分支和函数"><span class="toc-number">9.</span> <span class="toc-text">习题35 分支和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题36-设计和调试"><span class="toc-number">10.</span> <span class="toc-text">习题36 设计和调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句的规则"><span class="toc-number">10.1.</span> <span class="toc-text">if语句的规则:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-number">10.2.</span> <span class="toc-text">调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题37-复习各种符号"><span class="toc-number">11.</span> <span class="toc-text">习题37 复习各种符号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">11.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">11.2.</span> <span class="toc-text">数据类型</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
