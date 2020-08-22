@@ -16,7 +16,7 @@
 <meta property="og:description" content="这里是我自己在习题13-习题26的笔记，方便以后查阅。主要内容为文件操作、函数等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-22T17:33:34.411Z">
+<meta property="article:modified_time" content="2020-08-22T17:37:02.025Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="软件">
@@ -253,8 +253,20 @@
 <li>自顶向下与自底向上</li>
 <li>房间切换原理：通过函数返回值决定下一场景（个人总结）</li>
 </ol>
-<hr>
-
+<h2 id="习题44-继承与组合"><a href="#习题44-继承与组合" class="headerlink" title="习题44 继承与组合"></a>习题44 继承与组合</h2><ol>
+<li><strong>继承</strong><br>继承，就是用来指明一个类的大部分或全部功能都是从一个父类中获得的。当你写 <code>class Foo(Bar)</code>时，代码就发生了继承效果，这句代码的意思是“创建一个叫 Foo 的类，并让他继承自Bar”。Python 语言会让 Bar 的实例所具有的功能都工作在 Foo 的实例上。这样可以把通用的功能放到 Bar 里边，然后再给 Foo 特别设定一些功能。<br>当你这么做的时候，父类和子类有三种交互方式：<ol>
+<li>子类上的动作完全等同于父类上的动作</li>
+<li>子类上的动作完全覆盖了父类上的动作</li>
+<li>子类上的动作部分变更了父类上的动作</li>
+</ol>
+</li>
+<li>Python内置函数<code>super()</code>可以调用父类parent里的版本，如<code>super(Child, self).func()</code></li>
+<li><strong>多重继承：</strong><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">SuperFun</span>(<span class="symbol">Child, <span class="symbol">BadStuff</span></span>):</span><br><span class="line"><span class="symbol">pass</span></span><br></pre></td></tr></table></figure>
+这相当于说“创建一个叫 SuperFun 的类，让它同时继承 Child 和 BadStuff 两个类”。</li>
+<li><strong>继承和组合</strong><br>都是解决代码复用的问题。继承通过创建在基类里隐含父类的功能的机制来解决这一问题；组合则利用模块和别的类中的函数调用达到同一目的。</li>
+<li>(巩固练习)[<a href="http://www.python.org/dev/peps/pep-0008]" target="_blank" rel="noopener">http://www.python.org/dev/peps/pep-0008]</a></li>
+</ol>
+<h2 id="2020-8-23"><a href="#2020-8-23" class="headerlink" title="(2020/8/23)"></a>(2020/8/23)</h2>
       
 
 
@@ -424,7 +436,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题38-列表的操作"><span class="toc-number">2.</span> <span class="toc-text">习题38 列表的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题39-字典、可爱的字典"><span class="toc-number">3.</span> <span class="toc-text">习题39 字典、可爱的字典</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题40-模块、类和对象"><span class="toc-number">4.</span> <span class="toc-text">习题40 模块、类和对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题41-学习面向对象术语"><span class="toc-number">5.</span> <span class="toc-text">习题41 学习面向对象术语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题42-对象、类及从属关系"><span class="toc-number">6.</span> <span class="toc-text">习题42 对象、类及从属关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题43-基本的面向对象分析和设计"><span class="toc-number">7.</span> <span class="toc-text">习题43 基本的面向对象分析和设计</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题38-列表的操作"><span class="toc-number">2.</span> <span class="toc-text">习题38 列表的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题39-字典、可爱的字典"><span class="toc-number">3.</span> <span class="toc-text">习题39 字典、可爱的字典</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题40-模块、类和对象"><span class="toc-number">4.</span> <span class="toc-text">习题40 模块、类和对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题41-学习面向对象术语"><span class="toc-number">5.</span> <span class="toc-text">习题41 学习面向对象术语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题42-对象、类及从属关系"><span class="toc-number">6.</span> <span class="toc-text">习题42 对象、类及从属关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题43-基本的面向对象分析和设计"><span class="toc-number">7.</span> <span class="toc-text">习题43 基本的面向对象分析和设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题44-继承与组合"><span class="toc-number">8.</span> <span class="toc-text">习题44 继承与组合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020-8-23"><span class="toc-number">9.</span> <span class="toc-text">(2020&#x2F;8&#x2F;23)</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -565,10 +577,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">公式</a>
               </li>
              
@@ -578,6 +586,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">latex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
