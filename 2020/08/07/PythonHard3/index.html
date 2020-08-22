@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>入门Python--“笨方法”学Python学习笔记(2) | JanierVan</title>
+  <title>入门Python--“笨方法”学Python学习笔记(3) | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里是我自己在习题13-习题26的笔记，方便以后查阅。主要内容为文件操作、函数等。">
+  <meta name="description" content="这里是我自己在习题27-习题37的笔记，方便以后查阅。主要内容为逻辑关系、if语句、循环语句、调试等。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="入门Python--“笨方法”学Python学习笔记(2)">
-<meta property="og:url" content="https://jainervam.github.io/2020/08/04/%E5%85%A5%E9%97%A8Python-%E2%80%9C%E7%AC%A8%E6%96%B9%E6%B3%95%E2%80%9D%E5%AD%A6Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/index.html">
+<meta property="og:title" content="入门Python--“笨方法”学Python学习笔记(3)">
+<meta property="og:url" content="https://jainervam.github.io/2020/08/07/PythonHard3/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="这里是我自己在习题13-习题26的笔记，方便以后查阅。主要内容为文件操作、函数等。">
+<meta property="og:description" content="这里是我自己在习题27-习题37的笔记，方便以后查阅。主要内容为逻辑关系、if语句、循环语句、调试等。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-22T17:04:27.869Z">
+<meta property="article:published_time" content="2020-08-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-08-22T17:57:33.521Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="code">
-<meta property="article:tag" content="python">
 <meta property="article:tag" content="软件">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="JanierVan" type="application/atom+xml">
@@ -166,88 +166,554 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-入门Python-“笨方法”学Python学习笔记-2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-PythonHard3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      入门Python--“笨方法”学Python学习笔记(2)
+      入门Python--“笨方法”学Python学习笔记(3)
     </h1>
   
 
         
-        <a href="/2020/08/04/%E5%85%A5%E9%97%A8Python-%E2%80%9C%E7%AC%A8%E6%96%B9%E6%B3%95%E2%80%9D%E5%AD%A6Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/" class="archive-article-date">
-  	<time datetime="2020-08-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-04</time>
+        <a href="/2020/08/07/PythonHard3/" class="archive-article-date">
+  	<time datetime="2020-08-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这里是我自己在习题13-习题26的笔记，方便以后查阅。主要内容为文件操作、函数等。</p>
+        <p>这里是我自己在习题27-习题37的笔记，方便以后查阅。主要内容为逻辑关系、if语句、循环语句、调试等。</p>
 <a id="more"></a>
 
 <h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>“笨方法”学Python 3</p>
 <p>代码链接：<a href="https://pan.baidu.com/s/1bxJqLEMQPzGJeGpOHx3-Iw" target="_blank" rel="noopener">https://pan.baidu.com/s/1bxJqLEMQPzGJeGpOHx3-Iw</a><br>提取码：9z0o</p>
-<h2 id="习题13-参数、解包和变量"><a href="#习题13-参数、解包和变量" class="headerlink" title="习题13 参数、解包和变量"></a>习题13 参数、解包和变量</h2><p><span style="color:blue;">这一章看着就好难ww</span></p>
-<ol>
-<li>如下<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys import argv</span><br><span class="line"></span><br><span class="line"><span class="keyword">script</span>, <span class="keyword">first</span>, <span class="keyword">second</span>, <span class="keyword">third</span> = argv</span><br></pre></td></tr></table></figure>
-<code>import</code>: 将python的特性引入脚本,将变量传递给脚本（.py程序）<br><code>argv</code>: 参数变量(argument variable)<br><code>script, first, second, third = argv</code>: 将argv解包，所有的参数依次赋值给左边的变量<br><code>sys</code>: 模块（module）/库（library）<br><span style="color:red;">运行程序时，必须传递3个命令行参数：如<code>python ex13.py 1st 2nd 3rd</code></span></li>
-<li>argv与input()区别: argv是参数在用户执行命令时输入；input()是在运行脚本过程中输入</li>
-<li>命令行输入的是字符串，如果要数字，需用int()将其转化为整数</li>
-</ol>
-<h2 id="习题14-提示和传递"><a href="#习题14-提示和传递" class="headerlink" title="习题14 提示和传递"></a>习题14 提示和传递</h2><p>这章没有新东西，在<code>input</code>中加了个<code>&#39;&gt;&#39;</code>做提示符</p>
-<h2 id="习题15-读取文件"><a href="#习题15-读取文件" class="headerlink" title="习题15 读取文件"></a>习题15 读取文件</h2><ol>
-<li><code>open</code>: 打开文件，例: <code>txt = open(filename)</code>，返回文件对象</li>
-<li>文件接收命令是使用句点（.），例: <code>txt.read()</code><br><span style="color:red;">好像读完了就完了，没有关闭文件的操作</span>–read()一旦运行，文件就会被python关掉</li>
-</ol>
-<h2 id="习题16-读写文件"><a href="#习题16-读写文件" class="headerlink" title="习题16 读写文件"></a>习题16 读写文件</h2><p>与文件相关的命令：<br>• <code>close</code>: 关闭文件。跟编辑器的 文件-&gt;保存 一个意思<br>• <code>read</code>:  读取文件内容。可以把结果赋给一个变量<br>• <code>readline</code>: 读取文本文件中的一行 // 扫描文件的每一个字节，直到找到一个\n为止（返回\n）<br>• <code>truncate</code>: 清空文件<br>• <code>write(&#39;stuff&#39;)</code>: 将”stuff”写入文件<br>• <code>seek(0)</code>: 将读写位置移动到文件开头 // 转到文件的0字节（第一个字节）的位置</p>
-<p><code>open(filename,&#39;w&#39;)</code>: ‘w’（写入），‘r’（读取），‘a’（追加），默认只读</p>
-<h2 id="习题17-更多文件操作"><a href="#习题17-更多文件操作" class="headerlink" title="习题17 更多文件操作"></a>习题17 更多文件操作</h2><p>本章实现了将一个文件的内容复制到另一个文件中</p>
-<ol>
-<li><code>from os.path import exists</code>: <code>exists</code>将文件名字字符串作为参数，若文件存在，返回True；否则返回False</li>
-<li><code>len()</code>: 返回传递的字符串的长度</li>
-<li><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">in_file = <span class="built_in">open</span>(from_file)</span><br><span class="line">indata = in_file.<span class="built_in">read</span>()</span><br><span class="line">in_file.<span class="built_in">close</span>()</span><br></pre></td></tr></table></figure>
+<h2 id="习题27-记住逻辑关系"><a href="#习题27-记住逻辑关系" class="headerlink" title="习题27 记住逻辑关系"></a>习题27 记住逻辑关系</h2><p>逻辑术语<br>• <code>and</code> 与<br>• <code>or</code> 或<br>• <code>not</code> 非<br>• <code>!=</code> 不等于<br>• <code>==</code> 等于<br>• <code>&gt;=</code> 大于等于<br>• <code>&lt;=</code> 小于等于<br>• <code>True</code> 真<br>• <code>False</code> 假</p>
+<h2 id="习题28-布尔表达式练习"><a href="#习题28-布尔表达式练习" class="headerlink" title="习题28 布尔表达式练习"></a>习题28 布尔表达式练习</h2><p><code>&quot;test&quot; and &quot;test&quot;</code> 返回 <code>&quot;test&quot;</code>， <code>1 and 1</code> 返回 <code>1</code>，而不是返回 True:<br>Python 和很多语言一样，都是给布尔表达式返回两个被操作对象中的一个，而非True 或 False 。这意味着如果你写了 False and 1 ，你得到的是第一个操作字元(False)，而非第二个字元(1)。但如果写 True and 1，得到的是第二个操作数（1）。emmm</p>
+<h2 id="习题29-if语句"><a href="#习题29-if语句" class="headerlink" title="习题29 if语句"></a>习题29 if语句</h2><p><strong>注意缩进！！！</strong>python的规则里，只要一行以冒号（:）结尾，他接下来的内容就应该有缩进</p>
+<h2 id="习题30-else和if"><a href="#习题30-else和if" class="headerlink" title="习题30 else和if"></a>习题30 else和if</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> cars &gt; people:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"We should take the cars."</span>)</span><br><span class="line">elif cars &lt; people:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"We should not take the cars."</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"We can't decide."</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="习题31-做出决定"><a href="#习题31-做出决定" class="headerlink" title="习题31 做出决定"></a>习题31 做出决定</h2><p>判断一个数处于某个值域中：<code>1 &lt; x &lt; 10</code>，或者用 <code>x in range(1, 10)</code></p>
+<h2 id="习题32-循环和列表"><a href="#习题32-循环和列表" class="headerlink" title="习题32 循环和列表"></a>习题32 循环和列表</h2><ol>
+<li>创建列表：<code>hairs = [&#39;brown&#39;, &#39;blond&#39;, &#39;red&#39;]</code>；创建二维列表：<code>[[1,2,3],[4,5,6]]</code></li>
+<li><code>.append()</code>: 是在列表的尾部追加元素</li>
+<li><code>range(1,3)</code>: range() 函数会从第一个数到最后一个，但不包含最后一个数字，含首不含尾</li>
+<li>以下不能直接赋值为range(0,6)<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i in <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">6</span>):</span><br><span class="line">     <span class="keyword">print</span> (<span class="keyword">f</span><span class="string">"Adding &#123;i&#125; to the list."</span>)</span><br><span class="line">     # <span class="keyword">append</span> <span class="keyword">is</span> <span class="keyword">a</span> <span class="function"><span class="keyword">function</span> <span class="title">that</span> <span class="title">lists</span> <span class="title">understand</span></span></span><br><span class="line">     elements.<span class="keyword">append</span>(i)</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<p>和<code>indata = open(from_file).read()</code>同</p>
-<h2 id="习题18-命名、变量、代码和函数"><a href="#习题18-命名、变量、代码和函数" class="headerlink" title="习题18 命名、变量、代码和函数"></a>习题18 命名、变量、代码和函数</h2><p>使用<code>def</code>创建函数的2种方法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 接收两个参数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_two</span><span class="params">(*args)</span>:</span> </span><br><span class="line">    arg1, arg2 = args</span><br><span class="line">    print(<span class="string">f"arg1: <span class="subst">&#123;arg1&#125;</span>, arg2: <span class="subst">&#123;arg2&#125;</span>"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 跳过解包的过程</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_two_again</span><span class="params">(arg1, arg2)</span>:</span></span><br><span class="line">    print(<span class="string">f"arg1: <span class="subst">&#123;arg1&#125;</span>, arg2: <span class="subst">&#123;arg2&#125;</span>"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="习题33-while循环"><a href="#习题33-while循环" class="headerlink" title="习题33 while循环"></a>习题33 while循环</h2><p>把while循环改成一个函数花了一点时间</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_num</span><span class="params">(up_thr)</span>:</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    numbers = []</span><br><span class="line">    <span class="keyword">while</span> i &lt; up_thr:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">f"At the top i is <span class="subst">&#123;i&#125;</span>"</span>)</span><br><span class="line">        numbers.append(i)</span><br><span class="line"></span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">print</span> (<span class="string">"Numbers now: "</span>, numbers)</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">f"At the bottom i is <span class="subst">&#123;i&#125;</span>"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> numbers</span><br><span class="line"></span><br><span class="line">numbers = print_num(<span class="number">6</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"The numbers: "</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> numbers:</span><br><span class="line">    <span class="keyword">print</span> (num)</span><br></pre></td></tr></table></figure>
 
-<p><span style="color:red;">注意：</span></p>
-<ol>
-<li>参数名不能重复</li>
-<li>4个空格的缩进，以及函数结束缩进也结束</li>
-<li><code>*args</code>中的*指把所有参数都接收，然后放到args中去</li>
+<h2 id="习题34-访问列表的元素"><a href="#习题34-访问列表的元素" class="headerlink" title="习题34 访问列表的元素"></a>习题34 访问列表的元素</h2><p>Python 的列表是从 0 开始的</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">animals</span> = [<span class="string">'bear'</span>, <span class="string">'tiger'</span>, <span class="string">'penguin'</span>, <span class="string">'zebra'</span>]</span><br><span class="line"><span class="attr">bear</span> = animals[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<p>“序数等于有序，从1开始；基数等于随机选取，从0开始”</p>
+<h2 id="习题35-分支和函数"><a href="#习题35-分支和函数" class="headerlink" title="习题35 分支和函数"></a>习题35 分支和函数</h2><p><code>exit(0)</code>: 在很多类型的操作系统里，<code>exit(0)</code> 可以中断某个程序，而其中的数字参数则用来表示程序是否是碰到错误而中断。 exit(1) 表示发生了错误，而 exit(0) 则表示程序是正常退出的。这和我们学的布尔逻辑 0==False 正好相反，不过你可以用不一样的数字表示不同的错误结果。比如你可以用 exit(100) 来表示另一种和 exit(2) 或 exit(1) 不同的错误。</p>
+<h2 id="习题36-设计和调试"><a href="#习题36-设计和调试" class="headerlink" title="习题36 设计和调试"></a>习题36 设计和调试</h2><h3 id="if语句的规则"><a href="#if语句的规则" class="headerlink" title="if语句的规则:"></a><code>if</code>语句的规则:</h3><ol>
+<li>每一个“if 语句”必须包含一个 else</li>
+<li>如果这个 else 永远都不应该被执行到，因为它本身没有任何意义，那必须在 else 语句后面使用一个叫做 die 的函数</li>
+<li>“if 语句”的嵌套不要超过2层，最好尽量保持只有1层</li>
 </ol>
-<h2 id="习题19-函数和变量"><a href="#习题19-函数和变量" class="headerlink" title="习题19 函数和变量"></a>习题19 函数和变量</h2><p>给函数传递值的几种方式：直接传递数字、传变量、数学表达式、数学表达式和变量结合</p>
-<h2 id="习题20-函数和文件"><a href="#习题20-函数和文件" class="headerlink" title="习题20 函数和文件"></a>习题20 函数和文件</h2><p><code>x += y --&gt; x = x+y</code></p>
-<h2 id="习题21-函数可以返回某些东西"><a href="#习题21-函数可以返回某些东西" class="headerlink" title="习题21 函数可以返回某些东西"></a>习题21 函数可以返回某些东西</h2><p><code>return</code>的用法:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    print(<span class="string">f"ADDING <span class="subst">&#123;a&#125;</span> + <span class="subst">&#123;b&#125;</span>"</span>)</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line"></span><br><span class="line">age = add(<span class="number">30</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="习题22"><a href="#习题22" class="headerlink" title="习题22"></a>习题22</h2><p>第二阶段学习完毕～</p>
-<h2 id="习题23-字符串、字节串和字符编码"><a href="#习题23-字符串、字节串和字符编码" class="headerlink" title="习题23 字符串、字节串和字符编码"></a>习题23 字符串、字节串和字符编码</h2><p><span style="color:blue;">这一章巨难ww</span></p>
-<ol>
-<li>在python中字符串（string）: UTF-8编码的字符序列，是显示和处理文本的基础；字节串（bytes）：用来存储UTF-8字符串的原始字节序列。解码（<code>decode</code>）字节串，编码（<code>encode</code>）字符串</li>
-<li>编码方式：utf-8（Unicode Transformation Format 8Bits）、utf-16、big5等</li>
-<li>命令行参数处理的另一种方式:<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line"><span class="keyword">script</span>, encoding, <span class="keyword">error</span> = sys.argv</span><br></pre></td></tr></table></figure></li>
-<li><code>readline()</code>运行到文件结尾时会返回一个空字符串</li>
-<li><code>if</code>函数，注意缩进</li>
-<li><code>strip()</code>函数：删除空白符， 只能删除开头或是结尾的字符或是字符串。不能删除中间的字符或是字符串。更多见<a href="https://www.cnblogs.com/yyxayz/p/4034299.html" target="_blank" rel="noopener">网页</a></li>
-</ol>
-<p>（2020/8/5）</p>
-<h2 id="习题24-更多的练习"><a href="#习题24-更多的练习" class="headerlink" title="习题24 更多的练习"></a>习题24 更多的练习</h2><p>是前面学习的巩固练习~</p>
-<h2 id="习题25-更多更多的练习"><a href="#习题25-更多更多的练习" class="headerlink" title="习题25 更多更多的练习"></a>习题25 更多更多的练习</h2><ol>
-<li><code>.split()</code>: 将字符串分割，返回一个列表，更多见<a href="https://www.cnblogs.com/yyxayz/p/4034299.html" target="_blank" rel="noopener">网页</a></li>
-<li><code>sorted()</code>: 按首字母排序</li>
-<li><code>.pop(0)</code>: 第一个字符出栈；<code>.pop(-1)</code>: 最后一个字符</li>
-<li><code>from ex25 import *</code>: 把ex25中所有的东西导入进来</li>
-</ol>
-<h2 id="习题26-恭喜你，现在可以考试了！"><a href="#习题26-恭喜你，现在可以考试了！" class="headerlink" title="习题26 恭喜你，现在可以考试了！"></a>习题26 恭喜你，现在可以考试了！</h2><p>好的，恭喜我~</p>
-<p>（2020/8/6）</p>
+<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p>使用<code>print</code>在各个想要检查的关键环节将关键变量打印出来，从而检查那里是否有错</p>
+<h2 id="习题37-复习各种符号"><a href="#习题37-复习各种符号" class="headerlink" title="习题37 复习各种符号"></a>习题37 复习各种符号</h2><p>比较简单的的我就不写了ww</p>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">描述</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">as</td>
+<td align="center">with-as语句的一部分</td>
+<td align="center">with X as Y: pass(<a href="https://www.jianshu.com/p/1a02a5b63c88" target="_blank" rel="noopener">参考</a>)</td>
+</tr>
+<tr>
+<td align="center">assert</td>
+<td align="center">断言（确保）某东西为真</td>
+<td align="center">assert False, “Error!”</td>
+</tr>
+<tr>
+<td align="center">break</td>
+<td align="center">立即停止整个循环</td>
+<td align="center">while True: break</td>
+</tr>
+<tr>
+<td align="center">class</td>
+<td align="center">定义一个类</td>
+<td align="center">class Person (object)</td>
+</tr>
+<tr>
+<td align="center">continue</td>
+<td align="center">停止当前循环的后续步骤，但继续下一次循环</td>
+<td align="center">while True: continue</td>
+</tr>
+<tr>
+<td align="center">def</td>
+<td align="center">定义一个函数</td>
+<td align="center">def X(): pass</td>
+</tr>
+<tr>
+<td align="center">del</td>
+<td align="center">从字典中删除</td>
+<td align="center">del X[Y]</td>
+</tr>
+<tr>
+<td align="center">except</td>
+<td align="center">如果发生异常，运行此处代码</td>
+<td align="center">except ValueError, e: print e</td>
+</tr>
+<tr>
+<td align="center">exec</td>
+<td align="center">将字符串作为Python脚本执行</td>
+<td align="center">exec ‘print (“hello”)’</td>
+</tr>
+<tr>
+<td align="center">finally</td>
+<td align="center">不管是否有异常，finally代码块都执行</td>
+<td align="center">finally: pass</td>
+</tr>
+<tr>
+<td align="center">for</td>
+<td align="center">for循环</td>
+<td align="center">for X in Y: pass</td>
+</tr>
+<tr>
+<td align="center">from</td>
+<td align="center">从某一模块中导入特定部分</td>
+<td align="center">import X from Y</td>
+</tr>
+<tr>
+<td align="center">global</td>
+<td align="center">定义一个全局变量</td>
+<td align="center">global X</td>
+</tr>
+<tr>
+<td align="center">if</td>
+<td align="center">If 条件</td>
+<td align="center">if: X; elif: Y; else: J</td>
+</tr>
+<tr>
+<td align="center">import</td>
+<td align="center">将模块导入当前文件以供使用</td>
+<td align="center">import os</td>
+</tr>
+<tr>
+<td align="center">in</td>
+<td align="center">for循环的一部分，也可以是X是否在Y中的条件判断</td>
+<td align="center">for X in Y: pass / 1 in [1] == True</td>
+</tr>
+<tr>
+<td align="center">is</td>
+<td align="center">类似==，判断是否一样</td>
+<td align="center">1 is 1 == True</td>
+</tr>
+<tr>
+<td align="center">lambda</td>
+<td align="center">创建短匿名函数</td>
+<td align="center">s = lambda y: y ** y; s(3)</td>
+</tr>
+<tr>
+<td align="center">not</td>
+<td align="center">逻辑非</td>
+<td align="center">not True == False</td>
+</tr>
+<tr>
+<td align="center">pass</td>
+<td align="center">空代码块</td>
+<td align="center">def empty(): pass</td>
+</tr>
+<tr>
+<td align="center">print</td>
+<td align="center">打印字符串</td>
+<td align="center">print (‘this string’)</td>
+</tr>
+<tr>
+<td align="center">raise</td>
+<td align="center">出错后引发异常</td>
+<td align="center">raise ValueError(“No”)</td>
+</tr>
+<tr>
+<td align="center">return</td>
+<td align="center">退出函数并返回一个返回值</td>
+<td align="center">def X(): return Y</td>
+</tr>
+<tr>
+<td align="center">try</td>
+<td align="center">尝试执行代码块，出错后转到except</td>
+<td align="center">try: pass</td>
+</tr>
+<tr>
+<td align="center">while</td>
+<td align="center">While循环</td>
+<td align="center">while X: pass</td>
+</tr>
+<tr>
+<td align="center">with</td>
+<td align="center">将表达式作为一个变量，然后执行代码块</td>
+<td align="center">with X as Y: pass</td>
+</tr>
+<tr>
+<td align="center">yield</td>
+<td align="center">暂停函数，返回到调用函数的代码中</td>
+<td align="center">def X(): yield Y; X().next()</td>
+</tr>
+</tbody></table>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">描述</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">True</td>
+<td align="center">布尔值“真”</td>
+<td align="center">True or False == True</td>
+</tr>
+<tr>
+<td align="center">False</td>
+<td align="center">布尔值“假”</td>
+<td align="center">False and True == False</td>
+</tr>
+<tr>
+<td align="center">None</td>
+<td align="center">表示 “不存在” 或者”没有值”</td>
+<td align="center">x = None</td>
+</tr>
+<tr>
+<td align="center">bytes</td>
+<td align="center">字节串存储，可能是文本、PNG图片、文件等</td>
+<td align="center">x = b’hello’</td>
+</tr>
+<tr>
+<td align="center">strings</td>
+<td align="center">存储文本信息</td>
+<td align="center">x = ‘hello’</td>
+</tr>
+<tr>
+<td align="center">numbers</td>
+<td align="center">存储整数</td>
+<td align="center">i = 100</td>
+</tr>
+<tr>
+<td align="center">Floats</td>
+<td align="center">存储十进制数</td>
+<td align="center">i = 10.389</td>
+</tr>
+<tr>
+<td align="center">lists</td>
+<td align="center">存储列表</td>
+<td align="center">j = [1,2,3,4]</td>
+</tr>
+<tr>
+<td align="center">dicts</td>
+<td align="center">存储 键-值 映射</td>
+<td align="center">e = {‘x’: 1, ‘y’: 2}</td>
+</tr>
+</tbody></table>
+<h3 id="字符串转义序列"><a href="#字符串转义序列" class="headerlink" title="字符串转义序列"></a>字符串转义序列</h3><table>
+<thead>
+<tr>
+<th align="center">转义符</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\\</td>
+<td align="center">反斜杠</td>
+</tr>
+<tr>
+<td align="center">\‘</td>
+<td align="center">单引号</td>
+</tr>
+<tr>
+<td align="center">\“</td>
+<td align="center">双引号</td>
+</tr>
+<tr>
+<td align="center">\a</td>
+<td align="center">响铃</td>
+</tr>
+<tr>
+<td align="center">\b</td>
+<td align="center">退格符</td>
+</tr>
+<tr>
+<td align="center">\f</td>
+<td align="center">表单填充符</td>
+</tr>
+<tr>
+<td align="center">\n</td>
+<td align="center">换行符</td>
+</tr>
+<tr>
+<td align="center">\r</td>
+<td align="center">回车</td>
+</tr>
+<tr>
+<td align="center">\t</td>
+<td align="center">制表符</td>
+</tr>
+<tr>
+<td align="center">\v</td>
+<td align="center">垂直制表符</td>
+</tr>
+</tbody></table>
+<h3 id="老式字符串格式"><a href="#老式字符串格式" class="headerlink" title="老式字符串格式"></a>老式字符串格式</h3><p>python2用这些格式化字符实现f字符串的功能</p>
+<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">描述</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%d</td>
+<td align="center">十进制整数（非浮点数）</td>
+<td align="center">“%d” % 45 == ‘45’</td>
+</tr>
+<tr>
+<td align="center">%i</td>
+<td align="center">与%d相同</td>
+<td align="center">“%i” % 45 == ‘45’</td>
+</tr>
+<tr>
+<td align="center">%o</td>
+<td align="center">八进制数</td>
+<td align="center">“%o” % 1000 == ‘1750’</td>
+</tr>
+<tr>
+<td align="center">%u</td>
+<td align="center">无符号整数</td>
+<td align="center">“%u” % -1000 == ‘-1000’</td>
+</tr>
+<tr>
+<td align="center">%x</td>
+<td align="center">小写十六进制数</td>
+<td align="center">“%x” % 1000 == ‘3e8’</td>
+</tr>
+<tr>
+<td align="center">%X</td>
+<td align="center">大写十六进制数</td>
+<td align="center">“%X” % 1000 == ‘3E8’</td>
+</tr>
+<tr>
+<td align="center">%e</td>
+<td align="center">指数表示，小写 ‘e’</td>
+<td align="center">“%e” % 1000 == ‘1.000000e+03’</td>
+</tr>
+<tr>
+<td align="center">%E</td>
+<td align="center">指数表示，大写 ‘e’</td>
+<td align="center">“%E” % 1000 == ‘1.000000E+03’</td>
+</tr>
+<tr>
+<td align="center">%f</td>
+<td align="center">浮点数</td>
+<td align="center">“%f” % 10.34 == ‘10.340000’</td>
+</tr>
+<tr>
+<td align="center">%F</td>
+<td align="center">与%f相同</td>
+<td align="center">“%F” % 10.34 == ‘10.340000’</td>
+</tr>
+<tr>
+<td align="center">%g</td>
+<td align="center">%f 或者 %e中较短的一个</td>
+<td align="center">“%g” % 10.34 == ‘10.34’</td>
+</tr>
+<tr>
+<td align="center">%G</td>
+<td align="center">%F 或者 %E中较短的一个</td>
+<td align="center">“%G” % 10.34 == ‘10.34’</td>
+</tr>
+<tr>
+<td align="center">%c</td>
+<td align="center">字符格式</td>
+<td align="center">“%c” % 34 == ‘“‘</td>
+</tr>
+<tr>
+<td align="center">%r</td>
+<td align="center">Repr格式（调试格式）</td>
+<td align="center">“%r” % <code>int == &quot;&lt;type &#39;int&#39;&gt;&quot;</code></td>
+</tr>
+<tr>
+<td align="center">%s</td>
+<td align="center">字符串格式</td>
+<td align="center">“%s there” % ‘hi’ == ‘hi there’</td>
+</tr>
+<tr>
+<td align="center">%%</td>
+<td align="center">百分号%</td>
+<td align="center">“%g%%” % 10.34 == ‘10.34%’</td>
+</tr>
+</tbody></table>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">描述</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">加</td>
+<td align="center">2 + 4 = 6</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">减</td>
+<td align="center">2 - 4 = -2</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">乘</td>
+<td align="center">2 * 4 = 8</td>
+</tr>
+<tr>
+<td align="center">**</td>
+<td align="center">幂乘</td>
+<td align="center">2 ** 4 = 16</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="center">除</td>
+<td align="center">2 / 4 == 0.5</td>
+</tr>
+<tr>
+<td align="center">//</td>
+<td align="center">除后向下取整</td>
+<td align="center">2 // 4 = 0</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="center">字符串翻译，或者求余数</td>
+<td align="center">2 % 4 = 2</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">小于</td>
+<td align="center">4 &lt; 4 == False</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">大于</td>
+<td align="center">4 &gt; 4 == False</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">小于等于</td>
+<td align="center">4 &lt;= 4 == True</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">大于等于</td>
+<td align="center">4 &gt;= 4 == True</td>
+</tr>
+<tr>
+<td align="center">==</td>
+<td align="center">等于，比较操作对象是否相等</td>
+<td align="center">4 == 5 == False</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="center">不等于</td>
+<td align="center">4 != 5 == True</td>
+</tr>
+<tr>
+<td align="center">&lt;&gt;</td>
+<td align="center">不等于</td>
+<td align="center">4 &lt;&gt; 5 == True</td>
+</tr>
+<tr>
+<td align="center">( )</td>
+<td align="center">括号</td>
+<td align="center">len(‘hi’) == 2</td>
+</tr>
+<tr>
+<td align="center">[ ]</td>
+<td align="center">列表括号</td>
+<td align="center">[1,3,4]</td>
+</tr>
+<tr>
+<td align="center">{ }</td>
+<td align="center">花括号</td>
+<td align="center">{‘x’: 5, ‘y’: 10}</td>
+</tr>
+<tr>
+<td align="center">@</td>
+<td align="center">修饰器符</td>
+<td align="center">@classmethod</td>
+</tr>
+<tr>
+<td align="center">,</td>
+<td align="center">逗号</td>
+<td align="center">range(0, 10)</td>
+</tr>
+<tr>
+<td align="center">:</td>
+<td align="center">冒号</td>
+<td align="center">def X():</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="center">点</td>
+<td align="center">self.x = 10</td>
+</tr>
+<tr>
+<td align="center">=</td>
+<td align="center">赋值</td>
+<td align="center">x = 10</td>
+</tr>
+<tr>
+<td align="center">;</td>
+<td align="center">分号</td>
+<td align="center">print (“hi”); print (“there”)</td>
+</tr>
+<tr>
+<td align="center">+=</td>
+<td align="center">加等于</td>
+<td align="center">x = 1; x += 2</td>
+</tr>
+<tr>
+<td align="center">-=</td>
+<td align="center">减等于</td>
+<td align="center">x = 1; x -= 2</td>
+</tr>
+<tr>
+<td align="center">*=</td>
+<td align="center">乘等于</td>
+<td align="center">x = 1; x *= 2</td>
+</tr>
+<tr>
+<td align="center">/=</td>
+<td align="center">除等于</td>
+<td align="center">x = 1; x /= 2</td>
+</tr>
+<tr>
+<td align="center">//=</td>
+<td align="center">整除等于</td>
+<td align="center">x = 1; x //= 2</td>
+</tr>
+<tr>
+<td align="center">%=</td>
+<td align="center">模除等于</td>
+<td align="center">x = 1; x %= 2</td>
+</tr>
+<tr>
+<td align="center">**=</td>
+<td align="center">幂乘等于</td>
+<td align="center">x = 1; x **= 2</td>
+</tr>
+</tbody></table>
 <hr>
 
       
@@ -260,7 +726,7 @@
     
     <br>
     <strong>本文链接：</strong>
-    https://jainervam.github.io/2020/08/04/%E5%85%A5%E9%97%A8Python-%E2%80%9C%E7%AC%A8%E6%96%B9%E6%B3%95%E2%80%9D%E5%AD%A6Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/
+    https://jainervam.github.io/2020/08/07/PythonHard3/
     <br>
     <strong>版权声明：</strong>
     本作品采用
@@ -316,11 +782,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -376,7 +842,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/08/04/%E5%85%A5%E9%97%A8Python-%E2%80%9C%E7%AC%A8%E6%96%B9%E6%B3%95%E2%80%9D%E5%AD%A6Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/08/07/PythonHard3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -390,18 +856,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/08/07/%E5%85%A5%E9%97%A8Python-%E2%80%9C%E7%AC%A8%E6%96%B9%E6%B3%95%E2%80%9D%E5%AD%A6Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/08/08/PythonHard4/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          入门Python--“笨方法”学Python学习笔记(3)
+          入门Python--“笨方法”学Python学习笔记(4)
         
       </div>
     </a>
   
   
-    <a href="/2020/08/03/PythonHard1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(1)</div>
+    <a href="/2020/08/04/PythonHard2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(2)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -428,7 +894,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题13-参数、解包和变量"><span class="toc-number">2.</span> <span class="toc-text">习题13 参数、解包和变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题14-提示和传递"><span class="toc-number">3.</span> <span class="toc-text">习题14 提示和传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题15-读取文件"><span class="toc-number">4.</span> <span class="toc-text">习题15 读取文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题16-读写文件"><span class="toc-number">5.</span> <span class="toc-text">习题16 读写文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题17-更多文件操作"><span class="toc-number">6.</span> <span class="toc-text">习题17 更多文件操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题18-命名、变量、代码和函数"><span class="toc-number">7.</span> <span class="toc-text">习题18 命名、变量、代码和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题19-函数和变量"><span class="toc-number">8.</span> <span class="toc-text">习题19 函数和变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题20-函数和文件"><span class="toc-number">9.</span> <span class="toc-text">习题20 函数和文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题21-函数可以返回某些东西"><span class="toc-number">10.</span> <span class="toc-text">习题21 函数可以返回某些东西</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题22"><span class="toc-number">11.</span> <span class="toc-text">习题22</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题23-字符串、字节串和字符编码"><span class="toc-number">12.</span> <span class="toc-text">习题23 字符串、字节串和字符编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题24-更多的练习"><span class="toc-number">13.</span> <span class="toc-text">习题24 更多的练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题25-更多更多的练习"><span class="toc-number">14.</span> <span class="toc-text">习题25 更多更多的练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题26-恭喜你，现在可以考试了！"><span class="toc-number">15.</span> <span class="toc-text">习题26 恭喜你，现在可以考试了！</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题27-记住逻辑关系"><span class="toc-number">2.</span> <span class="toc-text">习题27 记住逻辑关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题28-布尔表达式练习"><span class="toc-number">3.</span> <span class="toc-text">习题28 布尔表达式练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题29-if语句"><span class="toc-number">4.</span> <span class="toc-text">习题29 if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题30-else和if"><span class="toc-number">5.</span> <span class="toc-text">习题30 else和if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题31-做出决定"><span class="toc-number">6.</span> <span class="toc-text">习题31 做出决定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题32-循环和列表"><span class="toc-number">7.</span> <span class="toc-text">习题32 循环和列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题33-while循环"><span class="toc-number">8.</span> <span class="toc-text">习题33 while循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题34-访问列表的元素"><span class="toc-number">9.</span> <span class="toc-text">习题34 访问列表的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题35-分支和函数"><span class="toc-number">10.</span> <span class="toc-text">习题35 分支和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题36-设计和调试"><span class="toc-number">11.</span> <span class="toc-text">习题36 设计和调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句的规则"><span class="toc-number">11.1.</span> <span class="toc-text">if语句的规则:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-number">11.2.</span> <span class="toc-text">调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题37-复习各种符号"><span class="toc-number">12.</span> <span class="toc-text">习题37 复习各种符号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">12.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">12.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串转义序列"><span class="toc-number">12.3.</span> <span class="toc-text">字符串转义序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#老式字符串格式"><span class="toc-number">12.4.</span> <span class="toc-text">老式字符串格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">12.5.</span> <span class="toc-text">运算符</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -569,11 +1035,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -581,19 +1043,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">latex</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
