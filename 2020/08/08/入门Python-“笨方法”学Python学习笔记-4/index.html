@@ -16,7 +16,7 @@
 <meta property="og:description" content="这里是我自己在习题13-习题26的笔记，方便以后查阅。主要内容为文件操作、函数等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-22T17:32:08.188Z">
+<meta property="article:modified_time" content="2020-08-22T17:33:34.411Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="软件">
@@ -227,14 +227,25 @@
 <li>• (<strong>urllib库</strong>)[<a href="https://www.cnblogs.com/xtznb/p/10960396.html]" target="_blank" rel="noopener">https://www.cnblogs.com/xtznb/p/10960396.html]</a></li>
 <li>• <strong>count():</strong> <code>str.count(sub, start= 0,end=len(string))</code>返回子字符串在字符串中出现的次数</li>
 <li>• <code>str.capitalize()</code>将字符串的第一个字母变成大写,其他字母变小写</li>
-<li>• <strong>range()函数:</strong> 返回的是一个可迭代对象（类型是对象）<br><code>range(start, stop[, step])</code><br>参数说明：<br>start: 计数从 start 开始。默认是从 0 开始<br>stop: 计数到 stop 结束，但不包括 stop<br>step：步长，默认为1</li>
+<li>• <strong>range()函数:</strong> 返回的是一个可迭代对象（类型是对象）<br><code>range(start, stop[, step])</code><ol>
+<li>参数说明：</li>
+<li>start: 计数从 start 开始。默认是从 0 开始</li>
+<li>stop: 计数到 stop 结束，但不包括 stop</li>
+<li>step：步长，默认为1</li>
+</ol>
+</li>
 <li>• <code>str.replace(old, new[, max])</code>把字符串中的 ol（旧字符串) 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次</li>
 </ol>
 </li>
 <li><code>result = sentence[:]</code>是 Python 中复制列表的方法。用列表切片（list slicing）的语法[:]将列表从头到尾每个元素切片出来并创建一个新列表</li>
 </ol>
 <h2 id="习题42-对象、类及从属关系"><a href="#习题42-对象、类及从属关系" class="headerlink" title="习题42 对象、类及从属关系"></a>习题42 对象、类及从属关系</h2><ol>
-<li><strong>super()函数:</strong> <code>super(type[, object-or-type])</code>调用父类(超类)的一个方法<br>参数说明：<br>type: 类<br>object-or-type: 类，一般是 self</li>
+<li><strong>super()函数:</strong> <code>super(type[, object-or-type])</code>调用父类(超类)的一个方法<ol>
+<li>参数说明：</li>
+<li>type: 类</li>
+<li>object-or-type: 类，一般是 self</li>
+</ol>
+</li>
 <li>Python3中，类名后面不需要加（object），但Python圈的人相信“显式优于隐式”</li>
 <li><code>self.pet = None</code>确保类的 self.pet 属性被设置为默认None</li>
 </ol>
