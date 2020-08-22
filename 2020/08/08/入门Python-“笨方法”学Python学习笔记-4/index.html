@@ -16,7 +16,7 @@
 <meta property="og:description" content="这里是我自己在习题13-习题26的笔记，方便以后查阅。主要内容为文件操作、函数等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-22T17:30:05.841Z">
+<meta property="article:modified_time" content="2020-08-22T17:32:08.188Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="软件">
@@ -223,10 +223,14 @@
 <h2 id="习题41-学习面向对象术语"><a href="#习题41-学习面向对象术语" class="headerlink" title="习题41 学习面向对象术语"></a>习题41 学习面向对象术语</h2><ol>
 <li><strong>专有词汇</strong><br>• 类（class）：告诉python创建新类型的东西<br>• 对象（object）：两个意思，即最基本的东西，或者某样东西的实例<br>• 实例（instance）：这是让python创建一个类时得到的东西<br>• def：这是在类里定义函数的方法<br>• self：在类的函数中，self指代被访问的对象或者实例的一个变量<br>• 继承（inheritance)： 指一个类可以继承另一个类的特性，和父子关系类似<br>• 组合（composition）：指一个类可以将别的类作为它的部件构建起来，有点像车子和车轮的关系<br>• 属性（attribute）：类的一个属性，它来自于组合，而且通常是一个变量<br>• 是什么（is-a): 用来描述继承关系，如 Salmon is-a Fish<br>• 有什么（has-a）：用来描述某个东西是由另外一些东西组成，或者某个东西有某特征，如Salmon has-a mouth</li>
 <li><strong>措辞练习</strong><br>• class X(Y): 创建一个叫X的类，它是Y的一种<br>• class X(object): def__init__(self, J): 类X有一个<strong>init</strong>, 它接收self和J作为参数<br>• class X(object): def M(self, J）: 类X有一个名为M的函数，它接收self和J作为参数<br>• foo = X(): 将foo设为类X的一个实例<br>• foo.M(J): 从foo中找到M的函数，并使用self和J参数调用它<br>• foo.K = Q: 从foo中获取K属性，并将其设为Q</li>
-<li>代码中的一些函数<br>• (<strong>urllib库</strong>)[<a href="https://www.cnblogs.com/xtznb/p/10960396.html]" target="_blank" rel="noopener">https://www.cnblogs.com/xtznb/p/10960396.html]</a><br>• <strong>count():</strong> <code>str.count(sub, start= 0,end=len(string))</code>返回子字符串在字符串中出现的次数<br>• <code>str.capitalize()</code>将字符串的第一个字母变成大写,其他字母变小写<br>• <strong>range()函数:</strong> 返回的是一个可迭代对象（类型是对象）<br><code>range(start, stop[, step])</code><br>参数说明：<br>  start: 计数从 start 开始。默认是从 0 开始<br>  stop: 计数到 stop 结束，但不包括 stop<br>  step：步长，默认为1</li>
+<li><strong>代码中的一些函数</strong><ol>
+<li>• (<strong>urllib库</strong>)[<a href="https://www.cnblogs.com/xtznb/p/10960396.html]" target="_blank" rel="noopener">https://www.cnblogs.com/xtznb/p/10960396.html]</a></li>
+<li>• <strong>count():</strong> <code>str.count(sub, start= 0,end=len(string))</code>返回子字符串在字符串中出现的次数</li>
+<li>• <code>str.capitalize()</code>将字符串的第一个字母变成大写,其他字母变小写</li>
+<li>• <strong>range()函数:</strong> 返回的是一个可迭代对象（类型是对象）<br><code>range(start, stop[, step])</code><br>参数说明：<br>start: 计数从 start 开始。默认是从 0 开始<br>stop: 计数到 stop 结束，但不包括 stop<br>step：步长，默认为1</li>
+<li>• <code>str.replace(old, new[, max])</code>把字符串中的 ol（旧字符串) 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次</li>
 </ol>
-<p>• <code>str.replace(old, new[, max])</code>把字符串中的 ol（旧字符串) 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次</p>
-<ol start="4">
+</li>
 <li><code>result = sentence[:]</code>是 Python 中复制列表的方法。用列表切片（list slicing）的语法[:]将列表从头到尾每个元素切片出来并创建一个新列表</li>
 </ol>
 <h2 id="习题42-对象、类及从属关系"><a href="#习题42-对象、类及从属关系" class="headerlink" title="习题42 对象、类及从属关系"></a>习题42 对象、类及从属关系</h2><ol>
