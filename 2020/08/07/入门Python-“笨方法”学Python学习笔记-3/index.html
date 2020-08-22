@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
   <title>入门Python--“笨方法”学Python学习笔记(3) | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="继续学～干巴爹">
+  <meta name="description" content="这里是我自己在习题27-习题37的笔记，方便以后查阅。主要内容为逻辑关系、if语句、循环语句、调试等。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="入门Python--“笨方法”学Python学习笔记(3)">
 <meta property="og:url" content="https://jainervam.github.io/2020/08/07/%E5%85%A5%E9%97%A8Python-%E2%80%9C%E7%AC%A8%E6%96%B9%E6%B3%95%E2%80%9D%E5%AD%A6Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="继续学～干巴爹">
+<meta property="og:description" content="这里是我自己在习题27-习题37的笔记，方便以后查阅。主要内容为逻辑关系、if语句、循环语句、调试等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-18T11:37:16.388Z">
+<meta property="article:modified_time" content="2020-08-22T17:08:33.644Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="软件">
@@ -186,11 +186,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>继续学～干巴爹</p>
+        <p>这里是我自己在习题27-习题37的笔记，方便以后查阅。主要内容为逻辑关系、if语句、循环语句、调试等。</p>
 <a id="more"></a>
 
+<h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>“笨方法”学Python 3</p>
+<p>代码链接：<a href="https://pan.baidu.com/s/1bxJqLEMQPzGJeGpOHx3-Iw" target="_blank" rel="noopener">https://pan.baidu.com/s/1bxJqLEMQPzGJeGpOHx3-Iw</a><br>提取码：9z0o</p>
 <h2 id="习题27-记住逻辑关系"><a href="#习题27-记住逻辑关系" class="headerlink" title="习题27 记住逻辑关系"></a>习题27 记住逻辑关系</h2><p>逻辑术语<br>• <code>and</code> 与<br>• <code>or</code> 或<br>• <code>not</code> 非<br>• <code>!=</code> 不等于<br>• <code>==</code> 等于<br>• <code>&gt;=</code> 大于等于<br>• <code>&lt;=</code> 小于等于<br>• <code>True</code> 真<br>• <code>False</code> 假</p>
-<h2 id="习题28-布尔表达式练习"><a href="#习题28-布尔表达式练习" class="headerlink" title="习题28 布尔表达式练习"></a>习题28 布尔表达式练习</h2><p><code>&quot;test&quot; and &quot;test&quot;</code> 返回 <code>&quot;test&quot;</code>， <code>1 and 1</code> 返回 <code>1</code>，而不是返回 True 呢: Python 和很多语言一样，都是给布尔表达式返回两个被操作对象中的一个，而非True 或 False 。这意味着如果你写了 False and 1 ，你得到的是第一个操作字元(False)，而非第二个字元(1)。但如果写 True and 1，得到的是第二个操作数（1）。emmm</p>
+<h2 id="习题28-布尔表达式练习"><a href="#习题28-布尔表达式练习" class="headerlink" title="习题28 布尔表达式练习"></a>习题28 布尔表达式练习</h2><p><code>&quot;test&quot; and &quot;test&quot;</code> 返回 <code>&quot;test&quot;</code>， <code>1 and 1</code> 返回 <code>1</code>，而不是返回 True:<br>Python 和很多语言一样，都是给布尔表达式返回两个被操作对象中的一个，而非True 或 False 。这意味着如果你写了 False and 1 ，你得到的是第一个操作字元(False)，而非第二个字元(1)。但如果写 True and 1，得到的是第二个操作数（1）。emmm</p>
 <h2 id="习题29-if语句"><a href="#习题29-if语句" class="headerlink" title="习题29 if语句"></a>习题29 if语句</h2><p><strong>注意缩进！！！</strong>python的规则里，只要一行以冒号（:）结尾，他接下来的内容就应该有缩进</p>
 <h2 id="习题30-else和if"><a href="#习题30-else和if" class="headerlink" title="习题30 else和if"></a>习题30 else和if</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> cars &gt; people:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"We should take the cars."</span>)</span><br><span class="line">elif cars &lt; people:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"We should not take the cars."</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"We can't decide."</span>)</span><br></pre></td></tr></table></figure>
 
@@ -892,7 +894,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#习题27-记住逻辑关系"><span class="toc-number">1.</span> <span class="toc-text">习题27 记住逻辑关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题28-布尔表达式练习"><span class="toc-number">2.</span> <span class="toc-text">习题28 布尔表达式练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题29-if语句"><span class="toc-number">3.</span> <span class="toc-text">习题29 if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题30-else和if"><span class="toc-number">4.</span> <span class="toc-text">习题30 else和if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题31-做出决定"><span class="toc-number">5.</span> <span class="toc-text">习题31 做出决定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题32-循环和列表"><span class="toc-number">6.</span> <span class="toc-text">习题32 循环和列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题33-while循环"><span class="toc-number">7.</span> <span class="toc-text">习题33 while循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题34-访问列表的元素"><span class="toc-number">8.</span> <span class="toc-text">习题34 访问列表的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题35-分支和函数"><span class="toc-number">9.</span> <span class="toc-text">习题35 分支和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题36-设计和调试"><span class="toc-number">10.</span> <span class="toc-text">习题36 设计和调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句的规则"><span class="toc-number">10.1.</span> <span class="toc-text">if语句的规则:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-number">10.2.</span> <span class="toc-text">调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题37-复习各种符号"><span class="toc-number">11.</span> <span class="toc-text">习题37 复习各种符号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">11.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">11.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串转义序列"><span class="toc-number">11.3.</span> <span class="toc-text">字符串转义序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#老式字符串格式"><span class="toc-number">11.4.</span> <span class="toc-text">老式字符串格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">11.5.</span> <span class="toc-text">运算符</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题27-记住逻辑关系"><span class="toc-number">2.</span> <span class="toc-text">习题27 记住逻辑关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题28-布尔表达式练习"><span class="toc-number">3.</span> <span class="toc-text">习题28 布尔表达式练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题29-if语句"><span class="toc-number">4.</span> <span class="toc-text">习题29 if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题30-else和if"><span class="toc-number">5.</span> <span class="toc-text">习题30 else和if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题31-做出决定"><span class="toc-number">6.</span> <span class="toc-text">习题31 做出决定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题32-循环和列表"><span class="toc-number">7.</span> <span class="toc-text">习题32 循环和列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题33-while循环"><span class="toc-number">8.</span> <span class="toc-text">习题33 while循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题34-访问列表的元素"><span class="toc-number">9.</span> <span class="toc-text">习题34 访问列表的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题35-分支和函数"><span class="toc-number">10.</span> <span class="toc-text">习题35 分支和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题36-设计和调试"><span class="toc-number">11.</span> <span class="toc-text">习题36 设计和调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句的规则"><span class="toc-number">11.1.</span> <span class="toc-text">if语句的规则:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-number">11.2.</span> <span class="toc-text">调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题37-复习各种符号"><span class="toc-number">12.</span> <span class="toc-text">习题37 复习各种符号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">12.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">12.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串转义序列"><span class="toc-number">12.3.</span> <span class="toc-text">字符串转义序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#老式字符串格式"><span class="toc-number">12.4.</span> <span class="toc-text">老式字符串格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">12.5.</span> <span class="toc-text">运算符</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -1033,10 +1035,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">公式</a>
               </li>
              
@@ -1046,6 +1044,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">latex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
