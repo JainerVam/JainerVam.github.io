@@ -16,7 +16,7 @@
 <meta property="og:description" content="这里是我自己在习题50的笔记，方便以后查阅。主要内容为创建网站。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-09-05T08:48:07.576Z">
+<meta property="article:modified_time" content="2020-09-05T08:50:57.688Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="软件">
 <meta property="article:tag" content="code">
@@ -201,9 +201,12 @@
 <p>打开网址 <a href="http://127.0.0.1:5000/" target="_blank" rel="noopener">http://127.0.0.1:5000/</a> 会显示 Hello,World!<br>可以按CTRL+C退出，为避免锁死问题，把最后一行<code>app.run()</code>换成<code>app.run(threaded=True)</code></p>
 <h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><p>设置环境变量：<code>$env:FLASK_DEBUG=1</code>，再运行 python app.py ，有调试PIN。但这种方法在网上运行不安全。</p>
 <h4 id="创建模版文件"><a href="#创建模版文件" class="headerlink" title="创建模版文件"></a>创建模版文件</h4><p>创建 templates/index.html 文件，内容如下：</p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;<span class="name">title</span>&gt;</span>Gothons Of Planet Percal #25<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> greeting %&#125;</span><span class="xml">:</span></span><br><span class="line"><span class="xml">    I just wanted to say</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">em</span> <span class="attr">style</span>=<span class="string">"color: green; font-size: 2em;"</span>&gt;</span></span><span class="template-variable">&#123;&#123; greeting &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">em</span>&gt;</span>.</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">else</span></span> %&#125;</span><span class="xml">:</span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">em</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">em</span>&gt;</span>, world!</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;<span class="name">title</span>&gt;</span>Gothons Of Planet Percal #25<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> greeting %&#125;</span><span class="xml">: # 可执行代码</span></span><br><span class="line"><span class="xml">    I just wanted to say</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">em</span> <span class="attr">style</span>=<span class="string">"color: green; font-size: 2em;"</span>&gt;</span></span><span class="template-variable">&#123;&#123; greeting &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">em</span>&gt;</span>.</span></span><br><span class="line"><span class="xml">    # </span><span class="template-variable">&#123;&#123; &#125;&#125;</span><span class="xml"> 要转换为HTML输出文本的变量</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">else</span></span> %&#125;</span><span class="xml">:</span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">em</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">em</span>&gt;</span>, world!</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
+<p>修改app.py：<br>引入新函数：<code>from flask import render_template</code><br>修改以下函数：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def index():</span><br><span class="line">    greeting = <span class="string">"World"</span></span><br><span class="line">    # <span class="keyword">return</span> f<span class="string">'Hello, &#123;greeting&#125;!'</span></span><br><span class="line">    <span class="keyword">return</span> render_template(<span class="string">"index.html"</span>,greeting = greeting) # 返回了render.templates() ，并且将 greeting 变量作为参数传递给了 index 函数</span><br><span class="line">    # <span class="keyword">return</span> <span class="string">'Hello,World!'</span></span><br></pre></td></tr></table></figure>
 
+<p>后面的内容感觉我不太用得到，先不学了233，有时间了再看吧</p>
 <hr>
 
       
@@ -346,9 +349,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/09/04/PythonHard6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          入门Python--“笨方法”学Python学习笔记(6)
+        
+      </div>
+    </a>
   
-    <a href="/2020/09/04/PythonHard6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(6)</div>
+  
+    <a href="/2020/08/25/PythonHard5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(5)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -516,7 +528,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,7 +540,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
