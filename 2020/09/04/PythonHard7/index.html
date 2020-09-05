@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>入门Python--“笨方法”学Python学习笔记(6) | JanierVan</title>
+  <title>入门Python--“笨方法”学Python学习笔记(7) | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里是我自己在习题50-习题52的笔记，方便以后查阅。主要内容为测试、异常、进阶编程。">
+  <meta name="description" content="这里是我自己在习题50的笔记，方便以后查阅。主要内容为创建网站。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="入门Python--“笨方法”学Python学习笔记(6)">
+<meta property="og:title" content="入门Python--“笨方法”学Python学习笔记(7)">
 <meta property="og:url" content="https://jainervam.github.io/2020/09/04/PythonHard7/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="这里是我自己在习题50-习题52的笔记，方便以后查阅。主要内容为测试、异常、进阶编程。">
+<meta property="og:description" content="这里是我自己在习题50的笔记，方便以后查阅。主要内容为创建网站。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-09-05T08:13:55.630Z">
+<meta property="article:modified_time" content="2020-09-05T08:48:07.576Z">
 <meta property="article:author" content="JanierVan">
-<meta property="article:tag" content="code">
 <meta property="article:tag" content="软件">
+<meta property="article:tag" content="code">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
   
@@ -173,7 +173,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      入门Python--“笨方法”学Python学习笔记(6)
+      入门Python--“笨方法”学Python学习笔记(7)
     </h1>
   
 
@@ -186,19 +186,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这里是我自己在习题50-习题52的笔记，方便以后查阅。主要内容为测试、异常、进阶编程。</p>
+        <p>这里是我自己在习题50的笔记，方便以后查阅。主要内容为创建网站。</p>
 <a id="more"></a>
 
-<h2 id="习题50-你的第一个网站"><a href="#习题50-你的第一个网站" class="headerlink" title="习题50 你的第一个网站"></a>习题50 你的第一个网站</h2><p>先进入虚拟环境：<code>.\.venvs\lpthw\Scripts\activate</code><br>安装Web框架（这里使用flask框架）：<code>pip install flask</code><br>查看安装的列表：<code>pip list</code></p>
-<p>创建一个项目，项目目录使用flask<br>首先创建一个项目目录</p>
+<h2 id="习题50-你的第一个网站"><a href="#习题50-你的第一个网站" class="headerlink" title="习题50 你的第一个网站"></a>习题50 你的第一个网站</h2><h4 id="安装flask"><a href="#安装flask" class="headerlink" title="安装flask"></a>安装flask</h4><p>先进入虚拟环境：<code>.\.venvs\lpthw\Scripts\activate</code><br>安装Web框架（这里使用flask框架）：<code>pip install flask</code><br>查看安装的列表：<code>pip list</code></p>
+<h4 id="创建一个项目"><a href="#创建一个项目" class="headerlink" title="创建一个项目"></a>创建一个项目</h4><p>创建一个项目，项目目录使用flask</p>
+<p>首先创建一个项目目录</p>
 <figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd projects <span class="comment"># 自己的目录</span></span><br><span class="line">mkdir gothonweb <span class="comment"># 项目名字是gothonweb</span></span><br><span class="line">cd gothonweb</span><br><span class="line">mkdir bin gothonweb tests docs templates <span class="comment"># 分开创建</span></span><br><span class="line">new-item -type file gothonweb/__init__.py <span class="comment"># 新建文件</span></span><br><span class="line">new-item -type file tests/__init__.py</span><br></pre></td></tr></table></figure>
 
 <p>创建一个最基本的flask应用程序 app.py，放入 /gothonweb 目录下</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">  app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">  @app.route('/')</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span>:</span></span><br><span class="line">      <span class="keyword">return</span> <span class="string">'Hello,World!'</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">      app.run()</span><br></pre></td></tr></table></figure>
-<p>运行这个Web应用程序：<code>python app.py</code><br>显示</p>
+<p>运行这个Web应用程序：<code>python app.py</code><br>显示如下内容：</p>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* Serving Flask app "app" (lazy loading)</span><br><span class="line"> * Environment: production</span><br><span class="line">   <span class="built_in">WARNING</span>: This <span class="keyword">is</span> a development <span class="keyword">server</span>. <span class="keyword">Do</span> <span class="keyword">not</span> use it <span class="keyword">in</span> a production deployment.</span><br><span class="line">   Use a production WSGI <span class="keyword">server</span> <span class="keyword">instead</span>.</span><br><span class="line"> * <span class="keyword">Debug</span> mode: <span class="keyword">off</span></span><br><span class="line"> * Running <span class="keyword">on</span> http://<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5000</span>/ (Press CTRL+C <span class="keyword">to</span> quit)</span><br></pre></td></tr></table></figure>
 <p>打开网址 <a href="http://127.0.0.1:5000/" target="_blank" rel="noopener">http://127.0.0.1:5000/</a> 会显示 Hello,World!<br>可以按CTRL+C退出，为避免锁死问题，把最后一行<code>app.run()</code>换成<code>app.run(threaded=True)</code></p>
-<p>调试：<br>设置环境变量：<code>$env:FLASK_DEBUG=1</code><br>再运行 python app.py 有调试PIN</p>
+<h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><p>设置环境变量：<code>$env:FLASK_DEBUG=1</code>，再运行 python app.py ，有调试PIN。但这种方法在网上运行不安全。</p>
+<h4 id="创建模版文件"><a href="#创建模版文件" class="headerlink" title="创建模版文件"></a>创建模版文件</h4><p>创建 templates/index.html 文件，内容如下：</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;<span class="name">title</span>&gt;</span>Gothons Of Planet Percal #25<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> greeting %&#125;</span><span class="xml">:</span></span><br><span class="line"><span class="xml">    I just wanted to say</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">em</span> <span class="attr">style</span>=<span class="string">"color: green; font-size: 2em;"</span>&gt;</span></span><span class="template-variable">&#123;&#123; greeting &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">em</span>&gt;</span>.</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">else</span></span> %&#125;</span><span class="xml">:</span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">em</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">em</span>&gt;</span>, world!</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+
 <hr>
 
       
@@ -263,11 +268,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -341,18 +346,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/09/04/PythonHard6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          入门Python--“笨方法”学Python学习笔记(6)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/08/25/PythonHard5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(5)</div>
+    <a href="/2020/09/04/PythonHard6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(6)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -379,7 +375,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#习题50-你的第一个网站"><span class="toc-number">1.</span> <span class="toc-text">习题50 你的第一个网站</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#习题50-你的第一个网站"><span class="toc-number">1.</span> <span class="toc-text">习题50 你的第一个网站</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装flask"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装flask</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建一个项目"><span class="toc-number">1.0.2.</span> <span class="toc-text">创建一个项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#调试"><span class="toc-number">1.0.3.</span> <span class="toc-text">调试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建模版文件"><span class="toc-number">1.0.4.</span> <span class="toc-text">创建模版文件</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -508,18 +504,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">code</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">公式</a>
               </li>
              
@@ -533,6 +517,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
               </li>
              
               <li class="article-tag-list-item">
