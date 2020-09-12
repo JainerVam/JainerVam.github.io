@@ -16,7 +16,7 @@
 <meta property="og:description" content="NP完全问题在实际应用也很常见，对于NP完全问题，是否存在解决其的有效算法是未知的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-09-12T13:53:32.442Z">
+<meta property="article:modified_time" content="2020-09-12T13:57:22.069Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="基础知识">
 <meta property="article:tag" content="NP问题">
@@ -191,7 +191,7 @@
 <p>转载自：<a href="https://blog.csdn.net/qq_21768483/article/details/80430590" target="_blank" rel="noopener">https://blog.csdn.net/qq_21768483/article/details/80430590</a></p>
 <p>在讲P类问题之前先介绍两个个概念：多项式，时间复杂度。</p>
 <ol>
-<li>多项式：$$ a<em>x^n-b</em>x^{n-1}+c $$</li>
+<li>多项式：$$ ax^n-bx^{n-1}+c $$</li>
 <li>时间复杂度：我们知道在计算机算法求解问题当中，经常用时间复杂度和空间复杂度来表示一个算法的运行效率。<strong>空间复杂度</strong>表示一个算法在计算过程当中要占用的内存空间大小，这里暂不讨论。<strong>时间复杂度</strong>则表示这个算法运行得到想要的解所需的计算工作量，他探讨的是当输入值接近无穷时，算法所需工作量的变化快慢程度。</li>
 </ol>
 <p>举个例子：冒泡排序。</p>
@@ -218,13 +218,13 @@
 <p>(PS :网络上经常有人说，这不是个NP问题吗，其实很多时候他们说的应该是NPC问题，而不是NP问题)</p>
 <p>为了证明这个千古难题，科学家想出了很多办法。其中之一就是问题的约化。所谓问题约化就是，可以用问题B的算法来解决A ，我们就说问题A可以约化成问题B。举个例子，一元一次方程的求解，跟二元一次方程的求解，我们知道，只要能求解二元一次方程，那就可以用二元一次方程的解法来求解一元一次方程，只需要将一元一次方程加上y，并附加一个方程y=0就可以将一元一次方程变形为一个二元一次方程，然后用二元一次方程的解法来求解这个方程。注意，这里二元一次方程的解法会比一元一次的复杂。所以我们说，只需要找到解二元一次方程的规则性解法，那就能用这个规则性解法来求解一元一次方程。从这里也可以看出，约化是具有传递性的，如A约化到B，B约化到C，A就可以约化到C，同时不断约化下去，我们会发现一个很惊人的特性，就是他一定会存在一个最大的问题，而我们只需要解决了这个问题，那其下的所有问题也就解决啦！这就是我们所说的NPC问题的概念！！！</p>
 <p>引到NP问题里就是，对于同一类的所有的NP类问题，若他们都可以在多项式时间内约化成最难的一个NP类问题，（我们直观的认为，被约化成的问题应具有比前一个问题更复杂的时间复杂度）当我们针对这个时间复杂度最高的超级NP问题要是能找到他的多项式时间算法的话，那就等于变向的证明了其下的所有问题都是存在多项式算法的，即NP=P！！！！给出NPC问题定义。</p>
-<h3 id="NPC类问题（Nondeterminism-Polynomial-complete）"><a href="#NPC类问题（Nondeterminism-Polynomial-complete）" class="headerlink" title="NPC类问题（Nondeterminism Polynomial complete）"></a>NPC类问题（Nondeterminism Polynomial complete）</h3><p>存在这样一个NP问题，所有的NP问题都可以约化成它。换句话说，只要解决了这个问题，那么所有的NP问题都解决了。其定义要满足2个条件： </p>
+<h2 id="NPC类问题（Nondeterminism-Polynomial-complete）"><a href="#NPC类问题（Nondeterminism-Polynomial-complete）" class="headerlink" title="NPC类问题（Nondeterminism Polynomial complete）"></a>NPC类问题（Nondeterminism Polynomial complete）</h2><p>存在这样一个NP问题，所有的NP问题都可以约化成它。换句话说，只要解决了这个问题，那么所有的NP问题都解决了。其定义要满足2个条件： </p>
 <ol>
 <li>首先，它得是一个NP问题；</li>
 <li>然后，所有的NP问题都可以约化到它。</li>
 </ol>
 <p>要证明npc问题的思路就是：先证明它至少是一个NP问题，再证明其中一个已知的NPC问题能约化到它。</p>
-<h3 id="NP难问题（NP-hard问题）"><a href="#NP难问题（NP-hard问题）" class="headerlink" title="NP难问题（NP-hard问题）"></a>NP难问题（NP-hard问题）</h3><p>NP-Hard问题是这样一种问题，它满足NPC问题定义的第二条但不一定要满足第一条（就是说，NP-Hard问题要比 NPC问题的范围广，NP-Hard问题没有限定属于NP），即所有的NP问题都能约化到它，但是他不一定是一个NP问题。</p>
+<h2 id="NP难问题（NP-hard问题）"><a href="#NP难问题（NP-hard问题）" class="headerlink" title="NP难问题（NP-hard问题）"></a>NP难问题（NP-hard问题）</h2><p>NP-Hard问题是这样一种问题，它满足NPC问题定义的第二条但不一定要满足第一条（就是说，NP-Hard问题要比 NPC问题的范围广，NP-Hard问题没有限定属于NP），即所有的NP问题都能约化到它，但是他不一定是一个NP问题。</p>
 <h2 id="NP-Hard问题同样难以找到多项式的算法，但它不列入我们的研究范围，因为它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。"><a href="#NP-Hard问题同样难以找到多项式的算法，但它不列入我们的研究范围，因为它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。" class="headerlink" title="NP-Hard问题同样难以找到多项式的算法，但它不列入我们的研究范围，因为它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。"></a>NP-Hard问题同样难以找到多项式的算法，但它不列入我们的研究范围，因为它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。</h2>
       
 
@@ -372,8 +372,8 @@
     </a>
   
   
-    <a href="/2020/09/04/PythonHard7/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(7)</div>
+    <a href="/2020/09/04/PythonHard6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(6)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -400,7 +400,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#P类问题"><span class="toc-number">1.</span> <span class="toc-text">P类问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NP类问题"><span class="toc-number">2.</span> <span class="toc-text">NP类问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NPC类问题（Nondeterminism-Polynomial-complete）"><span class="toc-number">2.1.</span> <span class="toc-text">NPC类问题（Nondeterminism Polynomial complete）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NP难问题（NP-hard问题）"><span class="toc-number">2.2.</span> <span class="toc-text">NP难问题（NP-hard问题）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NP-Hard问题同样难以找到多项式的算法，但它不列入我们的研究范围，因为它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。"><span class="toc-number">3.</span> <span class="toc-text">NP-Hard问题同样难以找到多项式的算法，但它不列入我们的研究范围，因为它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#P类问题"><span class="toc-number">1.</span> <span class="toc-text">P类问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NP类问题"><span class="toc-number">2.</span> <span class="toc-text">NP类问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NPC类问题（Nondeterminism-Polynomial-complete）"><span class="toc-number">3.</span> <span class="toc-text">NPC类问题（Nondeterminism Polynomial complete）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NP难问题（NP-hard问题）"><span class="toc-number">4.</span> <span class="toc-text">NP难问题（NP-hard问题）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NP-Hard问题同样难以找到多项式的算法，但它不列入我们的研究范围，因为它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。"><span class="toc-number">5.</span> <span class="toc-text">NP-Hard问题同样难以找到多项式的算法，但它不列入我们的研究范围，因为它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -558,14 +558,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ANN</a>
               </li>
              
@@ -578,11 +570,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">latex</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -598,11 +598,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日常</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
