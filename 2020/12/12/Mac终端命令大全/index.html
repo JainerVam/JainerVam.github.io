@@ -16,7 +16,7 @@
 <meta property="og:description" content="买了Mac快一年了还没整明白终端命令操作，做个备忘，方便查阅。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-12T14:26:51.093Z">
+<meta property="article:modified_time" content="2020-12-12T14:33:24.841Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="基础知识">
 <meta property="article:tag" content="mac">
@@ -188,16 +188,456 @@
         <p>买了Mac快一年了还没整明白终端命令操作，做个备忘，方便查阅。</p>
 <a id="more"></a>
 
-<h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><p>命令名｜功能描述｜使用举例<br>mkdir｜创建一个目录｜mkdir dirname<br>rmdir｜删除一个目录｜rmdir dirname<br>mvdir｜移动或重命名一个目录｜mvdir dir1 dir2<br>cd｜进入指定目录｜cd dirname<br>pwd｜显示当前目录的路径名｜pwd<br>ls｜显示当前目录的内容｜ls -la<br>dircmp｜比较两个目录的内容｜dircmp dir1 dir2</p>
-<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><p>命令名｜功能描述｜使用举例<br>cat｜显示或连接文件｜cat filename<br>pg｜分页格式化显示文件内容｜pg filename<br>more｜分屏显示文件内容｜more filename<br>od｜显示非文本文件的内容｜od -c filename<br>cp｜复制文件或目录｜cp file1 file2<br>rm｜删除文件或目录｜rm filename<br>mv｜改变文件名或所在目录｜mv file1 file2<br>ln｜联接文件｜ln -s file1 file2<br>find｜使用匹配表达式查找文件｜find . -name “*.c” -print<br>file｜显示文件类型｜file filename<br>open｜使用默认的程序打开文件｜open filename</p>
-<h2 id="选择操作"><a href="#选择操作" class="headerlink" title="选择操作"></a>选择操作</h2><p>命令名｜功能描述｜使用举例<br>head｜显示文件的最初几行｜head -20 filename<br>tail｜显示文件的最后几行｜tail -15 filename<br>cut｜显示文件每行中的某些域｜cut -f1,7 -d: /etc/passwd<br>colrm｜从标准输入中删除若干列｜colrm 8 20 file2<br>paste｜横向连接文件｜paste file1 file2<br>diff｜比较并显示两个文件的差异｜diff file1 file2<br>sed｜非交互方式流编辑器｜sed “s/red/green/g” filename<br>grep｜在文件中按模式查找｜grep “^[a-zA-Z]” filename<br>awk｜在文件中查找并处理模式｜awk ‘{print $1 $1}’ filename<br>sort｜排序或归并文件｜sort -d -f -u file1<br>uniq｜去掉文件中的重复行｜uniq file1 file2<br>comm｜显示两有序文件的公共和非公共行｜comm file1 file2<br>wc｜统计文件的字符数、词数和行数｜wc filename<br>nl｜给文件加上行号｜nl file1 &gt;file2</p>
-<h2 id="安全操作"><a href="#安全操作" class="headerlink" title="安全操作"></a>安全操作</h2><p>命令名｜功能描述｜使用举例<br>passwd｜修改用户密码｜passwd<br>chmod｜改变文件或目录的权限｜chmod ug+x filename<br>umask｜定义创建文件的权限掩码｜umask 027<br>chown｜改变文件或目录的属主｜chown newowner filename<br>chgrp｜改变文件或目录的所属组｜chgrp staff filename<br>xlock｜给终端上锁｜xlock -remote</p>
-<h2 id="编程操作"><a href="#编程操作" class="headerlink" title="编程操作"></a>编程操作</h2><p>命令名｜功能描述｜使用举例<br>make｜维护可执行程序的最新版本｜make<br>touch｜更新文件的访问和修改时间｜touch -m 05202400 filename<br>dbx｜命令行界面调试工具｜dbx a.out<br>xde｜图形用户界面调试工具｜xde a.out</p>
-<h2 id="进程操作"><a href="#进程操作" class="headerlink" title="进程操作"></a>进程操作</h2><p>命令名｜功能描述｜使用举例<br>ps｜显示进程当前状态｜ps u<br>kill｜终止进程｜kill -9 30142<br>nice｜改变待执行命令的优先级｜nice cc -c *.c<br>renice｜改变已运行进程的优先级｜renice +20 32768</p>
-<h2 id="时间操作"><a href="#时间操作" class="headerlink" title="时间操作"></a>时间操作</h2><p>命令名｜功能描述｜使用举例<br>date｜显示系统的当前日期和时间｜date<br>cal｜显示日历｜cal 8 1996<br>time｜统计程序的执行时间｜time a.out</p>
-<h2 id="网络与通信操作"><a href="#网络与通信操作" class="headerlink" title="网络与通信操作"></a>网络与通信操作</h2><p>命令名｜功能描述｜使用举例<br>telnet｜远程登录｜telnet hpc.sp.net.edu.cn<br>rlogin｜远程登录｜rlogin hostname -l username<br>rsh｜在远程主机执行指定命令｜rsh f01n03 date<br>ftp｜在本地主机与远程主机之间传输文件｜ftp ftp.sp.net.edu.cn<br>rcp｜在本地主机与远程主机 之间复制文件｜rcp file1 host1:file2<br>ping｜给一个网络主机发送 回应请求｜ping hpc.sp.net.edu.cn<br>mail｜阅读和发送电子邮件｜mail<br>write｜给另一用户发送报文｜write username pts/1<br>mesg｜允许或拒绝接收报文｜mesg n</p>
-<h2 id="Korn-Shell-命令"><a href="#Korn-Shell-命令" class="headerlink" title="Korn Shell 命令"></a>Korn Shell 命令</h2><p>命令名｜功能描述｜使用举例<br>history｜列出最近执行过的 几条命令及编号｜history<br>r｜重复执行最近执行过的 某条命令｜r -2<br>alias｜给某个命令定义别名｜alias del=rm -i<br>unalias｜取消对某个别名的定义｜unalias del</p>
-<h2 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h2><p>命令名｜功能描述｜使用举例<br>uname｜显示操作系统的有关信息｜uname -a<br>clear｜清除屏幕或窗口内容｜clear<br>env｜显示当前所有设置过的环境变量｜env<br>who｜列出当前登录的所有用户｜who<br>whoami｜显示当前正进行操作的用户名｜whoami<br>tty｜显示终端或伪终端的名称｜tty<br>stty｜显示或重置控制键定义｜stty -a<br>du｜查询磁盘使用情况｜du -k subdir<br>df｜显示文件系统的总空间和可用空间｜df /tmp<br>w｜显示当前系统活动的总信息｜w</p>
+<h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">mkdir</td>
+<td align="center">创建一个目录</td>
+<td align="center">mkdir dirname</td>
+</tr>
+<tr>
+<td align="center">rmdir</td>
+<td align="center">删除一个目录</td>
+<td align="center">rmdir dirname</td>
+</tr>
+<tr>
+<td align="center">mvdir</td>
+<td align="center">移动或重命名一个目录</td>
+<td align="center">mvdir dir1 dir2</td>
+</tr>
+<tr>
+<td align="center">cd</td>
+<td align="center">进入指定目录</td>
+<td align="center">cd dirname</td>
+</tr>
+<tr>
+<td align="center">pwd</td>
+<td align="center">显示当前目录的路径名</td>
+<td align="center">pwd</td>
+</tr>
+<tr>
+<td align="center">ls</td>
+<td align="center">显示当前目录的内容</td>
+<td align="center">ls -la</td>
+</tr>
+<tr>
+<td align="center">dircmp</td>
+<td align="center">比较两个目录的内容</td>
+<td align="center">dircmp dir1 dir2</td>
+</tr>
+</tbody></table>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">cat</td>
+<td align="center">显示或连接文件</td>
+<td align="center">cat filename</td>
+</tr>
+<tr>
+<td align="center">pg</td>
+<td align="center">分页格式化显示文件内容</td>
+<td align="center">pg filename</td>
+</tr>
+<tr>
+<td align="center">more</td>
+<td align="center">分屏显示文件内容</td>
+<td align="center">more filename</td>
+</tr>
+<tr>
+<td align="center">od</td>
+<td align="center">显示非文本文件的内容</td>
+<td align="center">od -c filename</td>
+</tr>
+<tr>
+<td align="center">cp</td>
+<td align="center">复制文件或目录</td>
+<td align="center">cp file1 file2</td>
+</tr>
+<tr>
+<td align="center">rm</td>
+<td align="center">删除文件或目录</td>
+<td align="center">rm filename</td>
+</tr>
+<tr>
+<td align="center">mv</td>
+<td align="center">改变文件名或所在目录</td>
+<td align="center">mv file1 file2</td>
+</tr>
+<tr>
+<td align="center">ln</td>
+<td align="center">联接文件</td>
+<td align="center">ln -s file1 file2</td>
+</tr>
+<tr>
+<td align="center">find</td>
+<td align="center">使用匹配表达式查找文件</td>
+<td align="center">find . -name “*.c” -print</td>
+</tr>
+<tr>
+<td align="center">file</td>
+<td align="center">显示文件类型</td>
+<td align="center">file filename</td>
+</tr>
+<tr>
+<td align="center">open</td>
+<td align="center">使用默认的程序打开文件</td>
+<td align="center">open filename</td>
+</tr>
+</tbody></table>
+<h2 id="选择操作"><a href="#选择操作" class="headerlink" title="选择操作"></a>选择操作</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">head</td>
+<td align="center">显示文件的最初几行</td>
+<td align="center">head -20 filename</td>
+</tr>
+<tr>
+<td align="center">tail</td>
+<td align="center">显示文件的最后几行</td>
+<td align="center">tail -15 filename</td>
+</tr>
+<tr>
+<td align="center">cut</td>
+<td align="center">显示文件每行中的某些域</td>
+<td align="center">cut -f1,7 -d: /etc/passwd</td>
+</tr>
+<tr>
+<td align="center">colrm</td>
+<td align="center">从标准输入中删除若干列</td>
+<td align="center">colrm 8 20 file2</td>
+</tr>
+<tr>
+<td align="center">paste</td>
+<td align="center">横向连接文件</td>
+<td align="center">paste file1 file2</td>
+</tr>
+<tr>
+<td align="center">diff</td>
+<td align="center">比较并显示两个文件的差异</td>
+<td align="center">diff file1 file2</td>
+</tr>
+<tr>
+<td align="center">sed</td>
+<td align="center">非交互方式流编辑器</td>
+<td align="center">sed “s/red/green/g” filename</td>
+</tr>
+<tr>
+<td align="center">grep</td>
+<td align="center">在文件中按模式查找</td>
+<td align="center">grep “^[a-zA-Z]” filename</td>
+</tr>
+<tr>
+<td align="center">awk</td>
+<td align="center">在文件中查找并处理模式</td>
+<td align="center">awk ‘{print $1 $1}’ filename</td>
+</tr>
+<tr>
+<td align="center">sort</td>
+<td align="center">排序或归并文件</td>
+<td align="center">sort -d -f -u file1</td>
+</tr>
+<tr>
+<td align="center">uniq</td>
+<td align="center">去掉文件中的重复行</td>
+<td align="center">uniq file1 file2</td>
+</tr>
+<tr>
+<td align="center">comm</td>
+<td align="center">显示两有序文件的公共和非公共行</td>
+<td align="center">comm file1 file2</td>
+</tr>
+<tr>
+<td align="center">wc</td>
+<td align="center">统计文件的字符数、词数和行数</td>
+<td align="center">wc filename</td>
+</tr>
+<tr>
+<td align="center">nl</td>
+<td align="center">给文件加上行号</td>
+<td align="center">nl file1 &gt;file2</td>
+</tr>
+</tbody></table>
+<h2 id="安全操作"><a href="#安全操作" class="headerlink" title="安全操作"></a>安全操作</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">passwd</td>
+<td align="center">修改用户密码</td>
+<td align="center">passwd</td>
+</tr>
+<tr>
+<td align="center">chmod</td>
+<td align="center">改变文件或目录的权限</td>
+<td align="center">chmod ug+x filename</td>
+</tr>
+<tr>
+<td align="center">umask</td>
+<td align="center">定义创建文件的权限掩码</td>
+<td align="center">umask 027</td>
+</tr>
+<tr>
+<td align="center">chown</td>
+<td align="center">改变文件或目录的属主</td>
+<td align="center">chown newowner filename</td>
+</tr>
+<tr>
+<td align="center">chgrp</td>
+<td align="center">改变文件或目录的所属组</td>
+<td align="center">chgrp staff filename</td>
+</tr>
+<tr>
+<td align="center">xlock</td>
+<td align="center">给终端上锁</td>
+<td align="center">xlock -remote</td>
+</tr>
+</tbody></table>
+<h2 id="编程操作"><a href="#编程操作" class="headerlink" title="编程操作"></a>编程操作</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">make</td>
+<td align="center">维护可执行程序的最新版本</td>
+<td align="center">make</td>
+</tr>
+<tr>
+<td align="center">touch</td>
+<td align="center">更新文件的访问和修改时间</td>
+<td align="center">touch -m 05202400 filename</td>
+</tr>
+<tr>
+<td align="center">dbx</td>
+<td align="center">命令行界面调试工具</td>
+<td align="center">dbx a.out</td>
+</tr>
+<tr>
+<td align="center">xde</td>
+<td align="center">图形用户界面调试工具</td>
+<td align="center">xde a.out</td>
+</tr>
+</tbody></table>
+<h2 id="进程操作"><a href="#进程操作" class="headerlink" title="进程操作"></a>进程操作</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ps</td>
+<td align="center">显示进程当前状态</td>
+<td align="center">ps u</td>
+</tr>
+<tr>
+<td align="center">kill</td>
+<td align="center">终止进程</td>
+<td align="center">kill -9 30142</td>
+</tr>
+<tr>
+<td align="center">nice</td>
+<td align="center">改变待执行命令的优先级</td>
+<td align="center">nice cc -c *.c</td>
+</tr>
+<tr>
+<td align="center">renice</td>
+<td align="center">改变已运行进程的优先级</td>
+<td align="center">renice +20 32768</td>
+</tr>
+</tbody></table>
+<h2 id="时间操作"><a href="#时间操作" class="headerlink" title="时间操作"></a>时间操作</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">date</td>
+<td align="center">显示系统的当前日期和时间</td>
+<td align="center">date</td>
+</tr>
+<tr>
+<td align="center">cal</td>
+<td align="center">显示日历</td>
+<td align="center">cal 8 1996</td>
+</tr>
+<tr>
+<td align="center">time</td>
+<td align="center">统计程序的执行时间</td>
+<td align="center">time a.out</td>
+</tr>
+</tbody></table>
+<h2 id="网络与通信操作"><a href="#网络与通信操作" class="headerlink" title="网络与通信操作"></a>网络与通信操作</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">telnet</td>
+<td align="center">远程登录</td>
+<td align="center">telnet hpc.sp.net.edu.cn</td>
+</tr>
+<tr>
+<td align="center">rlogin</td>
+<td align="center">远程登录</td>
+<td align="center">rlogin hostname -l username</td>
+</tr>
+<tr>
+<td align="center">rsh</td>
+<td align="center">在远程主机执行指定命令</td>
+<td align="center">rsh f01n03 date</td>
+</tr>
+<tr>
+<td align="center">ftp</td>
+<td align="center">在本地主机与远程主机之间传输文件</td>
+<td align="center">ftp ftp.sp.net.edu.cn</td>
+</tr>
+<tr>
+<td align="center">rcp</td>
+<td align="center">在本地主机与远程主机 之间复制文件</td>
+<td align="center">rcp file1 host1:file2</td>
+</tr>
+<tr>
+<td align="center">ping</td>
+<td align="center">给一个网络主机发送 回应请求</td>
+<td align="center">ping hpc.sp.net.edu.cn</td>
+</tr>
+<tr>
+<td align="center">mail</td>
+<td align="center">阅读和发送电子邮件</td>
+<td align="center">mail</td>
+</tr>
+<tr>
+<td align="center">write</td>
+<td align="center">给另一用户发送报文</td>
+<td align="center">write username pts/1</td>
+</tr>
+<tr>
+<td align="center">mesg</td>
+<td align="center">允许或拒绝接收报文</td>
+<td align="center">mesg n</td>
+</tr>
+</tbody></table>
+<h2 id="Korn-Shell-命令"><a href="#Korn-Shell-命令" class="headerlink" title="Korn Shell 命令"></a>Korn Shell 命令</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">history</td>
+<td align="center">列出最近执行过的 几条命令及编号</td>
+<td align="center">history</td>
+</tr>
+<tr>
+<td align="center">r</td>
+<td align="center">重复执行最近执行过的 某条命令</td>
+<td align="center">r -2</td>
+</tr>
+<tr>
+<td align="center">alias</td>
+<td align="center">给某个命令定义别名</td>
+<td align="center">alias del=rm -i</td>
+</tr>
+<tr>
+<td align="center">unalias</td>
+<td align="center">取消对某个别名的定义</td>
+<td align="center">unalias del</td>
+</tr>
+</tbody></table>
+<h2 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h2><table>
+<thead>
+<tr>
+<th align="center">命令名</th>
+<th align="center">功能描述</th>
+<th align="center">使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">uname</td>
+<td align="center">显示操作系统的有关信息</td>
+<td align="center">uname -a</td>
+</tr>
+<tr>
+<td align="center">clear</td>
+<td align="center">清除屏幕或窗口内容</td>
+<td align="center">clear</td>
+</tr>
+<tr>
+<td align="center">env</td>
+<td align="center">显示当前所有设置过的环境变量</td>
+<td align="center">env</td>
+</tr>
+<tr>
+<td align="center">who</td>
+<td align="center">列出当前登录的所有用户</td>
+<td align="center">who</td>
+</tr>
+<tr>
+<td align="center">whoami</td>
+<td align="center">显示当前正进行操作的用户名</td>
+<td align="center">whoami</td>
+</tr>
+<tr>
+<td align="center">tty</td>
+<td align="center">显示终端或伪终端的名称</td>
+<td align="center">tty</td>
+</tr>
+<tr>
+<td align="center">stty</td>
+<td align="center">显示或重置控制键定义</td>
+<td align="center">stty -a</td>
+</tr>
+<tr>
+<td align="center">du</td>
+<td align="center">查询磁盘使用情况</td>
+<td align="center">du -k subdir</td>
+</tr>
+<tr>
+<td align="center">df</td>
+<td align="center">显示文件系统的总空间和可用空间</td>
+<td align="center">df /tmp</td>
+</tr>
+<tr>
+<td align="center">w</td>
+<td align="center">显示当前系统活动的总信息</td>
+<td align="center">w</td>
+</tr>
+</tbody></table>
 <p>作者：KeKeMars<br>链接：<a href="https://www.jianshu.com/p/3291de46f3ff" target="_blank" rel="noopener">https://www.jianshu.com/p/3291de46f3ff</a><br>来源：简书</p>
 
       
@@ -515,22 +955,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">code</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">公式</a>
               </li>
              
@@ -543,7 +967,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -551,11 +991,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -572,14 +1020,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
             
             <div class="clearfix"></div>
