@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>matlab中的集合运算函数 | JanierVan</title>
+  <title>Java语言概述 | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="matlab中的集合运算：交集、并集、差集等">
+  <meta name="description" content="范范的Java学习之路～这真的是初学者了，Matlab选手学什么都跟初学一样，太惨了ww。本章主要内容是JAVA的安装及环境的配置，以及JAVA编程的最最基础的知识。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="matlab中的集合运算函数">
-<meta property="og:url" content="https://jainervam.github.io/2020/10/13/matlabR/index.html">
+<meta property="og:title" content="Java语言概述">
+<meta property="og:url" content="https://jainervam.github.io/2020/12/13/javabase/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="matlab中的集合运算：交集、并集、差集等">
+<meta property="og:description" content="范范的Java学习之路～这真的是初学者了，Matlab选手学什么都跟初学一样，太惨了ww。本章主要内容是JAVA的安装及环境的配置，以及JAVA编程的最最基础的知识。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-10-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-10-13T14:23:25.153Z">
+<meta property="article:published_time" content="2020-12-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-29T17:19:55.085Z">
 <meta property="article:author" content="JanierVan">
-<meta property="article:tag" content="matlab">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="JanierVan" type="application/atom+xml">
@@ -164,32 +164,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-matlabR" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-javabase" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      matlab中的集合运算函数
+      Java语言概述
     </h1>
   
 
         
-        <a href="/2020/10/13/matlabR/" class="archive-article-date">
-  	<time datetime="2020-10-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-13</time>
+        <a href="/2020/12/13/javabase/" class="archive-article-date">
+  	<time datetime="2020-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>matlab中的集合运算：交集、并集、差集等</p>
+        <p>范范的Java学习之路～这真的是初学者了，Matlab选手学什么都跟初学一样，太惨了ww。本章主要内容是JAVA的安装及环境的配置，以及JAVA编程的最最基础的知识。</p>
 <a id="more"></a>
 
-<p>intersect(A, B)：集合交集，A和B均为向量<br>union(A, B) ：集合并集<br>setdiff(A, B) ：集合A减集合B的差集(如果集合A中的元素都在B中存在，则结果为空)<br>ismember(a, A) ：判断是否是集合中的元素<br>sort(A)：对向量进行排序<br>issorted(A)：判断集合是否有序<br>setxor ：集合异或(在并集但不在交集中的元素)<br>unique ：返回集合的不重复元素(去掉相同元素)<br>例：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">A = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">B = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">C = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">D = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span>ersect(A,B); % ans = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">union(A,B);     % ans = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">setdiff(A,B)    % ans = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">setdiff(A,C)    % ans = Empty matrix: <span class="number">1</span>-by<span class="number">-0</span></span><br><span class="line">ismember(<span class="number">1</span>,A);  % ans = <span class="number">1</span></span><br><span class="line">sort(C);        % ans = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">issorted(A);    % ans = <span class="number">1</span></span><br><span class="line">setxor(A,B);    % ans = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">unique(D);      % ans = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-<p>转载自：<a href="https://blog.csdn.net/shengchaohua163/article/details/78938955" target="_blank" rel="noopener">https://blog.csdn.net/shengchaohua163/article/details/78938955</a></p>
+<h2 id="Java安装和环境配置"><a href="#Java安装和环境配置" class="headerlink" title="Java安装和环境配置"></a>Java安装和环境配置</h2><p><a href="https://blog.csdn.net/super_vicky/article/details/81172892" target="_blank" rel="noopener">Mac下Java环境的安装与配置</a></p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>Java包含三种注释方法：</p>
+<ol>
+<li>单行注释<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单行注释；</span></span><br></pre></td></tr></table></figure></li>
+<li>多行注释<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">多行注释</span></span><br><span class="line"><span class="comment">哈哈哈</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>注</strong>：对于单行和多行注释，被注释的文字，不会被JVM（java虚拟机）解释执行。多行注释不可以嵌套使用。<br>3. 文档注释(Java特有)</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"><span class="doctag">@author</span>  指定java程序的作者</span></span><br><span class="line"><span class="comment"><span class="doctag">@version</span>  指定源文件的版本</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<p>用法：<code>javadoc -d mydocname -author -version FileName.java</code></p>
+<h2 id="Java程序的编写-编译-运行"><a href="#Java程序的编写-编译-运行" class="headerlink" title="Java程序的编写-编译-运行"></a>Java程序的编写-编译-运行</h2><p>编写：将编写的Java代码保存在以“.java”结尾的源文件中。<br>编译：使用javac.exe命令编译java源文件。格式：javac filename.java<br>运行：使用java.exe命令解释运行字节码文件。格式：java classname</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
+<li>在一个java源文件中可以声明多个class，但是最多只能有一个类声明为public，即与文件名相同的class。<br>编译后会生成一个或多个字节码文件，字节码文件名与class名相同。</li>
+<li>程序的入口是main方法，格式是固定的。<code>public static void main(String[] args)</code>或<code>public static void main(String args[])</code></li>
+<li>输出语句<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println<span class="literal">()</span>: <span class="comment">//先输出，后换行。括号内没有内容就是纯换行</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.print<span class="literal">()</span>:</span><br></pre></td></tr></table></figure></li>
+<li>每一个执行语句都以分号结束。</li>
+</ol>
 
       
 
@@ -201,7 +214,7 @@
     
     <br>
     <strong>本文链接：</strong>
-    https://jainervam.github.io/2020/10/13/matlabR/
+    https://jainervam.github.io/2020/12/13/javabase/
     <br>
     <strong>版权声明：</strong>
     本作品采用
@@ -253,7 +266,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -309,7 +322,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/10/13/matlabR/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/12/13/javabase/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,18 +336,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/10/13/matlabstruct/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/12/13/macbase/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          matlab中的数据结构
+          Mac终端基础
         
       </div>
     </a>
   
   
-    <a href="/2020/09/20/return/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">return的用法</div>
+    <a href="/2020/12/12/Mac%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac终端命令大全</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -361,7 +374,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java安装和环境配置"><span class="toc-number">1.</span> <span class="toc-text">Java安装和环境配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注释"><span class="toc-number">2.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java程序的编写-编译-运行"><span class="toc-number">3.</span> <span class="toc-text">Java程序的编写-编译-运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-number">4.</span> <span class="toc-text">其他</span></a></li></ol>
                     </div>
                 </span>
             </div>
