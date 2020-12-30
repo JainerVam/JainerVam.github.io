@@ -16,7 +16,7 @@
 <meta property="og:description" content="以笔记&#x2F;大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括关键字、变量、控制流程等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-30T10:45:09.669Z">
+<meta property="article:modified_time" content="2020-12-30T10:46:01.186Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -249,6 +249,28 @@
 <li><code>continue</code>：使用在循环结构中，结束当次循环。</li>
 <li>关键字后面不能声明执行语句。</li>
 </ol>
+<h2 id="数组概述"><a href="#数组概述" class="headerlink" title="数组概述"></a>数组概述</h2><ol>
+<li>数组中常见的概念：数组名，下标（索引），元素，数组的长度。</li>
+<li>数组是引用数据类型，数组的元素可以是任何数据类型。</li>
+<li>数组的长度确定后不能修改长度。</li>
+<li>数组分配空间后，数组元素会被隐式初始化。</li>
+</ol>
+<h2 id="二维数组初始化默认值"><a href="#二维数组初始化默认值" class="headerlink" title="二维数组初始化默认值"></a>二维数组初始化默认值</h2><ol>
+<li><code>int[][] arr = new int[4][3];</code><br> 外层元素的初始化值为：地址值<br> 内层元素的初始化值：与一维数组初始化情况相同</li>
+<li><code>int[][] arr = new int[4][];</code><br> 外层元素的初始化值为：null<br> 内层元素的初始化值：不能调用，空指针报错</li>
+</ol>
+<h2 id="数组中涉及的常见算法"><a href="#数组中涉及的常见算法" class="headerlink" title="数组中涉及的常见算法"></a>数组中涉及的常见算法</h2><ol>
+<li>数组元素的赋值(杨辉三角、回形数等)</li>
+<li>求数值型数组中元素的最大值、最小值、平均数、总和等</li>
+<li>数组的复制、赋值、反转、指定元素的查找(线性查找、二分法查找)</li>
+<li>数组元素的排序算法</li>
+</ol>
+<p>-衡量排序算法的优劣：时间复杂度、空间复杂度、稳定性<br>-排序的分类：内部排序、外部排序<br>-十大排序算法的时间复杂度</p>
+<h2 id="Arrays工具类的使用"><a href="#Arrays工具类的使用" class="headerlink" title="Arrays工具类的使用"></a>Arrays工具类的使用</h2><p>定义在<code>util</code>包内<br><code>boolean equals(int[] a,int[] b)</code>: 判断两个数组是否相等（两个数组大小相等，且下标相同的元素都对应相等）<br><code>String toString(int[] a)</code>: 输出数组信息<br><code>void fill(int[] a,int val)</code>: 将指定值填充到数组之中<br><code>void sort(int[] a)</code>: 对数组进行排序<br><code>int binarySearch(int[] a,int key)</code>: 对排序后的数组进行二分法检索指定的值</p>
+<h2 id="数组中常见的异常"><a href="#数组中常见的异常" class="headerlink" title="数组中常见的异常"></a>数组中常见的异常</h2><ol>
+<li><code>ArrayIndexOutOfBoundsException</code>：数组脚标越界异常</li>
+<li><code>NullPointerException</code>：空指针异常</li>
+</ol>
 
       
 
@@ -420,7 +442,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关键字和保留字"><span class="toc-number">1.</span> <span class="toc-text">关键字和保留字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标识符（Identifier）"><span class="toc-number">2.</span> <span class="toc-text">标识符（Identifier）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#按数据类型分类"><span class="toc-number">3.1.</span> <span class="toc-text">按数据类型分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串类型"><span class="toc-number">3.2.</span> <span class="toc-text">字符串类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义变量"><span class="toc-number">3.3.</span> <span class="toc-text">定义变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型之间的转换"><span class="toc-number">3.4.</span> <span class="toc-text">数据类型之间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强制类型转换"><span class="toc-number">3.5.</span> <span class="toc-text">强制类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于进制"><span class="toc-number">4.</span> <span class="toc-text">关于进制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">5.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制流程"><span class="toc-number">6.</span> <span class="toc-text">控制流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分支结构：if-else-switch-case"><span class="toc-number">6.1.</span> <span class="toc-text">分支结构：if-else, switch-case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环结构：for-while-do-while"><span class="toc-number">6.2.</span> <span class="toc-text">循环结构：for, while, do-while</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特殊关键字的使用：break-continue"><span class="toc-number">6.3.</span> <span class="toc-text">特殊关键字的使用：break, continue</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关键字和保留字"><span class="toc-number">1.</span> <span class="toc-text">关键字和保留字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标识符（Identifier）"><span class="toc-number">2.</span> <span class="toc-text">标识符（Identifier）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#按数据类型分类"><span class="toc-number">3.1.</span> <span class="toc-text">按数据类型分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串类型"><span class="toc-number">3.2.</span> <span class="toc-text">字符串类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义变量"><span class="toc-number">3.3.</span> <span class="toc-text">定义变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型之间的转换"><span class="toc-number">3.4.</span> <span class="toc-text">数据类型之间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强制类型转换"><span class="toc-number">3.5.</span> <span class="toc-text">强制类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于进制"><span class="toc-number">4.</span> <span class="toc-text">关于进制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">5.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制流程"><span class="toc-number">6.</span> <span class="toc-text">控制流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分支结构：if-else-switch-case"><span class="toc-number">6.1.</span> <span class="toc-text">分支结构：if-else, switch-case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环结构：for-while-do-while"><span class="toc-number">6.2.</span> <span class="toc-text">循环结构：for, while, do-while</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特殊关键字的使用：break-continue"><span class="toc-number">6.3.</span> <span class="toc-text">特殊关键字的使用：break, continue</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组概述"><span class="toc-number">7.</span> <span class="toc-text">数组概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二维数组初始化默认值"><span class="toc-number">8.</span> <span class="toc-text">二维数组初始化默认值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组中涉及的常见算法"><span class="toc-number">9.</span> <span class="toc-text">数组中涉及的常见算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Arrays工具类的使用"><span class="toc-number">10.</span> <span class="toc-text">Arrays工具类的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组中常见的异常"><span class="toc-number">11.</span> <span class="toc-text">数组中常见的异常</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -582,11 +604,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
