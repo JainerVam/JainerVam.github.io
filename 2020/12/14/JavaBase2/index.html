@@ -16,7 +16,7 @@
 <meta property="og:description" content="以笔记&#x2F;大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括关键字、变量、控制流程等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-29T17:47:47.199Z">
+<meta property="article:modified_time" content="2021-01-19T08:54:48.811Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -249,6 +249,17 @@
 <li><code>continue</code>：使用在循环结构中，结束当次循环。</li>
 <li>关键字后面不能声明执行语句。</li>
 </ol>
+<h3 id="return关键字"><a href="#return关键字" class="headerlink" title="return关键字"></a>return关键字</h3><ol>
+<li>使用范围：使用在方法体中</li>
+<li>作用：</li>
+</ol>
+<ul>
+<li>结束方法</li>
+<li>针对有返回值类型的方法，使用<code>return 数据</code>可以返回需要的数据。</li>
+</ul>
+<ol start="3">
+<li>return关键字后面不能声明执行语句。</li>
+</ol>
 
       
 
@@ -420,7 +431,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关键字和保留字"><span class="toc-number">1.</span> <span class="toc-text">关键字和保留字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标识符（Identifier）"><span class="toc-number">2.</span> <span class="toc-text">标识符（Identifier）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#按数据类型分类"><span class="toc-number">3.1.</span> <span class="toc-text">按数据类型分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串类型"><span class="toc-number">3.2.</span> <span class="toc-text">字符串类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义变量"><span class="toc-number">3.3.</span> <span class="toc-text">定义变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型之间的转换"><span class="toc-number">3.4.</span> <span class="toc-text">数据类型之间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强制类型转换"><span class="toc-number">3.5.</span> <span class="toc-text">强制类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于进制"><span class="toc-number">4.</span> <span class="toc-text">关于进制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">5.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制流程"><span class="toc-number">6.</span> <span class="toc-text">控制流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分支结构：if-else-switch-case"><span class="toc-number">6.1.</span> <span class="toc-text">分支结构：if-else, switch-case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环结构：for-while-do-while"><span class="toc-number">6.2.</span> <span class="toc-text">循环结构：for, while, do-while</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特殊关键字的使用：break-continue"><span class="toc-number">6.3.</span> <span class="toc-text">特殊关键字的使用：break, continue</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关键字和保留字"><span class="toc-number">1.</span> <span class="toc-text">关键字和保留字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标识符（Identifier）"><span class="toc-number">2.</span> <span class="toc-text">标识符（Identifier）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#按数据类型分类"><span class="toc-number">3.1.</span> <span class="toc-text">按数据类型分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串类型"><span class="toc-number">3.2.</span> <span class="toc-text">字符串类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义变量"><span class="toc-number">3.3.</span> <span class="toc-text">定义变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型之间的转换"><span class="toc-number">3.4.</span> <span class="toc-text">数据类型之间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强制类型转换"><span class="toc-number">3.5.</span> <span class="toc-text">强制类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于进制"><span class="toc-number">4.</span> <span class="toc-text">关于进制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">5.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制流程"><span class="toc-number">6.</span> <span class="toc-text">控制流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分支结构：if-else-switch-case"><span class="toc-number">6.1.</span> <span class="toc-text">分支结构：if-else, switch-case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环结构：for-while-do-while"><span class="toc-number">6.2.</span> <span class="toc-text">循环结构：for, while, do-while</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特殊关键字的使用：break-continue"><span class="toc-number">6.3.</span> <span class="toc-text">特殊关键字的使用：break, continue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#return关键字"><span class="toc-number">6.4.</span> <span class="toc-text">return关键字</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
