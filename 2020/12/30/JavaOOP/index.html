@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>Tag: matlab | JanierVan</title>
+  <title>面向对象编程 | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="西安交通大学研究生，港村佛系少女一枚，喜欢二次元、打游戏，每天都为嗑盐目标发愁的小菜鸡，我说我只会Matlab你信吗www">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JanierVan">
-<meta property="og:url" content="https://jainervam.github.io/tags/matlab/index.html">
+  <meta name="description" content="以笔记&#x2F;大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象编程">
+<meta property="og:url" content="https://jainervam.github.io/2020/12/30/JavaOOP/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="西安交通大学研究生，港村佛系少女一枚，喜欢二次元、打游戏，每天都为嗑盐目标发愁的小菜鸡，我说我只会Matlab你信吗www">
+<meta property="og:description" content="以笔记&#x2F;大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括等。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-19T08:38:46.578Z">
 <meta property="article:author" content="JanierVan">
-<meta property="article:tag" content="ANN">
-<meta property="article:tag" content="科研">
-<meta property="article:tag" content="code">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="JanierVan" type="application/atom+xml">
@@ -165,186 +164,252 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaOOP" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象编程
+    </h1>
+  
+
+        
+        <a href="/2020/12/30/JavaOOP/" class="archive-article-date">
+  	<time datetime="2020-12-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-30</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以笔记/大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括等。</p>
+<a id="more"></a>
+
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ol>
+<li>面向对象思想编程内容的三条主线(尚硅谷学Java课程)</li>
+</ol>
+<ul>
+<li>类及类的成员：属性、方法、构造器；代码块、内部类</li>
+<li>面向对象的三大特征：封装、继承、多态</li>
+<li>其它关键字：this,super,abstract,interface,static,final,package,import</li>
+</ul>
+<ol start="2">
+<li>面向对象中的两个重要概念：类和对象</li>
+</ol>
+<ul>
+<li>类：对一类事物的描述，抽象的、概念上的内容</li>
+<li>对象：实实在在存在的一个个体，也称为实例（instance）。<br>对象是由类派生出来的。</li>
+</ul>
+<h2 id="面向过程与面向对象"><a href="#面向过程与面向对象" class="headerlink" title="面向过程与面向对象"></a>面向过程与面向对象</h2><h3 id="面向过程（POP）与面向对象（OOP）"><a href="#面向过程（POP）与面向对象（OOP）" class="headerlink" title="面向过程（POP）与面向对象（OOP）"></a>面向过程（POP）与面向对象（OOP）</h3><ul>
+<li>面向过程：强调功能行为，关注怎么做。</li>
+<li>面向对象：强调具备功能的对象，以类/对象为最小单位，考虑谁来做。</li>
+</ul>
+<h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><p><strong>面向对象程序设计的重点是类的设计。类的设计，其实就是类的成员的设计。</strong></p>
+<ol>
+<li>常见的类的成员：<ol>
+<li>属性 = 成员变量 = field = 域、字段</li>
+<li>方法 = 成员方法 = method</li>
+</ol>
+</li>
+<li>类和对象的使用：<ol>
+<li>创建类、设计类的成员</li>
+<li>创建类的对象 = 类的实例化</li>
+<li>调用方法：“对象.属性”，“对象.方法”</li>
+</ol>
+</li>
+<li>区分属性/成员变量和局部变量：<ol>
+<li>相同点：变量的性质都有，定义格式、先声明后使用、作用域等</li>
+<li>不同点：<br>（1）在类中声明的位置不同。<br>（2）可以在声明属性时指名其权限，使用权限修饰符。常用的权限修饰符：private、public、缺省、protected等。<br>（3）默认初始化值：属性有，局部变量无。在使用局部变量时必须要显式赋值。<br>（4）在内存中加载的位置不同：局部变量在栈中。</li>
+</ol>
+</li>
+</ol>
+
+      
+
+
+  <div class="declare">
+    <strong>本文作者：</strong>
+    
+      JanierVan
+    
+    <br>
+    <strong>本文链接：</strong>
+    https://jainervam.github.io/2020/12/30/JavaOOP/
+    <br>
+    <strong>版权声明：</strong>
+    本作品采用
+    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    进行许可。转载请注明出处！
+    
+  </div>
+
+
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/30/MatlabRunTime/" class="archive-article-date">
-  	<time datetime="2020-10-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/30/MatlabRunTime/">matlab统计运行时间的四种方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/12/30/JavaOOP/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/13/MatlabR/" class="archive-article-date">
-  	<time datetime="2020-10-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/23/JavaBase3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java数组</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/13/MatlabR/">matlab中的集合运算函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面向过程与面向对象"><span class="toc-number">2.</span> <span class="toc-text">面向过程与面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#面向过程（POP）与面向对象（OOP）"><span class="toc-number">2.1.</span> <span class="toc-text">面向过程（POP）与面向对象（OOP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面向对象"><span class="toc-number">2.2.</span> <span class="toc-text">面向对象</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/13/MatlabStruct/" class="archive-article-date">
-  	<time datetime="2020-10-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-13</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/13/MatlabStruct/">matlab中的数据结构</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/16/MATLAB%E7%94%BB%E5%9B%BE/" class="archive-article-date">
-  	<time datetime="2020-07-16T13:31:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/16/MATLAB%E7%94%BB%E5%9B%BE/">MATLAB画图</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">嗑盐</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -381,9 +446,9 @@
 	var yiliaConfig = {
 		mathjax: [object Object],
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
