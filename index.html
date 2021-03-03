@@ -677,30 +677,32 @@
 
 
   
-    <article id="post-MatlabRunTime" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-return" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/30/MatlabRunTime/">matlab统计运行时间的四种方法</a>
+      <a class="article-title" href="/2020/09/20/return/">return的用法</a>
     </h1>
   
 
         
-        <a href="/2020/10/30/MatlabRunTime/" class="archive-article-date">
-  	<time datetime="2020-10-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-30</time>
+        <a href="/2020/09/20/return/" class="archive-article-date">
+  	<time datetime="2020-09-20T14:35:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在研究算法的过程中，除了要提高算法的精度，还要提高算法运行效率，这时候就用到统计运行时间了。Matlab有四种统计代码块运行时间的方法。</p>
-        
-          <a class="article-more-a" href="/2020/10/30/MatlabRunTime/#more">more >></a>
-        
+        <h2 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h2><p>表示从被调函数返回到主调函数继续执行，返回时可附带一个返回值，由return后面的参数指定。<br>return通常是必要的，因为函数调用的时候计算结果通常是通过返回值带出的。 如果函数执行不需要返回计算结果，也经常需要返回一个状态码来表示函数执行的顺利与否（-1和0就是最常用的状态码）， 主调函数可以通过返回值判断被调函数的执行情况。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>结束正在运行的函数，并返回函数值</p>
+<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>计算结果、一个状态码来表示函数执行的顺利与否（-1和0）</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>return之后，函数后面的部分将不再执行</p>
+<hr>
+
       
 
 
@@ -718,11 +720,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础知识</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">return</a>
         		</li>
       		
 		</ul>
@@ -732,7 +734,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/30/MatlabRunTime/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/09/20/return/">展开全文 >></a>
         </p>
       
 
@@ -765,29 +767,29 @@
 
 
   
-    <article id="post-MatlabR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Intro2Algorithm1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/13/MatlabR/">matlab中的集合运算函数</a>
+      <a class="article-title" href="/2020/09/12/Intro2Algorithm1/">算法导论学习笔记(1)</a>
     </h1>
   
 
         
-        <a href="/2020/10/13/MatlabR/" class="archive-article-date">
-  	<time datetime="2020-10-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-13</time>
+        <a href="/2020/09/12/Intro2Algorithm1/" class="archive-article-date">
+  	<time datetime="2020-09-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>matlab中的集合运算：交集、并集、差集等</p>
+        <p>一直跟别人说我是做算法做算法，不能连算法是个啥都不知道吧，该学的还是要学～现在还不知道能不能坚持学下去，如果我能多学几章的话，再做一个单独的汇总页233</p>
         
-          <a class="article-more-a" href="/2020/10/13/MatlabR/#more">more >></a>
+          <a class="article-more-a" href="/2020/09/12/Intro2Algorithm1/#more">more >></a>
         
       
 
@@ -806,7 +808,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -816,7 +822,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/13/MatlabR/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/09/12/Intro2Algorithm1/">展开全文 >></a>
         </p>
       
 
@@ -1009,15 +1015,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
