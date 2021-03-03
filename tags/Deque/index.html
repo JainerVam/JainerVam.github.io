@@ -6,21 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>入门Python--“笨方法”学Python学习笔记(6) | JanierVan</title>
+  <title>Tag: Deque | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里是我自己在习题48-习题49的笔记，方便以后查阅。主要内容为测试、异常、进阶编程。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="入门Python--“笨方法”学Python学习笔记(6)">
-<meta property="og:url" content="https://jainervam.github.io/2020/09/04/PythonHard6/index.html">
+  <meta name="description" content="西安交通大学研究生，港村佛系少女一枚，喜欢二次元、打游戏，每天都为嗑盐目标发愁的小菜鸡，我说我只会Matlab你信吗www">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JanierVan">
+<meta property="og:url" content="https://jainervam.github.io/tags/Deque/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="这里是我自己在习题48-习题49的笔记，方便以后查阅。主要内容为测试、异常、进阶编程。">
+<meta property="og:description" content="西安交通大学研究生，港村佛系少女一枚，喜欢二次元、打游戏，每天都为嗑盐目标发愁的小菜鸡，我说我只会Matlab你信吗www">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-09-04T11:24:16.874Z">
 <meta property="article:author" content="JanierVan">
+<meta property="article:tag" content="ANN">
+<meta property="article:tag" content="科研">
 <meta property="article:tag" content="code">
-<meta property="article:tag" content="软件">
-<meta property="article:tag" content="python">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="JanierVan" type="application/atom+xml">
@@ -164,262 +163,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-PythonHard6" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      入门Python--“笨方法”学Python学习笔记(6)
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/01/19/JavaQueue/" class="archive-article-date">
+  	<time datetime="2021-01-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-19</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/01/19/JavaQueue/">Java中的Queue和Deque</a>
     </h1>
   
 
-        
-        <a href="/2020/09/04/PythonHard6/" class="archive-article-date">
-  	<time datetime="2020-09-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里是我自己在习题48-习题49的笔记，方便以后查阅。主要内容为测试、异常、进阶编程。</p>
-<a id="more"></a>
-
-<h2 id="习题48-用户输入进阶"><a href="#习题48-用户输入进阶" class="headerlink" title="习题48 用户输入进阶"></a>习题48 用户输入进阶</h2><p>这一章不看<a href="http://ewm.ptpress.com.cn:8085/preview?qrCode=qr2018003662&verified=true" target="_blank" rel="noopener">视频</a>不好理解哇，多看几遍～</p>
-<p><strong>目的</strong>：处理用户用各种方法输入的短语，然后转化为计算机能读懂的东西</p>
-<p>首先创建允许使用的单词的词汇表</p>
-<h4 id="断句"><a href="#断句" class="headerlink" title="断句"></a>断句</h4><p>将句子定义为“空格隔开的单词”</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">stuff</span> = input(<span class="string">'&gt; '</span>)</span><br><span class="line"><span class="attr">words</span> = stuff.split()</span><br></pre></td></tr></table></figure>
-
-<h4 id="词汇元组"><a href="#词汇元组" class="headerlink" title="词汇元组"></a>词汇元组</h4><p><strong>元组(tuple)</strong>: 元组相当于一个不能修改的列表。创建它的方法和创建列表差不多，成员之间需要用逗号隔开，方括号要换成圆括号 () </p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">first_word</span> = (<span class="string">'direction'</span>, <span class="string">'north'</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="异常和数值"><a href="#异常和数值" class="headerlink" title="异常和数值"></a>异常和数值</h4><p><strong>目的</strong>：用异常解决错误输入</p>
-<p>处理异常的方法是使用 <code>try</code> 和 <code>except</code> 这两个关键字：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">convert_number</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> int(s)</span><br><span class="line">    <span class="keyword">except</span> ValueError:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
-
-<p>把要试着运行的代码放到 try 块里，再将<strong>出错后</strong>要运行的代码放到 except 块里。在这里，要试着调用 int() 去处理某个可能是数字的东西，如果中间出了错，我们就抓到这个错误，然后返回 None。</p>
-<h4 id="测试优先挑战"><a href="#测试优先挑战" class="headerlink" title="测试优先挑战"></a>测试优先挑战</h4><p>当还没想好代码实现，但已经想好代码的使用方式时，用测试优先。先写自动化测试，假装代码已经可以工作，然后写代码让测试通过。</p>
-<p>将”测试优先”和“伪代码”结合起来的编程流程：</p>
-<ol>
-<li>写一段测试代码 lexicon_tests.py，运行<code>nosetests .\lexicon_tests.py</code></li>
-<li>写出测试所需的函数/模块/类的骨架，一次改一点，让测试全部运行（注意字典的使用）</li>
-<li>在骨架中写注释，描述它的工作方式</li>
-<li>将注释换成代码，直到测试通过</li>
-<li>重复上述过程</li>
-</ol>
-<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><ol>
-<li>导致 ImportError 的原因：（1）在模块目录中没有创建 <strong>init</strong>.py；（2）在错误的目录中执行了 import；（3）拼写错误；（4）PYTHONPATH没有设置到，无法从当前目录加载模块</li>
-<li><code>try-except</code>和<code>if-else</code>：<code>try-except</code>仅用于处理模块抛出的异常，绝不能用作<code>if-else</code>的替代品</li>
-</ol>
-<h2 id="习题49-创建句子"><a href="#习题49-创建句子" class="headerlink" title="习题49 创建句子"></a>习题49 创建句子</h2><p>python 中的 assert（断言）函数：</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assert</span> expression</span><br><span class="line"></span><br><span class="line">等价于：</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> not expression:</span><br><span class="line">    raise AssertionError</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span><span class="constructor">_equal(<span class="params">result</span>, <span class="string">"noun"</span>)</span></span><br><span class="line"></span><br><span class="line">等价于</span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> <span class="string">"noun"</span><span class="operator"> == </span>result</span><br></pre></td></tr></table></figure>
-<p><code>assert_raises</code> 看不懂233</p>
-<hr>
-
-      
-
-
-  <div class="declare">
-    <strong>本文作者：</strong>
-    
-      JanierVan
-    
-    <br>
-    <strong>本文链接：</strong>
-    https://jainervam.github.io/2020/09/04/PythonHard6/
-    <br>
-    <strong>版权声明：</strong>
-    本作品采用
-    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
-    进行许可。转载请注明出处！
-    
-  </div>
-
-
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Queue</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Deque</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/09/04/PythonHard6/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/09/04/PythonHard7/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          入门Python--“笨方法”学Python学习笔记(7)
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/08/25/PythonHard5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(5)</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#习题48-用户输入进阶"><span class="toc-number">1.</span> <span class="toc-text">习题48 用户输入进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#断句"><span class="toc-number">1.0.1.</span> <span class="toc-text">断句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#词汇元组"><span class="toc-number">1.0.2.</span> <span class="toc-text">词汇元组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#异常和数值"><span class="toc-number">1.0.3.</span> <span class="toc-text">异常和数值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试优先挑战"><span class="toc-number">1.0.4.</span> <span class="toc-text">测试优先挑战</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常见问题"><span class="toc-number">1.0.5.</span> <span class="toc-text">常见问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题49-创建句子"><span class="toc-number">2.</span> <span class="toc-text">习题49 创建句子</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -456,9 +261,9 @@
 	var yiliaConfig = {
 		mathjax: [object Object],
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
