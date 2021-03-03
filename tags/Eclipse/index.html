@@ -6,21 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>入门Python--“笨方法”学Python学习笔记(3) | JanierVan</title>
+  <title>Tag: Eclipse | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里是我自己在习题27-习题37的笔记，方便以后查阅。主要内容为逻辑关系、if语句、循环语句、调试等。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="入门Python--“笨方法”学Python学习笔记(3)">
-<meta property="og:url" content="https://jainervam.github.io/2020/08/07/PythonHard3/index.html">
+  <meta name="description" content="西安交通大学研究生，港村佛系少女一枚，喜欢二次元、打游戏，每天都为嗑盐目标发愁的小菜鸡，我说我只会Matlab你信吗www">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JanierVan">
+<meta property="og:url" content="https://jainervam.github.io/tags/Eclipse/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="这里是我自己在习题27-习题37的笔记，方便以后查阅。主要内容为逻辑关系、if语句、循环语句、调试等。">
+<meta property="og:description" content="西安交通大学研究生，港村佛系少女一枚，喜欢二次元、打游戏，每天都为嗑盐目标发愁的小菜鸡，我说我只会Matlab你信吗www">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-22T17:57:33.521Z">
 <meta property="article:author" content="JanierVan">
+<meta property="article:tag" content="ANN">
+<meta property="article:tag" content="科研">
 <meta property="article:tag" content="code">
-<meta property="article:tag" content="软件">
-<meta property="article:tag" content="python">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="JanierVan" type="application/atom+xml">
@@ -164,757 +163,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-PythonHard3" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      入门Python--“笨方法”学Python学习笔记(3)
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/03/02/JavaEclipse/" class="archive-article-date">
+  	<time datetime="2021-03-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/03/02/JavaEclipse/">Eclipse快捷键总结</a>
     </h1>
   
 
-        
-        <a href="/2020/08/07/PythonHard3/" class="archive-article-date">
-  	<time datetime="2020-08-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里是我自己在习题27-习题37的笔记，方便以后查阅。主要内容为逻辑关系、if语句、循环语句、调试等。</p>
-<a id="more"></a>
-
-<h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>“笨方法”学Python 3</p>
-<p>代码链接：<a href="https://pan.baidu.com/s/1bxJqLEMQPzGJeGpOHx3-Iw" target="_blank" rel="noopener">https://pan.baidu.com/s/1bxJqLEMQPzGJeGpOHx3-Iw</a><br>提取码：9z0o</p>
-<h2 id="习题27-记住逻辑关系"><a href="#习题27-记住逻辑关系" class="headerlink" title="习题27 记住逻辑关系"></a>习题27 记住逻辑关系</h2><p>逻辑术语<br>• <code>and</code> 与<br>• <code>or</code> 或<br>• <code>not</code> 非<br>• <code>!=</code> 不等于<br>• <code>==</code> 等于<br>• <code>&gt;=</code> 大于等于<br>• <code>&lt;=</code> 小于等于<br>• <code>True</code> 真<br>• <code>False</code> 假</p>
-<h2 id="习题28-布尔表达式练习"><a href="#习题28-布尔表达式练习" class="headerlink" title="习题28 布尔表达式练习"></a>习题28 布尔表达式练习</h2><p><code>&quot;test&quot; and &quot;test&quot;</code> 返回 <code>&quot;test&quot;</code>， <code>1 and 1</code> 返回 <code>1</code>，而不是返回 True:<br>Python 和很多语言一样，都是给布尔表达式返回两个被操作对象中的一个，而非True 或 False 。这意味着如果你写了 False and 1 ，你得到的是第一个操作字元(False)，而非第二个字元(1)。但如果写 True and 1，得到的是第二个操作数（1）。emmm</p>
-<h2 id="习题29-if语句"><a href="#习题29-if语句" class="headerlink" title="习题29 if语句"></a>习题29 if语句</h2><p><strong>注意缩进！！！</strong>python的规则里，只要一行以冒号（:）结尾，他接下来的内容就应该有缩进</p>
-<h2 id="习题30-else和if"><a href="#习题30-else和if" class="headerlink" title="习题30 else和if"></a>习题30 else和if</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> cars &gt; people:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"We should take the cars."</span>)</span><br><span class="line">elif cars &lt; people:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"We should not take the cars."</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"We can't decide."</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="习题31-做出决定"><a href="#习题31-做出决定" class="headerlink" title="习题31 做出决定"></a>习题31 做出决定</h2><p>判断一个数处于某个值域中：<code>1 &lt; x &lt; 10</code>，或者用 <code>x in range(1, 10)</code></p>
-<h2 id="习题32-循环和列表"><a href="#习题32-循环和列表" class="headerlink" title="习题32 循环和列表"></a>习题32 循环和列表</h2><ol>
-<li>创建列表：<code>hairs = [&#39;brown&#39;, &#39;blond&#39;, &#39;red&#39;]</code>；创建二维列表：<code>[[1,2,3],[4,5,6]]</code></li>
-<li><code>.append()</code>: 是在列表的尾部追加元素</li>
-<li><code>range(1,3)</code>: range() 函数会从第一个数到最后一个，但不包含最后一个数字，含首不含尾</li>
-<li>以下不能直接赋值为range(0,6)<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i in <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">6</span>):</span><br><span class="line">     <span class="keyword">print</span> (<span class="keyword">f</span><span class="string">"Adding &#123;i&#125; to the list."</span>)</span><br><span class="line">     # <span class="keyword">append</span> <span class="keyword">is</span> <span class="keyword">a</span> <span class="function"><span class="keyword">function</span> <span class="title">that</span> <span class="title">lists</span> <span class="title">understand</span></span></span><br><span class="line">     elements.<span class="keyword">append</span>(i)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="习题33-while循环"><a href="#习题33-while循环" class="headerlink" title="习题33 while循环"></a>习题33 while循环</h2><p>把while循环改成一个函数花了一点时间</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_num</span><span class="params">(up_thr)</span>:</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    numbers = []</span><br><span class="line">    <span class="keyword">while</span> i &lt; up_thr:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">f"At the top i is <span class="subst">&#123;i&#125;</span>"</span>)</span><br><span class="line">        numbers.append(i)</span><br><span class="line"></span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">print</span> (<span class="string">"Numbers now: "</span>, numbers)</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">f"At the bottom i is <span class="subst">&#123;i&#125;</span>"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> numbers</span><br><span class="line"></span><br><span class="line">numbers = print_num(<span class="number">6</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"The numbers: "</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> numbers:</span><br><span class="line">    <span class="keyword">print</span> (num)</span><br></pre></td></tr></table></figure>
-
-<h2 id="习题34-访问列表的元素"><a href="#习题34-访问列表的元素" class="headerlink" title="习题34 访问列表的元素"></a>习题34 访问列表的元素</h2><p>Python 的列表是从 0 开始的</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">animals</span> = [<span class="string">'bear'</span>, <span class="string">'tiger'</span>, <span class="string">'penguin'</span>, <span class="string">'zebra'</span>]</span><br><span class="line"><span class="attr">bear</span> = animals[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-<p>“序数等于有序，从1开始；基数等于随机选取，从0开始”</p>
-<h2 id="习题35-分支和函数"><a href="#习题35-分支和函数" class="headerlink" title="习题35 分支和函数"></a>习题35 分支和函数</h2><p><code>exit(0)</code>: 在很多类型的操作系统里，<code>exit(0)</code> 可以中断某个程序，而其中的数字参数则用来表示程序是否是碰到错误而中断。 exit(1) 表示发生了错误，而 exit(0) 则表示程序是正常退出的。这和我们学的布尔逻辑 0==False 正好相反，不过你可以用不一样的数字表示不同的错误结果。比如你可以用 exit(100) 来表示另一种和 exit(2) 或 exit(1) 不同的错误。</p>
-<h2 id="习题36-设计和调试"><a href="#习题36-设计和调试" class="headerlink" title="习题36 设计和调试"></a>习题36 设计和调试</h2><h3 id="if语句的规则"><a href="#if语句的规则" class="headerlink" title="if语句的规则:"></a><code>if</code>语句的规则:</h3><ol>
-<li>每一个“if 语句”必须包含一个 else</li>
-<li>如果这个 else 永远都不应该被执行到，因为它本身没有任何意义，那必须在 else 语句后面使用一个叫做 die 的函数</li>
-<li>“if 语句”的嵌套不要超过2层，最好尽量保持只有1层</li>
-</ol>
-<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p>使用<code>print</code>在各个想要检查的关键环节将关键变量打印出来，从而检查那里是否有错</p>
-<h2 id="习题37-复习各种符号"><a href="#习题37-复习各种符号" class="headerlink" title="习题37 复习各种符号"></a>习题37 复习各种符号</h2><p>比较简单的的我就不写了ww</p>
-<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><table>
-<thead>
-<tr>
-<th align="center">关键字</th>
-<th align="center">描述</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">as</td>
-<td align="center">with-as语句的一部分</td>
-<td align="center">with X as Y: pass(<a href="https://www.jianshu.com/p/1a02a5b63c88" target="_blank" rel="noopener">参考</a>)</td>
-</tr>
-<tr>
-<td align="center">assert</td>
-<td align="center">断言（确保）某东西为真</td>
-<td align="center">assert False, “Error!”</td>
-</tr>
-<tr>
-<td align="center">break</td>
-<td align="center">立即停止整个循环</td>
-<td align="center">while True: break</td>
-</tr>
-<tr>
-<td align="center">class</td>
-<td align="center">定义一个类</td>
-<td align="center">class Person (object)</td>
-</tr>
-<tr>
-<td align="center">continue</td>
-<td align="center">停止当前循环的后续步骤，但继续下一次循环</td>
-<td align="center">while True: continue</td>
-</tr>
-<tr>
-<td align="center">def</td>
-<td align="center">定义一个函数</td>
-<td align="center">def X(): pass</td>
-</tr>
-<tr>
-<td align="center">del</td>
-<td align="center">从字典中删除</td>
-<td align="center">del X[Y]</td>
-</tr>
-<tr>
-<td align="center">except</td>
-<td align="center">如果发生异常，运行此处代码</td>
-<td align="center">except ValueError, e: print e</td>
-</tr>
-<tr>
-<td align="center">exec</td>
-<td align="center">将字符串作为Python脚本执行</td>
-<td align="center">exec ‘print (“hello”)’</td>
-</tr>
-<tr>
-<td align="center">finally</td>
-<td align="center">不管是否有异常，finally代码块都执行</td>
-<td align="center">finally: pass</td>
-</tr>
-<tr>
-<td align="center">for</td>
-<td align="center">for循环</td>
-<td align="center">for X in Y: pass</td>
-</tr>
-<tr>
-<td align="center">from</td>
-<td align="center">从某一模块中导入特定部分</td>
-<td align="center">import X from Y</td>
-</tr>
-<tr>
-<td align="center">global</td>
-<td align="center">定义一个全局变量</td>
-<td align="center">global X</td>
-</tr>
-<tr>
-<td align="center">if</td>
-<td align="center">If 条件</td>
-<td align="center">if: X; elif: Y; else: J</td>
-</tr>
-<tr>
-<td align="center">import</td>
-<td align="center">将模块导入当前文件以供使用</td>
-<td align="center">import os</td>
-</tr>
-<tr>
-<td align="center">in</td>
-<td align="center">for循环的一部分，也可以是X是否在Y中的条件判断</td>
-<td align="center">for X in Y: pass / 1 in [1] == True</td>
-</tr>
-<tr>
-<td align="center">is</td>
-<td align="center">类似==，判断是否一样</td>
-<td align="center">1 is 1 == True</td>
-</tr>
-<tr>
-<td align="center">lambda</td>
-<td align="center">创建短匿名函数</td>
-<td align="center">s = lambda y: y ** y; s(3)</td>
-</tr>
-<tr>
-<td align="center">not</td>
-<td align="center">逻辑非</td>
-<td align="center">not True == False</td>
-</tr>
-<tr>
-<td align="center">pass</td>
-<td align="center">空代码块</td>
-<td align="center">def empty(): pass</td>
-</tr>
-<tr>
-<td align="center">print</td>
-<td align="center">打印字符串</td>
-<td align="center">print (‘this string’)</td>
-</tr>
-<tr>
-<td align="center">raise</td>
-<td align="center">出错后引发异常</td>
-<td align="center">raise ValueError(“No”)</td>
-</tr>
-<tr>
-<td align="center">return</td>
-<td align="center">退出函数并返回一个返回值</td>
-<td align="center">def X(): return Y</td>
-</tr>
-<tr>
-<td align="center">try</td>
-<td align="center">尝试执行代码块，出错后转到except</td>
-<td align="center">try: pass</td>
-</tr>
-<tr>
-<td align="center">while</td>
-<td align="center">While循环</td>
-<td align="center">while X: pass</td>
-</tr>
-<tr>
-<td align="center">with</td>
-<td align="center">将表达式作为一个变量，然后执行代码块</td>
-<td align="center">with X as Y: pass</td>
-</tr>
-<tr>
-<td align="center">yield</td>
-<td align="center">暂停函数，返回到调用函数的代码中</td>
-<td align="center">def X(): yield Y; X().next()</td>
-</tr>
-</tbody></table>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><table>
-<thead>
-<tr>
-<th align="center">关键字</th>
-<th align="center">描述</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">True</td>
-<td align="center">布尔值“真”</td>
-<td align="center">True or False == True</td>
-</tr>
-<tr>
-<td align="center">False</td>
-<td align="center">布尔值“假”</td>
-<td align="center">False and True == False</td>
-</tr>
-<tr>
-<td align="center">None</td>
-<td align="center">表示 “不存在” 或者”没有值”</td>
-<td align="center">x = None</td>
-</tr>
-<tr>
-<td align="center">bytes</td>
-<td align="center">字节串存储，可能是文本、PNG图片、文件等</td>
-<td align="center">x = b’hello’</td>
-</tr>
-<tr>
-<td align="center">strings</td>
-<td align="center">存储文本信息</td>
-<td align="center">x = ‘hello’</td>
-</tr>
-<tr>
-<td align="center">numbers</td>
-<td align="center">存储整数</td>
-<td align="center">i = 100</td>
-</tr>
-<tr>
-<td align="center">Floats</td>
-<td align="center">存储十进制数</td>
-<td align="center">i = 10.389</td>
-</tr>
-<tr>
-<td align="center">lists</td>
-<td align="center">存储列表</td>
-<td align="center">j = [1,2,3,4]</td>
-</tr>
-<tr>
-<td align="center">dicts</td>
-<td align="center">存储 键-值 映射</td>
-<td align="center">e = {‘x’: 1, ‘y’: 2}</td>
-</tr>
-</tbody></table>
-<h3 id="字符串转义序列"><a href="#字符串转义序列" class="headerlink" title="字符串转义序列"></a>字符串转义序列</h3><table>
-<thead>
-<tr>
-<th align="center">转义符</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\\</td>
-<td align="center">反斜杠</td>
-</tr>
-<tr>
-<td align="center">\‘</td>
-<td align="center">单引号</td>
-</tr>
-<tr>
-<td align="center">\“</td>
-<td align="center">双引号</td>
-</tr>
-<tr>
-<td align="center">\a</td>
-<td align="center">响铃</td>
-</tr>
-<tr>
-<td align="center">\b</td>
-<td align="center">退格符</td>
-</tr>
-<tr>
-<td align="center">\f</td>
-<td align="center">表单填充符</td>
-</tr>
-<tr>
-<td align="center">\n</td>
-<td align="center">换行符</td>
-</tr>
-<tr>
-<td align="center">\r</td>
-<td align="center">回车</td>
-</tr>
-<tr>
-<td align="center">\t</td>
-<td align="center">制表符</td>
-</tr>
-<tr>
-<td align="center">\v</td>
-<td align="center">垂直制表符</td>
-</tr>
-</tbody></table>
-<h3 id="老式字符串格式"><a href="#老式字符串格式" class="headerlink" title="老式字符串格式"></a>老式字符串格式</h3><p>python2用这些格式化字符实现f字符串的功能</p>
-<table>
-<thead>
-<tr>
-<th align="center">关键字</th>
-<th align="center">描述</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">%d</td>
-<td align="center">十进制整数（非浮点数）</td>
-<td align="center">“%d” % 45 == ‘45’</td>
-</tr>
-<tr>
-<td align="center">%i</td>
-<td align="center">与%d相同</td>
-<td align="center">“%i” % 45 == ‘45’</td>
-</tr>
-<tr>
-<td align="center">%o</td>
-<td align="center">八进制数</td>
-<td align="center">“%o” % 1000 == ‘1750’</td>
-</tr>
-<tr>
-<td align="center">%u</td>
-<td align="center">无符号整数</td>
-<td align="center">“%u” % -1000 == ‘-1000’</td>
-</tr>
-<tr>
-<td align="center">%x</td>
-<td align="center">小写十六进制数</td>
-<td align="center">“%x” % 1000 == ‘3e8’</td>
-</tr>
-<tr>
-<td align="center">%X</td>
-<td align="center">大写十六进制数</td>
-<td align="center">“%X” % 1000 == ‘3E8’</td>
-</tr>
-<tr>
-<td align="center">%e</td>
-<td align="center">指数表示，小写 ‘e’</td>
-<td align="center">“%e” % 1000 == ‘1.000000e+03’</td>
-</tr>
-<tr>
-<td align="center">%E</td>
-<td align="center">指数表示，大写 ‘e’</td>
-<td align="center">“%E” % 1000 == ‘1.000000E+03’</td>
-</tr>
-<tr>
-<td align="center">%f</td>
-<td align="center">浮点数</td>
-<td align="center">“%f” % 10.34 == ‘10.340000’</td>
-</tr>
-<tr>
-<td align="center">%F</td>
-<td align="center">与%f相同</td>
-<td align="center">“%F” % 10.34 == ‘10.340000’</td>
-</tr>
-<tr>
-<td align="center">%g</td>
-<td align="center">%f 或者 %e中较短的一个</td>
-<td align="center">“%g” % 10.34 == ‘10.34’</td>
-</tr>
-<tr>
-<td align="center">%G</td>
-<td align="center">%F 或者 %E中较短的一个</td>
-<td align="center">“%G” % 10.34 == ‘10.34’</td>
-</tr>
-<tr>
-<td align="center">%c</td>
-<td align="center">字符格式</td>
-<td align="center">“%c” % 34 == ‘“‘</td>
-</tr>
-<tr>
-<td align="center">%r</td>
-<td align="center">Repr格式（调试格式）</td>
-<td align="center">“%r” % <code>int == &quot;&lt;type &#39;int&#39;&gt;&quot;</code></td>
-</tr>
-<tr>
-<td align="center">%s</td>
-<td align="center">字符串格式</td>
-<td align="center">“%s there” % ‘hi’ == ‘hi there’</td>
-</tr>
-<tr>
-<td align="center">%%</td>
-<td align="center">百分号%</td>
-<td align="center">“%g%%” % 10.34 == ‘10.34%’</td>
-</tr>
-</tbody></table>
-<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><table>
-<thead>
-<tr>
-<th align="center">关键字</th>
-<th align="center">描述</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">+</td>
-<td align="center">加</td>
-<td align="center">2 + 4 = 6</td>
-</tr>
-<tr>
-<td align="center">-</td>
-<td align="center">减</td>
-<td align="center">2 - 4 = -2</td>
-</tr>
-<tr>
-<td align="center">*</td>
-<td align="center">乘</td>
-<td align="center">2 * 4 = 8</td>
-</tr>
-<tr>
-<td align="center">**</td>
-<td align="center">幂乘</td>
-<td align="center">2 ** 4 = 16</td>
-</tr>
-<tr>
-<td align="center">/</td>
-<td align="center">除</td>
-<td align="center">2 / 4 == 0.5</td>
-</tr>
-<tr>
-<td align="center">//</td>
-<td align="center">除后向下取整</td>
-<td align="center">2 // 4 = 0</td>
-</tr>
-<tr>
-<td align="center">%</td>
-<td align="center">字符串翻译，或者求余数</td>
-<td align="center">2 % 4 = 2</td>
-</tr>
-<tr>
-<td align="center">&lt;</td>
-<td align="center">小于</td>
-<td align="center">4 &lt; 4 == False</td>
-</tr>
-<tr>
-<td align="center">&gt;</td>
-<td align="center">大于</td>
-<td align="center">4 &gt; 4 == False</td>
-</tr>
-<tr>
-<td align="center">&lt;=</td>
-<td align="center">小于等于</td>
-<td align="center">4 &lt;= 4 == True</td>
-</tr>
-<tr>
-<td align="center">&gt;=</td>
-<td align="center">大于等于</td>
-<td align="center">4 &gt;= 4 == True</td>
-</tr>
-<tr>
-<td align="center">==</td>
-<td align="center">等于，比较操作对象是否相等</td>
-<td align="center">4 == 5 == False</td>
-</tr>
-<tr>
-<td align="center">!=</td>
-<td align="center">不等于</td>
-<td align="center">4 != 5 == True</td>
-</tr>
-<tr>
-<td align="center">&lt;&gt;</td>
-<td align="center">不等于</td>
-<td align="center">4 &lt;&gt; 5 == True</td>
-</tr>
-<tr>
-<td align="center">( )</td>
-<td align="center">括号</td>
-<td align="center">len(‘hi’) == 2</td>
-</tr>
-<tr>
-<td align="center">[ ]</td>
-<td align="center">列表括号</td>
-<td align="center">[1,3,4]</td>
-</tr>
-<tr>
-<td align="center">{ }</td>
-<td align="center">花括号</td>
-<td align="center">{‘x’: 5, ‘y’: 10}</td>
-</tr>
-<tr>
-<td align="center">@</td>
-<td align="center">修饰器符</td>
-<td align="center">@classmethod</td>
-</tr>
-<tr>
-<td align="center">,</td>
-<td align="center">逗号</td>
-<td align="center">range(0, 10)</td>
-</tr>
-<tr>
-<td align="center">:</td>
-<td align="center">冒号</td>
-<td align="center">def X():</td>
-</tr>
-<tr>
-<td align="center">.</td>
-<td align="center">点</td>
-<td align="center">self.x = 10</td>
-</tr>
-<tr>
-<td align="center">=</td>
-<td align="center">赋值</td>
-<td align="center">x = 10</td>
-</tr>
-<tr>
-<td align="center">;</td>
-<td align="center">分号</td>
-<td align="center">print (“hi”); print (“there”)</td>
-</tr>
-<tr>
-<td align="center">+=</td>
-<td align="center">加等于</td>
-<td align="center">x = 1; x += 2</td>
-</tr>
-<tr>
-<td align="center">-=</td>
-<td align="center">减等于</td>
-<td align="center">x = 1; x -= 2</td>
-</tr>
-<tr>
-<td align="center">*=</td>
-<td align="center">乘等于</td>
-<td align="center">x = 1; x *= 2</td>
-</tr>
-<tr>
-<td align="center">/=</td>
-<td align="center">除等于</td>
-<td align="center">x = 1; x /= 2</td>
-</tr>
-<tr>
-<td align="center">//=</td>
-<td align="center">整除等于</td>
-<td align="center">x = 1; x //= 2</td>
-</tr>
-<tr>
-<td align="center">%=</td>
-<td align="center">模除等于</td>
-<td align="center">x = 1; x %= 2</td>
-</tr>
-<tr>
-<td align="center">**=</td>
-<td align="center">幂乘等于</td>
-<td align="center">x = 1; x **= 2</td>
-</tr>
-</tbody></table>
-<hr>
-
-      
-
-
-  <div class="declare">
-    <strong>本文作者：</strong>
-    
-      JanierVan
-    
-    <br>
-    <strong>本文链接：</strong>
-    https://jainervam.github.io/2020/08/07/PythonHard3/
-    <br>
-    <strong>版权声明：</strong>
-    本作品采用
-    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
-    进行许可。转载请注明出处！
-    
-  </div>
-
-
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Eclipse</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Keys</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/08/07/PythonHard3/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/08/08/PythonHard4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          入门Python--“笨方法”学Python学习笔记(4)
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/08/04/PythonHard2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(2)</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题27-记住逻辑关系"><span class="toc-number">2.</span> <span class="toc-text">习题27 记住逻辑关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题28-布尔表达式练习"><span class="toc-number">3.</span> <span class="toc-text">习题28 布尔表达式练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题29-if语句"><span class="toc-number">4.</span> <span class="toc-text">习题29 if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题30-else和if"><span class="toc-number">5.</span> <span class="toc-text">习题30 else和if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题31-做出决定"><span class="toc-number">6.</span> <span class="toc-text">习题31 做出决定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题32-循环和列表"><span class="toc-number">7.</span> <span class="toc-text">习题32 循环和列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题33-while循环"><span class="toc-number">8.</span> <span class="toc-text">习题33 while循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题34-访问列表的元素"><span class="toc-number">9.</span> <span class="toc-text">习题34 访问列表的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题35-分支和函数"><span class="toc-number">10.</span> <span class="toc-text">习题35 分支和函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题36-设计和调试"><span class="toc-number">11.</span> <span class="toc-text">习题36 设计和调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句的规则"><span class="toc-number">11.1.</span> <span class="toc-text">if语句的规则:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试"><span class="toc-number">11.2.</span> <span class="toc-text">调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题37-复习各种符号"><span class="toc-number">12.</span> <span class="toc-text">习题37 复习各种符号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字"><span class="toc-number">12.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">12.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串转义序列"><span class="toc-number">12.3.</span> <span class="toc-text">字符串转义序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#老式字符串格式"><span class="toc-number">12.4.</span> <span class="toc-text">老式字符串格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">12.5.</span> <span class="toc-text">运算符</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -951,9 +261,9 @@
 	var yiliaConfig = {
 		mathjax: [object Object],
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
