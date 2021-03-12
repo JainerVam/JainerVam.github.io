@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>Java语言概述 | JanierVan</title>
+  <title>Java面向对象编程(6) | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="范范的Java学习之路～这真的是初学者了，Matlab选手学什么都跟初学一样，太惨了ww。本章主要内容是JAVA的安装及环境的配置，以及JAVA编程的最最基础的知识。">
+  <meta name="description" content="以笔记&#x2F;大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括Java中的常用类：Object类（包括equals()方法和toString()方法等）和包装类。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java语言概述">
-<meta property="og:url" content="https://jainervam.github.io/2020/12/13/JavaBase/index.html">
+<meta property="og:title" content="Java面向对象编程(6)">
+<meta property="og:url" content="https://jainervam.github.io/2021/03/08/JavaOOP6/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="范范的Java学习之路～这真的是初学者了，Matlab选手学什么都跟初学一样，太惨了ww。本章主要内容是JAVA的安装及环境的配置，以及JAVA编程的最最基础的知识。">
+<meta property="og:description" content="以笔记&#x2F;大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括Java中的常用类：Object类（包括equals()方法和toString()方法等）和包装类。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-12-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-29T17:40:50.522Z">
+<meta property="article:published_time" content="2021-03-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-03-12T16:46:16.100Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="Java">
+<meta property="article:tag" content="面向对象">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="JanierVan" type="application/atom+xml">
@@ -160,45 +161,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaBase" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaOOP6" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java语言概述
+      Java面向对象编程(6)
     </h1>
   
 
         
-        <a href="/2020/12/13/JavaBase/" class="archive-article-date">
-  	<time datetime="2020-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-13</time>
+        <a href="/2021/03/08/JavaOOP6/" class="archive-article-date">
+  	<time datetime="2021-03-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>范范的Java学习之路～这真的是初学者了，Matlab选手学什么都跟初学一样，太惨了ww。本章主要内容是JAVA的安装及环境的配置，以及JAVA编程的最最基础的知识。</p>
+        <p>以笔记/大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括Java中的常用类：Object类（包括<code>equals()</code>方法和<code>toString()</code>方法等）和包装类。</p>
 <a id="more"></a>
 
-<h2 id="Java安装和环境配置"><a href="#Java安装和环境配置" class="headerlink" title="Java安装和环境配置"></a>Java安装和环境配置</h2><p><a href="https://blog.csdn.net/super_vicky/article/details/81172892" target="_blank" rel="noopener">Mac下Java环境的安装与配置</a></p>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>Java包含三种注释方法：</p>
-<ol>
-<li>单行注释<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单行注释；</span></span><br></pre></td></tr></table></figure></li>
-<li>多行注释<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">多行注释</span></span><br><span class="line"><span class="comment">哈哈哈</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
+
+<h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><ol>
+<li>Object类是所有Java类的根父类。</li>
+<li>如果在类的声明中未使用extends关键字指明其父类，则默认父类为<code>java.lang.Object</code>类。<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">publicclassPerson&#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br><span class="line">等价于：</span><br><span class="line">publicclassPersonextendsObject&#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Object类中的属性和方法具有通用性。<ul>
+<li>属性：无</li>
+<li>方法：<code>equals()</code> / <code>toString()</code> / <code>getClass()</code> / <code>hashCode()</code> / <code>clone()</code> / <code>finalize()</code> / <code>wait()</code> / <code>notify()</code> / <code>notifyAll()</code></li>
+</ul>
+</li>
+<li>Object类只声明了一个空参的构造器。</li>
 </ol>
-<p><strong>注</strong>：对于单行和多行注释，被注释的文字，不会被JVM（java虚拟机）解释执行。多行注释不可以嵌套使用。<br>3. 文档注释(Java特有)</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"><span class="doctag">@author</span>  指定java程序的作者</span></span><br><span class="line"><span class="comment"><span class="doctag">@version</span>  指定源文件的版本</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-<p>用法：<code>javadoc -d mydocname -author -version FileName.java</code></p>
-<h2 id="Java程序的编写-编译-运行"><a href="#Java程序的编写-编译-运行" class="headerlink" title="Java程序的编写-编译-运行"></a>Java程序的编写-编译-运行</h2><p>编写：将编写的Java代码保存在以“.java”结尾的源文件中。<br>编译：使用javac.exe命令编译java源文件。格式：javac filename.java<br>运行：使用java.exe命令解释运行字节码文件。格式：java classname</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
-<li>在一个java源文件中可以声明多个class，但是最多只能有一个类声明为public，即与文件名相同的class。<br>编译后会生成一个或多个字节码文件，字节码文件名与class名相同。</li>
-<li>程序的入口是main方法，格式是固定的。<code>public static void main(String[] args)</code>或<code>public static void main(String args[])</code></li>
-<li>输出语句<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println<span class="literal">()</span>: <span class="comment">//先输出，后换行。括号内没有内容就是纯换行</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.print<span class="literal">()</span>:</span><br></pre></td></tr></table></figure></li>
-<li>每一个执行语句都以分号结束。</li>
+<h3 id="equals方法"><a href="#equals方法" class="headerlink" title="equals方法"></a>equals方法</h3><h4 id="的使用"><a href="#的使用" class="headerlink" title="== 的使用"></a>== 的使用</h4><ol>
+<li>可以使用在基本数据类型和引用数据类型中<ul>
+<li>基本数据类型：比较两个变量保存的数据是否相同，类型不一定同</li>
+<li>引用数据类型：比较两个变量的地址值是否相同，即两个引用是否指向同一个对象实体</li>
+</ul>
+</li>
 </ol>
+<h4 id="equals方法的使用"><a href="#equals方法的使用" class="headerlink" title="equals方法的使用"></a>equals方法的使用</h4><ol>
+<li>是方法，而非运算符</li>
+<li>只适用于引用数据类型</li>
+<li>Object类中<code>equals()</code>的定义：与<code>==</code>作用是相同的。</li>
+<li>String \ Date \ File \ 包装类等都重写了<code>equals()</code>方法，比较的是两个对象的实体内容是否相同。</li>
+<li>可以通过自定义<code>equals()</code>实现比较两个对象的“实体内容”是否相同。（Eclipse可自动生成<code>equals()</code>方法）。</li>
+</ol>
+<h3 id="toString方法"><a href="#toString方法" class="headerlink" title="toString方法"></a>toString方法</h3><ol>
+<li>当我们输出一个对象的引用时，实际上是调用当前对象的toString()。</li>
+<li><code>toString()</code>方法在Object类中定义，其返回值是String类型，返回类名和它的引用地址。</li>
+<li>String \ Date \ File \ 包装类等都重写了<code>toString()</code>方法，返回“实体内容”信息。</li>
+<li>可以通过自定义<code>toString()</code>返回对象的“实体内容”。（Eclipse可自动生成<code>toString()</code>方法）。</li>
+</ol>
+<h2 id="包装（Wrapper）类"><a href="#包装（Wrapper）类" class="headerlink" title="包装（Wrapper）类"></a>包装（Wrapper）类</h2><h3 id="包装类的使用"><a href="#包装类的使用" class="headerlink" title="包装类的使用"></a>包装类的使用</h3><p>针对八种基本数据类型定义相应的引用类型。使得<strong>基本数据类型的变量也有类的特征</strong>。有了类的特点，就可以调用类中的方法。<br>基本数据类型|包装类<br>:–:|:–:<br>boolean|    Boolean<br>byte|    Byte<br>short|    Short<br>int|    Integer<br>long|    Long<br>float|    Float<br>double|    Double<br>char|    Character</p>
+<h3 id="基本数据类型、包装类与String类间的转换"><a href="#基本数据类型、包装类与String类间的转换" class="headerlink" title="基本数据类型、包装类与String类间的转换"></a>基本数据类型、包装类与String类间的转换</h3><ol>
+<li>基本数据类型–&gt;包装类：<ul>
+<li>调用包装类的构造器<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="type">Integer</span> <span class="keyword">in</span> = <span class="built_in">new</span> <span class="type">Integer</span>(num);</span><br><span class="line">或</span><br><span class="line"><span class="type">Integer</span> <span class="keyword">in</span> = <span class="built_in">new</span> <span class="type">Integer</span>("10");</span><br></pre></td></tr></table></figure></li>
+<li><strong>自动装箱</strong><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Integer in</span> = num;</span><br></pre></td></tr></table></figure>
+其中，Integer内部定义了IntegerCache结构，IntegerCache中定义了Integer[]，保存了从-218～127范围的整数。如果我们使用自动装箱的方式，给Integer赋值的范围在-128～127范围内时，可以直接使用数组中的元素，不用再去new了。目的：提高效率。</li>
+</ul>
+</li>
+<li>包装类–&gt;基本数据类型：<ul>
+<li>调用包装类的xxxValue()<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> num = <span class="keyword">in</span>.<span class="built_in">int</span><span class="constructor">Value()</span>;</span><br></pre></td></tr></table></figure></li>
+<li><strong>自动拆箱</strong><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> <span class="built_in">num</span> = <span class="keyword">in</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>基本数据类型、包装类–&gt;String类型<ul>
+<li>连接运算<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> <span class="built_in">num</span> = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">String</span> str = <span class="built_in">num</span> + <span class="string">""</span>;</span><br></pre></td></tr></table></figure></li>
+<li>调用String的valueOf(Xxx xxx)<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="module-access"><span class="module"><span class="identifier">Sting</span>.</span></span>value<span class="constructor">Of(<span class="params">num</span>)</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>String类型–&gt;基本数据类型、包装类<ul>
+<li>调用包装类的parseXxx()<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> num = <span class="module-access"><span class="module"><span class="identifier">Integer</span>.</span></span>parse<span class="constructor">Int(<span class="params">str</span>)</span>;</span><br></pre></td></tr></table></figure>
+可能会报NumberFormatException</li>
+</ul>
+</li>
+</ol>
+<h3 id="应用场景举例"><a href="#应用场景举例" class="headerlink" title="应用场景举例"></a>应用场景举例</h3><ul>
+<li>Vector类中关于添加元素，只定义了形参为Object类型的方法：<br><code>v.addElement(Object obj); //基本数据类型--&gt;包装类--&gt;使用多态</code></li>
+</ul>
 
       
 
@@ -210,7 +253,7 @@
     
     <br>
     <strong>本文链接：</strong>
-    https://jainervam.github.io/2020/12/13/JavaBase/
+    https://jainervam.github.io/2021/03/08/JavaOOP6/
     <br>
     <strong>版权声明：</strong>
     本作品采用
@@ -263,6 +306,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
         		</li>
       		
 		</ul>
@@ -318,7 +365,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/12/13/JavaBase/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2021/03/08/JavaOOP6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -332,18 +379,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/12/14/JavaBase2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java基本语法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/12/13/MacBase-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac终端基础</div>
+    <a href="/2021/03/04/JavaOOP5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java面向对象编程(5)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -370,7 +408,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java安装和环境配置"><span class="toc-number">1.</span> <span class="toc-text">Java安装和环境配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注释"><span class="toc-number">2.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java程序的编写-编译-运行"><span class="toc-number">3.</span> <span class="toc-text">Java程序的编写-编译-运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-number">4.</span> <span class="toc-text">其他</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object类"><span class="toc-number">1.</span> <span class="toc-text">Object类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#equals方法"><span class="toc-number">1.1.</span> <span class="toc-text">equals方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#的使用"><span class="toc-number">1.1.1.</span> <span class="toc-text">&#x3D;&#x3D; 的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#equals方法的使用"><span class="toc-number">1.1.2.</span> <span class="toc-text">equals方法的使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toString方法"><span class="toc-number">1.2.</span> <span class="toc-text">toString方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#包装（Wrapper）类"><span class="toc-number">2.</span> <span class="toc-text">包装（Wrapper）类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#包装类的使用"><span class="toc-number">2.1.</span> <span class="toc-text">包装类的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型、包装类与String类间的转换"><span class="toc-number">2.2.</span> <span class="toc-text">基本数据类型、包装类与String类间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用场景举例"><span class="toc-number">2.3.</span> <span class="toc-text">应用场景举例</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
