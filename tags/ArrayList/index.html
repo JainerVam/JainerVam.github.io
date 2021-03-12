@@ -6,21 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>入门Python--“笨方法”学Python学习笔记(4) | JanierVan</title>
+  <title>Tag: ArrayList | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里是我自己在习题38-习题44的笔记，方便以后查阅。主要内容为列表、模块、类、对象等，难度较高。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="入门Python--“笨方法”学Python学习笔记(4)">
-<meta property="og:url" content="https://jainervam.github.io/2020/08/08/PythonHard4/index.html">
+  <meta name="description" content="西安交通大学研究生，港村佛系少女一枚，喜欢二次元、打游戏，每天都为嗑盐目标发愁的小菜鸡，我说我只会Matlab你信吗www">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JanierVan">
+<meta property="og:url" content="https://jainervam.github.io/tags/ArrayList/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="这里是我自己在习题38-习题44的笔记，方便以后查阅。主要内容为列表、模块、类、对象等，难度较高。">
+<meta property="og:description" content="西安交通大学研究生，港村佛系少女一枚，喜欢二次元、打游戏，每天都为嗑盐目标发愁的小菜鸡，我说我只会Matlab你信吗www">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-25T06:12:50.797Z">
 <meta property="article:author" content="JanierVan">
+<meta property="article:tag" content="ANN">
+<meta property="article:tag" content="科研">
 <meta property="article:tag" content="code">
-<meta property="article:tag" content="软件">
-<meta property="article:tag" content="python">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="JanierVan" type="application/atom+xml">
@@ -162,316 +161,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-PythonHard4" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      入门Python--“笨方法”学Python学习笔记(4)
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/03/05/JavaArrayList/" class="archive-article-date">
+  	<time datetime="2021-03-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-05</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/03/05/JavaArrayList/">Java ArrayList类</a>
     </h1>
   
 
-        
-        <a href="/2020/08/08/PythonHard4/" class="archive-article-date">
-  	<time datetime="2020-08-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里是我自己在习题38-习题44的笔记，方便以后查阅。主要内容为列表、模块、类、对象等，难度较高。</p>
-<a id="more"></a>
-
-<h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>“笨方法”学Python 3</p>
-<p>代码链接：<a href="https://pan.baidu.com/s/1bxJqLEMQPzGJeGpOHx3-Iw" target="_blank" rel="noopener">https://pan.baidu.com/s/1bxJqLEMQPzGJeGpOHx3-Iw</a><br>提取码：9z0o</p>
-<h2 id="习题38-列表的操作"><a href="#习题38-列表的操作" class="headerlink" title="习题38 列表的操作"></a>习题38 列表的操作</h2><ol>
-<li><code>mystuff.append(&#39;hello&#39;)</code>实际意义是<code>append(mystuff, &#39;hello&#39;)</code></li>
-<li><code>.</code>是在处理对象</li>
-<li><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span>(stuff[<span class="number">1</span>]) <span class="meta"># 列表取元素用方括号</span></span><br><span class="line"><span class="keyword">print</span>(stuff[<span class="number">-1</span>]) <span class="meta"># 打印列表中的最后一个元素</span></span><br><span class="line"><span class="keyword">print</span>(stuff.<span class="keyword">pop</span>()) <span class="meta"># pop() 函数用于移除列表中的一个元素（默认最后一个元素），并且返回该元素的值。</span></span><br><span class="line"><span class="keyword">print</span>(' '.<span class="built_in">join</span>(stuff)) <span class="meta"># 用空格连接字符 </span></span><br><span class="line"><span class="meta"># Python中有 join() 和 os.path.join() 两个函数，具体作用如下：</span></span><br><span class="line"><span class="meta"># join()：连接字符串数组。将字符串、元组、列表中的元素以指定的字符(分隔符)连接生成一个新的字符串</span></span><br><span class="line"><span class="meta">#os.path.join()：将多个路径组合后返回</span></span><br><span class="line"><span class="keyword">print</span>('#'.<span class="built_in">join</span>(stuff[<span class="number">3</span>:<span class="number">5</span>])) <span class="meta"># 第4、5个元素，不包含第6个</span></span><br></pre></td></tr></table></figure></li>
-<li><strong>列表</strong>就是一种有序的列表，可以把要存储的东西放进去，也可以访问其中的元素，访问可以随机，也可以通过索引线性访问</li>
-<li>将每一个被调用的函数翻译成Python实际执行的动作。例如： <code>&#39; &#39;.join(things)</code> 其实是 <code>join(&#39; &#39;, things)</code>。将这两种方式翻译为自然语言。例如， <code>&#39; &#39;.join(things)</code> 可以翻译成“用’ ‘ 连接(join) things”，而 <code>join(&#39; &#39;, things)</code> 的意思是“为’ ‘和 things 调用 join 函数”。</li>
-</ol>
-<h2 id="习题39-字典、可爱的字典"><a href="#习题39-字典、可爱的字典" class="headerlink" title="习题39 字典、可爱的字典"></a>习题39 字典、可爱的字典</h2><ol>
-<li><p><strong>字典:</strong> 可以通过任何东西（不只是数值）找到元素。可以用到通过某个值去查看另一个值的场合。可以看作一个“查找表”</p>
-</li>
-<li><p><code>items()</code> 函数以列表返回可遍历的(键, 值) 元组数组</p>
-</li>
-<li><p><code>list()</code> 用于将元组转换为列表。#注：#元组与列表是非常类似的，区别在于元组的元素值不能修改，元组是放在#括号#中，列表是放于#方括号#中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> abbrev, city <span class="keyword">in</span> list(cities.items()):</span><br><span class="line">    print(<span class="string">f"<span class="subst">&#123;abbrev&#125;</span> has the city <span class="subst">&#123;city&#125;</span>"</span>)</span><br></pre></td></tr></table></figure></li>
-<li><p><code>dict.keys()</code>以列表返回一个字典所有的键</p>
-</li>
-<li><p><code>dict.get(key, default=None)</code>返回指定键的值，如果键不在字典中返回默认值</p>
-</li>
-<li><p><code>dict.update(dict2)</code>用 update 更新字典 dict，会有两种情况：<br>（1）有相同的键时：会使用最新的字典 dict2 中 该 key 对应的 value 值<br>（2）有新的键时：会直接把字典 dict2 中的 key、value 加入到 dict 中</p>
-</li>
-<li><p><strong>列表和字典的区别:</strong> 列表是有序排列的一些项，而字典是将一些项（keys）对应到另外一些项（values）的数据结构</p>
-</li>
-</ol>
-<h2 id="习题40-模块、类和对象"><a href="#习题40-模块、类和对象" class="headerlink" title="习题40 模块、类和对象"></a>习题40 模块、类和对象</h2><ol>
-<li>面向对象编程（object oriented programming，OOP）</li>
-<li><strong>模块</strong><ol>
-<li>• 模块是包含函数和变量的 Python 文件</li>
-<li>• 可以 import 这个文件</li>
-<li>• 然后可以使用 ‘.’ 操作符访问模块中的函数和变量<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># this goes in mystuff.py</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">apple</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> (<span class="string">"I AM APPLES!"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># this is just a variable</span></span><br><span class="line">tangerine = <span class="string">"Living reflection of a dream"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##调用模块，访问函数和变量</span></span><br><span class="line"><span class="keyword">import</span> mystuff</span><br><span class="line"></span><br><span class="line">mystuff.apple()</span><br><span class="line">print(mystuff.tangerine)</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li><strong>模块和字典:</strong> 对于字典来说，key是一个字符串，获得值的语法是 <code>[key]</code>。对于模块来说，key是函数或者变量的名称，而语法是<code>.key</code>。除了这个，它们基本上就没什么区别了。</li>
-<li><strong>类:</strong> 迷你模块<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStuff</span>(<span class="title">object</span>):</span></span><br><span class="line"><span class="comment"># __ini__对对象实现初始化</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(<span class="keyword">self</span>)</span></span><span class="symbol">:</span></span><br><span class="line">    <span class="comment"># self是创建的空对象，可以对它进行类似模块、字典等操作，为它设置一些变量</span></span><br><span class="line">        <span class="keyword">self</span>.tangerine = <span class="string">"And now a thousand years between"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">apple</span><span class="params">(<span class="keyword">self</span>)</span></span><span class="symbol">:</span></span><br><span class="line">        print（<span class="string">"I AM CLASSY APPLES!"</span>）</span><br></pre></td></tr></table></figure></li>
-<li><strong>对象:</strong> 将类实例化，和import差不多<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">thing</span> = MyStuff() # 实例化操作</span><br><span class="line"><span class="keyword">thing</span>.apple()</span><br><span class="line">print <span class="keyword">thing</span>.tangerine</span><br></pre></td></tr></table></figure></li>
-<li>综上有三种方法可以从某个东西里获取它的内容：<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dict style</span></span><br><span class="line">mystuff[<span class="string">'apples'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># module style</span></span><br><span class="line">mystuff.apples()</span><br><span class="line"><span class="builtin-name">print</span> mystuff.tangerine</span><br><span class="line"></span><br><span class="line"><span class="comment"># class style</span></span><br><span class="line">thing = MyStuff()</span><br><span class="line">thing.apples()</span><br><span class="line"><span class="builtin-name">print</span> thing.tangerine</span><br></pre></td></tr></table></figure>
-(2020/8/21)</li>
-</ol>
-<h2 id="习题41-学习面向对象术语"><a href="#习题41-学习面向对象术语" class="headerlink" title="习题41 学习面向对象术语"></a>习题41 学习面向对象术语</h2><ol>
-<li><strong>专有词汇</strong><br>• 类（class）：告诉python创建新类型的东西<br>• 对象（object）：两个意思，即最基本的东西，或者某样东西的实例<br>• 实例（instance）：这是让python创建一个类时得到的东西<br>• def：这是在类里定义函数的方法<br>• self：在类的函数中，self指代被访问的对象或者实例的一个变量<br>• 继承（inheritance)： 指一个类可以继承另一个类的特性，和父子关系类似<br>• 组合（composition）：指一个类可以将别的类作为它的部件构建起来，有点像车子和车轮的关系<br>• 属性（attribute）：类的一个属性，它来自于组合，而且通常是一个变量<br>• 是什么（is-a): 用来描述继承关系，如 Salmon is-a Fish<br>• 有什么（has-a）：用来描述某个东西是由另外一些东西组成，或者某个东西有某特征，如Salmon has-a mouth</li>
-<li><strong>措辞练习</strong><br>• class X(Y): 创建一个叫X的类，它是Y的一种<br>• class X(object): def__init__(self, J): 类X有一个<strong>init</strong>, 它接收self和J作为参数<br>• class X(object): def M(self, J）: 类X有一个名为M的函数，它接收self和J作为参数<br>• foo = X(): 将foo设为类X的一个实例<br>• foo.M(J): 从foo中找到M的函数，并使用self和J参数调用它<br>• foo.K = Q: 从foo中获取K属性，并将其设为Q</li>
-<li><strong>代码中的一些函数</strong><ol>
-<li>• (<strong>urllib库</strong>)[<a href="https://www.cnblogs.com/xtznb/p/10960396.html]" target="_blank" rel="noopener">https://www.cnblogs.com/xtznb/p/10960396.html]</a></li>
-<li>• <strong>count():</strong> <code>str.count(sub, start= 0,end=len(string))</code>返回子字符串在字符串中出现的次数</li>
-<li>• <code>str.capitalize()</code>将字符串的第一个字母变成大写,其他字母变小写</li>
-<li>• <strong>range()函数:</strong> 返回的是一个可迭代对象（类型是对象）<br><code>range(start, stop[, step])</code><ol>
-<li>参数说明：</li>
-<li>start: 计数从 start 开始。默认是从 0 开始</li>
-<li>stop: 计数到 stop 结束，但不包括 stop</li>
-<li>step：步长，默认为1</li>
-</ol>
-</li>
-<li>• <code>str.replace(old, new[, max])</code>把字符串中的 ol（旧字符串) 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次</li>
-</ol>
-</li>
-<li><code>result = sentence[:]</code>是 Python 中复制列表的方法。用列表切片（list slicing）的语法[:]将列表从头到尾每个元素切片出来并创建一个新列表</li>
-</ol>
-<h2 id="习题42-对象、类及从属关系"><a href="#习题42-对象、类及从属关系" class="headerlink" title="习题42 对象、类及从属关系"></a>习题42 对象、类及从属关系</h2><ol>
-<li><strong>super()函数:</strong> <code>super(type[, object-or-type])</code>调用父类(超类)的一个方法<ol>
-<li>参数说明：</li>
-<li>type: 类</li>
-<li>object-or-type: 类，一般是 self</li>
-</ol>
-</li>
-<li>Python3中，类名后面不需要加（object），但Python圈的人相信“显式优于隐式”</li>
-<li><code>self.pet = None</code>确保类的 self.pet 属性被设置为默认None</li>
-</ol>
-<h2 id="习题43-基本的面向对象分析和设计"><a href="#习题43-基本的面向对象分析和设计" class="headerlink" title="习题43 基本的面向对象分析和设计"></a>习题43 基本的面向对象分析和设计</h2><ol>
-<li>自顶向下与自底向上</li>
-<li>房间切换原理：通过函数返回值决定下一场景（个人总结）</li>
-</ol>
-<h2 id="习题44-继承与组合"><a href="#习题44-继承与组合" class="headerlink" title="习题44 继承与组合"></a>习题44 继承与组合</h2><ol>
-<li><strong>继承</strong><br>继承，就是用来指明一个类的大部分或全部功能都是从一个父类中获得的。当你写 <code>class Foo(Bar)</code>时，代码就发生了继承效果，这句代码的意思是“创建一个叫 Foo 的类，并让他继承自Bar”。Python 语言会让 Bar 的实例所具有的功能都工作在 Foo 的实例上。这样可以把通用的功能放到 Bar 里边，然后再给 Foo 特别设定一些功能。<br>当你这么做的时候，父类和子类有三种交互方式：<ol>
-<li>子类上的动作完全等同于父类上的动作</li>
-<li>子类上的动作完全覆盖了父类上的动作</li>
-<li>子类上的动作部分变更了父类上的动作</li>
-</ol>
-</li>
-<li>Python内置函数<code>super()</code>可以调用父类parent里的版本，如<code>super(Child, self).func()</code></li>
-<li><strong>多重继承：</strong><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">SuperFun</span>(<span class="symbol">Child, <span class="symbol">BadStuff</span></span>):</span><br><span class="line"><span class="symbol">pass</span></span><br></pre></td></tr></table></figure>
-这相当于说“创建一个叫 SuperFun 的类，让它同时继承 Child 和 BadStuff 两个类”。</li>
-<li><strong>继承和组合</strong><br>都是解决代码复用的问题。继承通过创建在基类里隐含父类的功能的机制来解决这一问题；组合则利用模块和别的类中的函数调用达到同一目的。</li>
-<li>(巩固练习)[<a href="http://www.python.org/dev/peps/pep-0008]" target="_blank" rel="noopener">http://www.python.org/dev/peps/pep-0008]</a></li>
-</ol>
-<h2 id="2020-8-23"><a href="#2020-8-23" class="headerlink" title="(2020/8/23)"></a>(2020/8/23)</h2>
-      
-
-
-  <div class="declare">
-    <strong>本文作者：</strong>
-    
-      JanierVan
-    
-    <br>
-    <strong>本文链接：</strong>
-    https://jainervam.github.io/2020/08/08/PythonHard4/
-    <br>
-    <strong>版权声明：</strong>
-    本作品采用
-    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
-    进行许可。转载请注明出处！
-    
-  </div>
-
-
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ArrayList</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/08/08/PythonHard4/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/08/25/PythonHard5/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          入门Python--“笨方法”学Python学习笔记(5)
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/08/07/PythonHard3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">入门Python--“笨方法”学Python学习笔记(3)</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#书籍"><span class="toc-number">1.</span> <span class="toc-text">书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题38-列表的操作"><span class="toc-number">2.</span> <span class="toc-text">习题38 列表的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题39-字典、可爱的字典"><span class="toc-number">3.</span> <span class="toc-text">习题39 字典、可爱的字典</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题40-模块、类和对象"><span class="toc-number">4.</span> <span class="toc-text">习题40 模块、类和对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题41-学习面向对象术语"><span class="toc-number">5.</span> <span class="toc-text">习题41 学习面向对象术语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题42-对象、类及从属关系"><span class="toc-number">6.</span> <span class="toc-text">习题42 对象、类及从属关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题43-基本的面向对象分析和设计"><span class="toc-number">7.</span> <span class="toc-text">习题43 基本的面向对象分析和设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题44-继承与组合"><span class="toc-number">8.</span> <span class="toc-text">习题44 继承与组合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020-8-23"><span class="toc-number">9.</span> <span class="toc-text">(2020&#x2F;8&#x2F;23)</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -508,9 +255,9 @@
 	var yiliaConfig = {
 		mathjax: [object Object],
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
