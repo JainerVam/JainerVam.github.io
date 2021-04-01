@@ -16,7 +16,7 @@
 <meta property="og:description" content="在Java里面Queue是一个接口，它只是定义了一个基本的Queue应该有哪些功能规约。实际上有多个Queue的实现，有的是采用线性表实现，有的基于链表实现。还有的适用于多线程的环境。Java中具有Queue功能的类主要有如下几个：AbstractQueue, ArrayBlockingQueue, ConcurrentLinkedQueue, LinkedBlockingQueue, Delay">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-03-03T08:16:56.261Z">
+<meta property="article:modified_time" content="2021-04-01T13:24:19.502Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Queue">
@@ -192,6 +192,7 @@
 <li>从队列头部取出元素。</li>
 </ol>
 <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Queue</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">Collection</span>&lt;<span class="title">E</span>&gt; </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">offer</span><span class="params">(E e)</span></span>;  <span class="comment">//添加元素到队列中，添加失败false</span></span><br><span class="line">    add(E e); <span class="comment">// 添加元素到队列中，添加失败抛出异常 </span></span><br><span class="line">    <span class="function">E <span class="title">poll</span><span class="params">()</span></span>;  <span class="comment">//移除队头元素 ，返回false或null</span></span><br><span class="line">    <span class="function">E <span class="title">remove</span><span class="params">()</span></span>; <span class="comment">//移除队头元素 ，throw Exception</span></span><br><span class="line">    <span class="function">E <span class="title">peek</span><span class="params">()</span></span>;  <span class="comment">//获取但不移除队列头的元素 ，返回false或null</span></span><br><span class="line">    <span class="function">E <span class="title">element</span><span class="params">()</span></span>; <span class="comment">//获取但不移除队列头的元素 ，throw Exception</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Queue使用时要尽量避免Collection的<code>add()</code>和<code>remove()</code>方法，而是要使用<code>offer()</code>来加入元素，使用<code>poll()</code>来获取并移出元素。它们的优点是通过返回值可以判断成功与否，<code>add()</code>和<code>remove()</code>方法在失败的时候会抛出异常。 如果要使用前端而不移出该元素，使用<code>element()</code>或者<code>peek()</code>方法。</p>
 <h2 id="Deque"><a href="#Deque" class="headerlink" title="Deque"></a>Deque</h2><p>Deque是一个双端队列（Double Ended Queue），这将意味着它不过是对Queue接口的增强。如果仔细分析Deque接口代码的话，我们会发现它里面主要包含有4个部分的功能定义。1. 双向队列特定方法定义。 2. Queue方法定义。 3. Stack方法定义。4.Collection方法定义。<br>第3、4部分的方法相当于告诉我们，具体实现Deque的类我们也可以把他们当成Stack和普通的Collection来使用。</p>
 <h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>虽然Deque继承自Queue，所以有offer等接口，但最好是调用xxxFirst()/xxxLast()以便与Queue的方法区分开。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Deque</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">Queue</span>&lt;<span class="title">E</span>&gt; </span>&#123;  </span><br><span class="line"><span class="comment">//First队首，Last队尾</span></span><br><span class="line">    <span class="comment">//添加</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">offerFirst</span><span class="params">(E e)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">offerLast</span><span class="params">(E e)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addFirst</span><span class="params">(E e)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addLast</span><span class="params">(E e)</span></span>;</span><br><span class="line">    <span class="comment">//取元素并删除</span></span><br><span class="line">    <span class="function">E <span class="title">pollFirst</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">E <span class="title">pollLast</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">E <span class="title">removeFirst</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">E <span class="title">removeLast</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//取元素但不删除</span></span><br><span class="line">    <span class="function">E <span class="title">peekFirst</span><span class="params">()</span>；</span></span><br><span class="line"><span class="function">    E <span class="title">peekLast</span><span class="params">()</span>；</span></span><br><span class="line"><span class="function">    E <span class="title">getFirst</span><span class="params">()</span>；</span></span><br><span class="line"><span class="function">    E <span class="title">getLast</span><span class="params">()</span>；</span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
@@ -206,6 +207,7 @@
 <ol>
 <li><a href="https://blog.csdn.net/lk941206/article/details/106607785/" target="_blank" rel="noopener">https://blog.csdn.net/lk941206/article/details/106607785/</a></li>
 </ol>
+<hr>
 
       
 
@@ -551,15 +553,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Keys</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -572,6 +574,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Deque</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">latex</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -595,18 +609,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">latex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
@@ -619,11 +621,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">return</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">return</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
