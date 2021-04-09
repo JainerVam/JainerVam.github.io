@@ -170,7 +170,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/09/JavaNet/">JavaNet</a>
+      <a class="article-title" href="/2021/04/09/JavaNet/">Java 网络编程</a>
     </h1>
   
 
@@ -190,7 +190,8 @@
 </ol>
 <h2 id="网络编程中的两个要素"><a href="#网络编程中的两个要素" class="headerlink" title="网络编程中的两个要素"></a>网络编程中的两个要素</h2><ol>
 <li>IP和端口号</li>
-<li>网络通信协议
+<li>网络通信协议</li>
+</ol>
         
           <a class="article-more-a" href="/2021/04/09/JavaNet/#more">more >></a>
         
@@ -294,7 +295,8 @@
 <li><code>java.io.File</code>类： 文件和文件目录路径的抽象表示形式，与平台无关</li>
 <li>File 能新建、删除、重命名文件和目录，但 File 不写入或读取文件内容。如果需要访问文件内容本身，则需要使用输入/输出流。</li>
 <li>想要在Java程序中表示一个真实存在的文件或目录，那么必须有一个File对<br>象，但是Java程序中的一个File对象，可能没有一个真实存在的文件或目录。</li>
-<li>File对象可以作为参数传递给流的构造器，指明读取或写入的“终点”。
+<li>File对象可以作为参数传递给流的构造器，指明读取或写入的“终点”。</li>
+</ul>
         
           <a class="article-more-a" href="/2021/04/08/JavaFile/#more">more >></a>
         
@@ -390,7 +392,8 @@
 <h3 id="流的分类"><a href="#流的分类" class="headerlink" title="流的分类"></a>流的分类</h3><ol>
 <li>按<strong>操作数据单位</strong>不同分为： 字节流(8 bit)，字符流(16 bit)</li>
 <li>按<strong>数据流的流向</strong>不同分为： 输入流，输出流</li>
-<li>按<strong>流的角色</strong>的不同分为： 节点流，处理流
+<li>按<strong>流的角色</strong>的不同分为： 节点流，处理流</li>
+</ol>
         
           <a class="article-more-a" href="/2021/04/08/JavaIO/#more">more >></a>
         
@@ -496,12 +499,12 @@
       
         <h2 id="Java集合框架概述"><a href="#Java集合框架概述" class="headerlink" title="Java集合框架概述"></a>Java集合框架概述</h2><ol>
 <li>集合、框架都是对多个数据进行存储的结构，简称Java容器。（此时的存储，主要指的是内存层面的存储，不涉及到持久化的存储）</li>
-<li>数组</li>
-</ol>
-<ul>
+<li>数组<ul>
 <li>数组在内存存储方面的特点：<ul>
-<li>数组初始化以后，长度就确定了。</li>
+<li>数组初始化以后，长度就确定了。<ul>
 <li>数组声明的类型，就决定了进行元素初始化时的类型。</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>数组在存储数据方面的弊端：<ul>
@@ -511,10 +514,8 @@
 </ul>
 </li>
 </ul>
-<ol start="3">
-<li>Java 集合可分为 <code>Collection</code> 和 <code>Map</code> 两种体系</li>
-</ol>
-<ul>
+</li>
+<li>Java 集合可分为 <code>Collection</code> 和 <code>Map</code> 两种体系<ul>
 <li>Collection接口： 单列数据， 定义了存取一组对象的方法的集合<ul>
 <li>List： 元素有序、可重复的集合(“动态”数组)<ul>
 <li>ArrayList, LinkedList, Vector</li>
@@ -531,6 +532,8 @@
 </ul>
 </li>
 </ul>
+</li>
+</ol>
         
           <a class="article-more-a" href="/2021/04/07/JavaCollectionMap/#more">more >></a>
         
@@ -1158,14 +1161,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -1174,19 +1169,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">System</a>
+                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Math</a>
+                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">BigInteger</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">BidDecimal</a>
+                <a href="javascript:void(0)" class="js-tag color2">Arrays</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1206,11 +1197,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Arrays</a>
+                <a href="javascript:void(0)" class="js-tag color2">System</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
+                <a href="javascript:void(0)" class="js-tag color5">Math</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">BigInteger</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">BidDecimal</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1222,23 +1221,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">枚举类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">enum</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
+                <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1246,23 +1229,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Socket</a>
+                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1283,6 +1250,42 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Writer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Socket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">枚举类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">enum</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1338,7 +1341,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Stack</a>
+                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1354,11 +1361,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+                <a href="javascript:void(0)" class="js-tag color1">Stack</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1371,10 +1378,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">latex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
