@@ -501,9 +501,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java集合框架概述"><a href="#Java集合框架概述" class="headerlink" title="Java集合框架概述"></a>Java集合框架概述</h2><ol>
-<li>集合、框架都是对多个数据进行存储的结构，简称Java容器。（此时的存储，主要指的是内存层面的存储，不涉及到持久化的存储）</li>
-<li>数组<ul>
+        <h2 id="Java集合框架概述"><a href="#Java集合框架概述" class="headerlink" title="Java集合框架概述"></a>Java集合框架概述</h2><p>1.集合、框架都是对多个数据进行存储的结构，简称Java容器。（此时的存储，主要指的是内存层面的存储，不涉及到持久化的存储）<br>2.数组</p>
+<ul>
 <li>数组在内存存储方面的特点：<ul>
 <li>数组初始化以后，长度就确定了。</li>
 <li>数组声明的类型，就决定了进行元素初始化时的类型。</li>
@@ -512,12 +511,9 @@
 <li>数组在存储数据方面的弊端：<ul>
 <li>数组初始化以后，长度就不可变了，不便于扩展</li>
 <li>数组中提供的属性和方法少，不便于进行添加、删除、插入等操作，且效率不高。同时无法直接获取实际存储元素的个数。</li>
-<li>数组存储的数据是有序的、可以重复的。 —-&gt;存储数据的特点单一</li>
+<li>数组存储的数据是有序的、可以重复的。 —-&gt;存储数据的特点单一<br>3.Java 集合可分为 <code>Collection</code> 和 <code>Map</code> 两种体系</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Java 集合可分为 <code>Collection</code> 和 <code>Map</code> 两种体系<ul>
 <li>Collection接口： 单列数据， 定义了存取一组对象的方法的集合<ul>
 <li>List： 元素有序、可重复的集合(“动态”数组)<ul>
 <li>ArrayList, LinkedList, Vector</li>
@@ -534,8 +530,6 @@
 </ul>
 </li>
 </ul>
-</li>
-</ol>
         
           <a class="article-more-a" href="/2021/04/07/JavaCollectionMap/#more">more >></a>
         
@@ -825,98 +819,6 @@
 
 
   
-    <article id="post-JavaCompare" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/04/JavaCompare/">Java中的对象排序</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/04/JavaCompare/" class="archive-article-date">
-  	<time datetime="2021-04-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在Java中经常会涉及到对象数组的排序问题，那么就涉及到对象之间的比较问题。Java实现对象排序的方式有两种：自然排序（java.lang.Comparable）、定制排序（java.util.Comparator）</p>
-        
-          <a class="article-more-a" href="/2021/04/04/JavaCompare/#more">more >></a>
-        
-      
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Comparable</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Comparator</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/04/JavaCompare/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
     <article id="post-JavaClass" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -985,6 +887,112 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/04/04/JavaClass/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-JavaDate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/JavaDate/">Java中的日期时间API</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/JavaDate/" class="archive-article-date">
+  	<time datetime="2021-04-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JDK8之前日期时间API"><a href="#JDK8之前日期时间API" class="headerlink" title="JDK8之前日期时间API"></a>JDK8之前日期时间API</h2><h3 id="java-lang-System类"><a href="#java-lang-System类" class="headerlink" title="java.lang.System类"></a>java.lang.System类</h3><p>System类提供的<code>public static long currentTimeMillis()</code>用来返回当前时<br>间与1970年1月1日0时0分0秒之间以毫秒为单位的时间差。</p>
+<h3 id="java-util-Date类-｜java-sql-Date类"><a href="#java-util-Date类-｜java-sql-Date类" class="headerlink" title="java.util.Date类 ｜java.sql.Date类"></a>java.util.Date类 ｜java.sql.Date类</h3><p>表示特定的瞬间，精确到毫秒</p>
+<ul>
+<li>构造器：<ul>
+<li><code>Date()</code>： 使用无参构造器创建的对象可以获取本地当前时间。</li>
+<li><code>Date(long date)</code>：创建指定毫秒数的Date对象</li>
+</ul>
+</li>
+<li>常用方法<ul>
+<li><code>getTime()</code>:返回自 1970 年 1 月 1 日 00:00:00 GMT 以来此 Date 对象表示的毫秒数。</li>
+<li><code>toString()</code>:把此 Date 对象转换为以下形式的 String： dow mon dd hh:mm:ss zzz yyyy 其中： dow 是一周中的某一天 (Sun, Mon, Tue, Wed, Thu, Fri, Sat)，zzz是时间标准。</li>
+</ul>
+</li>
+<li>java.sql.Date对应数据库中的日期类型的变量<ul>
+<li>实例化：<code>java.sql.Date date = new java.sql.Date();</code></li>
+<li>java.util.Date —&gt; java.sql.Date对象转换（父类转子类）：获取毫秒数作为java.sql.Date的参数</li>
+</ul>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2021/04/04/JavaDate/#more">more >></a>
+        
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日期时间</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/JavaDate/">展开全文 >></a>
         </p>
       
 
@@ -1141,6 +1149,14 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Arrays</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
@@ -1149,11 +1165,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">ArrayList</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Arrays</a>
+                <a href="javascript:void(0)" class="js-tag color1">Collection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">List</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Set</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Map</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1165,15 +1193,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ArrayList</a>
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
+                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1197,27 +1221,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Collection</a>
+                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">List</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Set</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
+                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1230,6 +1238,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">File</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1261,10 +1273,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
@@ -1289,14 +1297,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">接口</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">static</a>
               </li>
              
@@ -1309,23 +1309,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Queue</a>
+                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Deque</a>
+                <a href="javascript:void(0)" class="js-tag color3">接口</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">内部类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Stack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1341,23 +1333,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+                <a href="javascript:void(0)" class="js-tag color1">Queue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+                <a href="javascript:void(0)" class="js-tag color1">Deque</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">同步</a>
+                <a href="javascript:void(0)" class="js-tag color1">Stack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1373,11 +1357,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">同步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
+                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1385,7 +1393,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
+                <a href="javascript:void(0)" class="js-tag color2">return</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1397,7 +1405,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">return</a>
+                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
               </li>
             
             <div class="clearfix"></div>
