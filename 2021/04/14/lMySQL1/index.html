@@ -16,7 +16,7 @@
 <meta property="og:description" content="终于也要补充数据库相关的知识了，本章主要包括数据库的相关概念、MySQL产品的安装和使用。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-20T12:59:44.524Z">
+<meta property="article:modified_time" content="2021-04-20T13:11:19.980Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="数据库">
 <meta property="article:tag" content="MySQL">
@@ -218,36 +218,18 @@
 </ol>
 <h3 id="MySQL服务的登录和退出"><a href="#MySQL服务的登录和退出" class="headerlink" title="MySQL服务的登录和退出"></a>MySQL服务的登录和退出</h3><ol>
 <li>方式一：通过mysql自带的客户端，只限于root用户</li>
-<li>方式二：通过windows自带的客户端<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   登录：</span><br><span class="line">mysql 【-h主机名 -P端口号 】-u用户名 -p密码</span><br><span class="line"></span><br><span class="line">退出：</span><br><span class="line"><span class="keyword">exit</span>或ctrl+C</span><br></pre></td></tr></table></figure>
+<li>方式二：通过windows自带的客户端<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">登录：</span><br><span class="line">mysql 【-h主机名 -P端口号 】-u用户名 -p密码</span><br><span class="line"></span><br><span class="line">退出：</span><br><span class="line"><span class="keyword">exit</span>或ctrl+C</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<h3 id="MySQL的常见命令"><a href="#MySQL的常见命令" class="headerlink" title="MySQL的常见命令"></a>MySQL的常见命令</h3><pre><code>1.查看当前所有的数据库
-show databases;
-2.打开指定的库
-use 库名
-3.查看当前库的所有表
-show tables;
-4.查看其它库的所有表
-show tables from 库名;
-5.创建表
-create table 表名(
-
-    列名 列类型,
-    列名 列类型，
-    。。。
-);
-6.查看表结构
-desc 表名;
-
-
-7.查看服务器的版本
-方式一：登录到mysql服务端
-select version();
-方式二：没有登录到mysql服务端
-mysql --version
-或
-mysql --V</code></pre><h3 id="MySQL的语法规范"><a href="#MySQL的语法规范" class="headerlink" title="MySQL的语法规范"></a>MySQL的语法规范</h3><ol>
+<h3 id="MySQL的常见命令"><a href="#MySQL的常见命令" class="headerlink" title="MySQL的常见命令"></a>MySQL的常见命令</h3><p>1.查看当前所有的数据库: <code>show databases;</code><br>2.打开指定的库: <code>use 库名</code><br>3.查看当前库的所有表: <code>show tables;</code><br>4.查看其它库的所有表: <code>show tables from 库名;</code><br>5.创建表</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create <span class="keyword">table</span> 表名(</span><br><span class="line"></span><br><span class="line">	列名 列类型,</span><br><span class="line">	列名 列类型，</span><br><span class="line">	...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>6.查看表结构: <code>desc 表名;</code><br>7.查看服务器的版本</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">方式一：登录到mysql服务端</span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">version</span>();</span><br><span class="line"></span><br><span class="line">方式二：没有登录到mysql服务端</span><br><span class="line">	mysql <span class="comment">--version</span></span><br><span class="line">	或</span><br><span class="line">	mysql <span class="comment">--V</span></span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>显示表中的所有数据: <code>select * from 表名;</code></li>
+</ol>
+<h3 id="MySQL的语法规范"><a href="#MySQL的语法规范" class="headerlink" title="MySQL的语法规范"></a>MySQL的语法规范</h3><ol>
 <li>不区分大小写,但建议关键字大写，表名、列名小写</li>
 <li>每条命令最好用分号结尾</li>
 <li>每条命令根据需要，可以进行缩进 或换行</li>
@@ -256,24 +238,53 @@ mysql --V</code></pre><h3 id="MySQL的语法规范"><a href="#MySQL的语法规�
 
 </li>
 </ol>
-<h3 id="SQL的语言分类"><a href="#SQL的语言分类" class="headerlink" title="SQL的语言分类"></a>SQL的语言分类</h3><pre><code>DQL（Data Query Language）：数据查询语言
-    select 
-DML(Data Manipulate Language):数据操作语言
-    insert 、update、delete
-DDL（Data Define Languge）：数据定义语言
-    create、drop、alter
-TCL（Transaction Control Language）：事务控制语言
-    commit、rollback</code></pre><h3 id="SQL的常见命令"><a href="#SQL的常见命令" class="headerlink" title="SQL的常见命令"></a>SQL的常见命令</h3><pre><code>show databases； 查看所有的数据库
-use 库名； 打开指定的库
-show tables ; 显示库中的所有表
-show tables from 库名;显示指定库中的所有表
-create table 表名(
-    字段名 字段类型,    
-    字段名 字段类型
-); 创建表
-
-desc 表名; 查看指定表的结构
-select * from 表名;显示表中的所有数据</code></pre>
+<h3 id="SQL的语言分类"><a href="#SQL的语言分类" class="headerlink" title="SQL的语言分类"></a>SQL的语言分类</h3><ol>
+<li>DQL（Data Query Language）：数据查询语言 <code>select</code></li>
+<li>DML(Data Manipulate Language):数据操作语言 <code>insert</code> 、<code>update</code>、<code>delete</code></li>
+<li>DDL（Data Define Languge）：数据定义语言 <code>create</code>、<code>drop</code>、<code>alter</code></li>
+<li>TCL（Transaction Control Language）：事务控制语言 <code>commit</code>、<code>rollback</code></li>
+</ol>
+<h3 id="SQL的常见命令"><a href="#SQL的常见命令" class="headerlink" title="SQL的常见命令"></a>SQL的常见命令</h3><table>
+<thead>
+<tr>
+<th align="left">函数名</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">show databases； 查看所有的数据库</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">use 库名； 打开指定的库</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">show tables ; 显示库中的所有表</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">show tables from 库名;显示指定库中的所有表</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">create table 表名(</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">字段名 字段类型,</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">字段名 字段类型</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">); 创建表</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<pre><code>desc 表名; 查看指定表的结构</code></pre>
       
 
 
@@ -409,6 +420,15 @@ select * from 表名;显示表中的所有数据</code></pre>
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/04/17/lMySQL2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MySQL常见函数
+        
+      </div>
+    </a>
   
   
     <a href="/2021/04/10/JavaReflection/" id="article-nav-older" class="article-nav-link-wrap">
@@ -862,6 +882,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">单行函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">分组函数</a>
               </li>
             
             <div class="clearfix"></div>
