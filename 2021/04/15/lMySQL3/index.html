@@ -16,7 +16,7 @@
 <meta property="og:description" content="DQL语言的学习–数据查询语言 select">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-22T02:11:54.315Z">
+<meta property="article:modified_time" content="2021-04-22T02:17:51.066Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="MySQL">
 <meta property="article:tag" content="查询">
@@ -290,11 +290,11 @@ group by 分组的字段
 <li>n表连接，至少需要n-1个连接条件</li>
 <li>多个表不分主次，没有顺序要求</li>
 <li>一般为表起别名，提高阅读性和性能；如果为表起了别名，则查询的字段就不能使用原来的表名去限定</li>
-<li>加筛选：AND 筛选语句<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">等值连接语法：</span><br><span class="line"><span class="keyword">select</span> 查询列表</span><br><span class="line">	<span class="keyword">from</span> 表<span class="number">1</span> 别名,表<span class="number">2</span> 别名</span><br><span class="line">	<span class="keyword">where</span> 表<span class="number">1.</span><span class="keyword">key</span>=表<span class="number">2.</span><span class="keyword">key</span></span><br><span class="line">	【<span class="keyword">and</span> 筛选条件】</span><br><span class="line">	【<span class="keyword">group</span> <span class="keyword">by</span> 分组字段】</span><br><span class="line">	【<span class="keyword">having</span> 分组后的筛选】</span><br><span class="line">	【<span class="keyword">order</span> <span class="keyword">by</span> 排序字段】</span><br></pre></td></tr></table></figure>
+<li>加筛选：AND 筛选语句<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">等值连接语法：</span><br><span class="line"><span class="keyword">select</span> 查询列表</span><br><span class="line"><span class="keyword">from</span> 表<span class="number">1</span> 别名,表<span class="number">2</span> 别名</span><br><span class="line"><span class="keyword">where</span> 表<span class="number">1.</span><span class="keyword">key</span>=表<span class="number">2.</span><span class="keyword">key</span></span><br><span class="line">【<span class="keyword">and</span> 筛选条件】</span><br><span class="line">【<span class="keyword">group</span> <span class="keyword">by</span> 分组字段】</span><br><span class="line"><span class="keyword">having</span> 分组后的筛选】</span><br><span class="line">【<span class="keyword">order</span> <span class="keyword">by</span> 排序字段】</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<h4 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h4><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">	<span class="keyword">select</span> 查询列表</span><br><span class="line">	<span class="keyword">from</span> 表 别名<span class="number">1</span>,表 别名<span class="number">2</span></span><br><span class="line">	<span class="keyword">where</span> 等值的连接条件</span><br><span class="line">	【<span class="keyword">and</span> 筛选条件】</span><br><span class="line">	【<span class="keyword">group</span> <span class="keyword">by</span> 分组字段】</span><br><span class="line">	【<span class="keyword">having</span> 分组后的筛选】</span><br><span class="line">	【<span class="keyword">order</span> <span class="keyword">by</span> 排序字段】</span><br></pre></td></tr></table></figure>
+<h4 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h4><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line"><span class="keyword">select</span> 查询列表</span><br><span class="line"><span class="keyword">from</span> 表 别名<span class="number">1</span>,表 别名<span class="number">2</span></span><br><span class="line"><span class="keyword">where</span> 等值的连接条件</span><br><span class="line">【<span class="keyword">and</span> 筛选条件】</span><br><span class="line">【<span class="keyword">group</span> <span class="keyword">by</span> 分组字段】</span><br><span class="line">【<span class="keyword">having</span> 分组后的筛选】</span><br><span class="line">【<span class="keyword">order</span> <span class="keyword">by</span> 排序字段】</span><br></pre></td></tr></table></figure>
 <h3 id="sql99标准"><a href="#sql99标准" class="headerlink" title="sql99标准"></a>sql99标准</h3><ul>
 <li>通过join关键字实现连接</li>
 <li>支持：内连接（等值连接、非等值连接、自连接）、外连接、交叉连接</li>
@@ -304,16 +304,22 @@ group by 分组的字段
 </ul>
 </li>
 </ul>
-<h4 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	等值连接语法：</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">select</span> 字段，...</span><br><span class="line">	<span class="keyword">from</span> 表<span class="number">1</span></span><br><span class="line">	【<span class="keyword">inner</span>|<span class="keyword">left</span> <span class="keyword">outer</span>|<span class="keyword">right</span> <span class="keyword">outer</span>|<span class="keyword">cross</span>】<span class="keyword">join</span> 表<span class="number">2</span> <span class="keyword">on</span>  连接条件</span><br><span class="line">	【<span class="keyword">inner</span>|<span class="keyword">left</span> <span class="keyword">outer</span>|<span class="keyword">right</span> <span class="keyword">outer</span>|<span class="keyword">cross</span>】<span class="keyword">join</span> 表<span class="number">3</span> <span class="keyword">on</span>  连接条件</span><br><span class="line">	【<span class="keyword">where</span> 筛选条件】</span><br><span class="line">	【<span class="keyword">group</span> <span class="keyword">by</span> 分组字段】</span><br><span class="line">	【<span class="keyword">having</span> 分组后的筛选条件】</span><br><span class="line">	【<span class="keyword">order</span> <span class="keyword">by</span> 排序的字段或表达式】</span><br><span class="line"><span class="string">``</span><span class="string">`	</span></span><br><span class="line"><span class="string">案例：sql92与sql99在自连接实现上的不同，查询员工名和直接上级的名称</span></span><br></pre></td></tr></table></figure>
-<p>sql99</p>
-<pre><code>SELECT e.last_name,m.last_name
+<h4 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">	等值连接语法：</span><br><span class="line">	<span class="keyword">select</span> 字段，...</span><br><span class="line">	<span class="keyword">from</span> 表<span class="number">1</span></span><br><span class="line">	【<span class="keyword">inner</span>|<span class="keyword">left</span> <span class="keyword">outer</span>|<span class="keyword">right</span> <span class="keyword">outer</span>|<span class="keyword">cross</span>】<span class="keyword">join</span> 表<span class="number">2</span> <span class="keyword">on</span>  连接条件</span><br><span class="line">	【<span class="keyword">inner</span>|<span class="keyword">left</span> <span class="keyword">outer</span>|<span class="keyword">right</span> <span class="keyword">outer</span>|<span class="keyword">cross</span>】<span class="keyword">join</span> 表<span class="number">3</span> <span class="keyword">on</span>  连接条件</span><br><span class="line">	【<span class="keyword">where</span> 筛选条件】</span><br><span class="line">	【<span class="keyword">group</span> <span class="keyword">by</span> 分组字段】</span><br><span class="line">	【<span class="keyword">having</span> 分组后的筛选条件】</span><br><span class="line">	【<span class="keyword">order</span> <span class="keyword">by</span> 排序的字段或表达式】</span><br><span class="line"><span class="string">``</span><span class="string">`	</span></span><br><span class="line"><span class="string">案例：sql92与sql99在自连接实现上的不同，查询员工名和直接上级的名称</span></span><br></pre></td></tr></table></figure>
+<pre><code>sql99
+
+SELECT e.last_name,m.last_name
 FROM employees e
-JOIN employees m ON e.`manager_id`=m.`employee_id`;</code></pre><p>sql92</p>
-<pre><code>SELECT e.last_name,m.last_name
+JOIN employees m ON e.`manager_id`=m.`employee_id`;
+
+
+sql92
+
+SELECT e.last_name,m.last_name
 FROM employees e,employees m 
-WHERE e.`manager_id`=m.`employee_id`;</code></pre><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="section">#### 外连接</span></span><br><span class="line"><span class="bullet">- </span>应用场景：用于查询一个表中有，另一个表没有的记录</span><br><span class="line"><span class="bullet">- </span>特点：</span><br><span class="line"><span class="bullet">    - </span>外连接的查询结果为主表中的所有记录，如果从表中有和它匹配的，则显示匹配的值；如果从表中没有和它匹配的，则显示null</span><br><span class="line"><span class="bullet">    - </span><span class="strong">**左外连接**</span>，left join左边的是主表；<span class="strong">**右外连接**</span>，right join右边的是主表</span><br><span class="line"><span class="bullet">- </span>一般用于查询除了交集部分的剩余的不匹配的行</span><br><span class="line"></span><br><span class="line"><span class="section">#### 交叉连接</span></span><br><span class="line">笛卡尔乘积，cross join</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">## 子查询</span></span><br><span class="line"><span class="bullet">- </span>含义：出现在其他语句内部的select语句，称为子查询或内查询；内部嵌套其他select语句的查询，称为外查询或主查询</span><br><span class="line"><span class="bullet">- </span>特点：</span><br><span class="line"><span class="bullet">	- </span>子查询都放在小括号内</span><br><span class="line"><span class="bullet">	- </span>子查询可以放在from、select、where、having、exists（相关子查询）后面，但一般放在条件的右侧</span><br><span class="line"><span class="bullet">	    - </span>from后：支持表子查询</span><br><span class="line"><span class="bullet">	    - </span>select后：仅支持标量子查询</span><br><span class="line"><span class="bullet">	    - </span>where/having后：标量子查询、列子查询、行子查询</span><br><span class="line"><span class="bullet">	    - </span>exists：表子查询。<span class="code">`exists(完整的查询语句)`</span>，结果是1或0</span><br><span class="line"><span class="bullet">	- </span>按结果集的行数不同分为：</span><br><span class="line"><span class="bullet">	    - </span>标量子查询：结果集只有一行一列（单行子查询）</span><br><span class="line"><span class="bullet">	    - </span>列子查询：结果集只有一列多行（多行子查询）</span><br><span class="line"><span class="bullet">	    - </span>行子查询：结果集有一行多列</span><br><span class="line"><span class="bullet">	    - </span>表子查询：一般为多行多列</span><br><span class="line"><span class="bullet">	- </span>子查询优先于主查询执行，主查询使用了子查询的执行结果</span><br><span class="line"></span><br><span class="line"><span class="section">### 标量子查询/单行子查询</span></span><br><span class="line"><span class="bullet">- </span>结果集只有一行</span><br><span class="line"><span class="bullet">- </span>一般搭配单行操作符使用：<span class="code">`&gt; &lt; = &lt;&gt; &gt;= &lt;=`</span></span><br><span class="line"><span class="bullet">- </span>非法使用子查询的情况：</span><br><span class="line"><span class="bullet">	- </span>子查询的结果为一组值</span><br><span class="line"><span class="bullet">	- </span>子查询的结果为空</span><br><span class="line"><span class="code">		</span></span><br><span class="line"><span class="section">### 列子查询/多行子查询</span></span><br><span class="line"><span class="bullet">- </span>结果集有多行</span><br><span class="line"><span class="bullet">- </span>一般搭配多行操作符使用：any/some、all、in、not in</span><br><span class="line"><span class="bullet">	- </span>in： 属于子查询结果中的<span class="strong">**任意**</span>一个就行</span><br><span class="line"><span class="bullet">	- </span>not in: 不属于子查询结果</span><br><span class="line"><span class="bullet">	- </span>any: 和子查询返回的某一个值比较</span><br><span class="line"><span class="bullet">	- </span>all: 和子查询返回的所有值比较</span><br><span class="line"><span class="bullet">	- </span>any和all往往可以用其他查询代替</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">## 分页查询</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>应用场景：实际的web项目中需要根据用户的需求提交对应的分页查询的sql语句</span><br><span class="line"><span class="bullet">- </span>特点：</span><br><span class="line"><span class="bullet">    - </span>起始条目索引从0开始</span><br><span class="line"><span class="bullet">    - </span>limit子句放在查询语句的最后</span><br><span class="line"><span class="bullet">    - </span>公式：假如每页显示条目数sizePerPage,要显示的页数 page: <span class="code">`select * from  表 limit （page-1）*sizePerPage,sizePerPage`</span></span><br></pre></td></tr></table></figure>
-<p>语法：</p>
-<pre><code>select 字段|表达式,...
+WHERE e.`manager_id`=m.`employee_id`;</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">#### 外连接</span><br><span class="line">- 应用场景：用于查询一个表中有，另一个表没有的记录</span><br><span class="line">- 特点：</span><br><span class="line">    - 外连接的查询结果为主表中的所有记录，如果从表中有和它匹配的，则显示匹配的值；如果从表中没有和它匹配的，则显示null</span><br><span class="line">    - **左外连接**，left join左边的是主表；**右外连接**，right join右边的是主表</span><br><span class="line">- 一般用于查询除了交集部分的剩余的不匹配的行</span><br><span class="line"></span><br><span class="line">#### 交叉连接</span><br><span class="line">笛卡尔乘积，cross join</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 子查询</span><br><span class="line">- 含义：出现在其他语句内部的select语句，称为子查询或内查询；内部嵌套其他select语句的查询，称为外查询或主查询</span><br><span class="line">- 特点：</span><br><span class="line">	- 子查询都放在小括号内</span><br><span class="line">	- 子查询可以放在from、select、where、having、exists（相关子查询）后面，但一般放在条件的右侧</span><br><span class="line">	    - from后：支持表子查询</span><br><span class="line">	    - select后：仅支持标量子查询</span><br><span class="line">	    - where/having后：标量子查询、列子查询、行子查询</span><br><span class="line">	    - exists：表子查询。`exists(完整的查询语句)`，结果是1或0</span><br><span class="line">	- 按结果集的行数不同分为：</span><br><span class="line">	    - 标量子查询：结果集只有一行一列（单行子查询）</span><br><span class="line">	    - 列子查询：结果集只有一列多行（多行子查询）</span><br><span class="line">	    - 行子查询：结果集有一行多列</span><br><span class="line">	    - 表子查询：一般为多行多列</span><br><span class="line">	- 子查询优先于主查询执行，主查询使用了子查询的执行结果</span><br><span class="line"></span><br><span class="line">### 标量子查询/单行子查询</span><br><span class="line">- 结果集只有一行</span><br><span class="line">- 一般搭配单行操作符使用：`&gt; &lt; = &lt;&gt; &gt;= &lt;=`</span><br><span class="line">- 非法使用子查询的情况：</span><br><span class="line">	- 子查询的结果为一组值</span><br><span class="line">	- 子查询的结果为空</span><br><span class="line">		</span><br><span class="line">### 列子查询/多行子查询</span><br><span class="line">- 结果集有多行</span><br><span class="line">- 一般搭配多行操作符使用：any/some、all、in、not in</span><br><span class="line">	- in： 属于子查询结果中的**任意**一个就行</span><br><span class="line">	- not in: 不属于子查询结果</span><br><span class="line">	- any: 和子查询返回的某一个值比较</span><br><span class="line">	- all: 和子查询返回的所有值比较</span><br><span class="line">	- any和all往往可以用其他查询代替</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 分页查询</span><br><span class="line"></span><br><span class="line">- 应用场景：实际的web项目中需要根据用户的需求提交对应的分页查询的sql语句</span><br><span class="line">- 特点：</span><br><span class="line">    - 起始条目索引从0开始</span><br><span class="line">    - limit子句放在查询语句的最后</span><br><span class="line">    - 公式：假如每页显示条目数sizePerPage,要显示的页数 page: `select * from  表 limit （page-1）*sizePerPage,sizePerPage`</span><br></pre></td></tr></table></figure>
+<pre><code>语法：
+
+select 字段|表达式,...
 from 表
 【where 条件】
 【group by 分组字段】
@@ -323,8 +329,9 @@ limit 【offset，】size;
 
 # offset: 起始的条目索引，从0开始，默认0
 # size：条目数</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 联合查询</span><br><span class="line">- union 联合、合并，将多条查询语句的结果合并成一个结果</span><br><span class="line">- 应用于：要查询的结果来自多个表，且多个表没有直接的连接关系，但要查询的信息一致</span><br><span class="line">- 特点</span><br><span class="line">    - 多条查询语句的查询的列数必须是一致的</span><br><span class="line">	- 多条查询语句的查询的列的类型和顺序最好一致</span><br><span class="line">	- `union`代表去重，`union all`代表不去重</span><br></pre></td></tr></table></figure>
-<p>语法：</p>
-<pre><code>select 字段|常量|表达式|函数 【from 表】 【where 条件】 union 【all】
+<pre><code>语法：
+
+select 字段|常量|表达式|函数 【from 表】 【where 条件】 union 【all】
 select 字段|常量|表达式|函数 【from 表】 【where 条件】 union 【all】
 select 字段|常量|表达式|函数 【from 表】 【where 条件】 union  【all】
 .....
@@ -466,9 +473,18 @@ select 字段|常量|表达式|函数 【from 表】 【where 条件】</code></
   
 <nav id="article-nav">
   
+    <a href="/2021/04/15/lMySQL2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MySQL常见函数
+        
+      </div>
+    </a>
   
-    <a href="/2021/04/15/lMySQL2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MySQL常见函数</div>
+  
+    <a href="/2021/04/14/lMySQL1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL数据库-背景</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -637,11 +653,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -673,43 +697,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">枚举类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">enum</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -729,11 +721,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">File</a>
+                <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">枚举类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">enum</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">File</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -785,6 +801,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Queue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Deque</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">static</a>
               </li>
              
@@ -797,11 +821,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Queue</a>
+                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Deque</a>
+                <a href="javascript:void(0)" class="js-tag color3">接口</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -825,15 +849,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">接口</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Stack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -849,10 +873,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">公式</a>
               </li>
              
@@ -862,14 +882,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">latex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -885,15 +897,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查询</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -905,11 +921,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color3">查询</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">return</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -921,7 +937,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">return</a>
               </li>
              
               <li class="article-tag-list-item">
