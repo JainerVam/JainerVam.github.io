@@ -170,20 +170,241 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/07/JavaWebjQuery/">JavaWebjQuery</a>
+      <a class="article-title" href="/2021/05/17/JavaWebjQuery/">jQuery基础</a>
     </h1>
   
 
         
-        <a href="/2021/06/07/JavaWebjQuery/" class="archive-article-date">
-  	<time datetime="2021-06-06T16:56:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-07</time>
+        <a href="/2021/05/17/JavaWebjQuery/" class="archive-article-date">
+  	<time datetime="2021-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <a id="more"></a>
+<h1 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h1><p>2021-5-17</p>
+<h2 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h2><p>jQuery， 顾名思义， 也就是 JavaScript 和查询（Query） ， 它就是辅助 JavaScript 开发的 js 类库。 </p>
+<p>jQuery 是免费、 开源的， jQuery 的语法设计可以使开发更加便捷， 例如操作文档对象、 选择 DOM 元素、<br>制作动画效果、 事件处理、 使用 Ajax 以及其他功能。</p>
+<blockquote>
+<p>注意：</p>
+<p>使用 jQuery 一定要引入 jQuery 库  </p>
+</blockquote>
+<h2 id="jQuery核心函数"><a href="#jQuery核心函数" class="headerlink" title="jQuery核心函数"></a>jQuery核心函数</h2><p><code>$</code> 是 jQuery 的核心函数， 能完成 jQuery 的很多功能。<code>$()</code>就是调用<code>$</code>这个函数  </p>
+<ol>
+<li><p>传入参数为 [ 函数 ] 时：表示页面加载完成之后（自动调用）。 相当于 <code>window.onload = function(){}</code></p>
+</li>
+<li><p>传入参数为 [ HTML 字符串 ] 时：会对我们创建这个 html 标签对象</p>
+</li>
+<li><p>传入参数为 [ DOM 对象 ] 时：会把这个 dom 对象转换为 jQuery 对</p>
+</li>
+<li><p>传入参数为 [ 选择器字符串 ] 时：</p>
+<p><code>$(“#id 属性值”);</code> id 选择器， 根据 id 查询标签对象<br><code>$(“标签名”);</code> 标签名选择器， 根据指定的标签名查询标签对象<br><code>$(“.class 属性值”);</code> 类型选择器， 可以根据 class 属性查询标签对象</p>
+</li>
+</ol>
+<p>jQuery代码示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Insert title here<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"../script/jquery-1.7.2.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">	<span class="comment">//使用$()代替window.onload</span></span></span><br><span class="line"><span class="javascript">	$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="comment">//使用选择器获取按钮对象，随后绑定单击响应函数</span></span></span><br><span class="line"><span class="javascript">		$(<span class="string">"#btnId"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="actionscript">			<span class="comment">//弹出Hello</span></span></span><br><span class="line"><span class="actionscript">			alert(<span class="string">'Hello'</span>);</span></span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;);</span><br><span class="line">    </span><br><span class="line"><span class="actionscript">    <span class="comment">//全写</span></span></span><br><span class="line"><span class="javascript">	$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="comment">// 代码...</span></span></span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnId"</span>&gt;</span>SayHello<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="jQuery-对象与-dom-对象"><a href="#jQuery-对象与-dom-对象" class="headerlink" title="jQuery 对象与 dom 对象"></a>jQuery 对象与 dom 对象</h2><h3 id="jQuery-对象"><a href="#jQuery-对象" class="headerlink" title="jQuery 对象"></a>jQuery 对象</h3><p><strong>jQuery 对象的本质</strong>：是 dom 对象的数组 + jQuery 提供的一系列功能函数 。 </p>
+<p>jQuery 对象 Alert 出来的效果是：<code>[object Object]</code>  </p>
+<ol>
+<li>通过 JQuery 提供的 API 创建的对象， 是 JQuery 对象</li>
+<li>通过 JQuery 包装的 Dom 对象， 也是 JQuery 对象</li>
+<li>通过 JQuery 提供的 API 查询到的对象， 是 JQuery 对象</li>
+</ol>
+<h3 id="dom-对象"><a href="#dom-对象" class="headerlink" title="dom 对象"></a>dom 对象</h3><p>DOM 对象 Alert 出来的效果是：<code>[object HTML 标签名 Element]</code></p>
+<ol>
+<li>通过 getElementById()查询出来的标签对象是 Dom 对象</li>
+<li>通过 getElementsByName()查询出来的标签对象是 Dom 对象</li>
+<li>通过 getElementsByTagName()查询出来的标签对象是 Dom 对象</li>
+<li>通过 createElement() 方法创建的对象， 是 Dom 对象  </li>
+</ol>
+<h3 id="jQuery-对象和-Dom-对象使用区别"><a href="#jQuery-对象和-Dom-对象使用区别" class="headerlink" title="jQuery 对象和 Dom 对象使用区别"></a>jQuery 对象和 Dom 对象使用区别</h3><p>jQuery 对象不能使用 DOM 对象的属性和方法，DOM 对象也不能使用 jQuery 对象的属性和方法 。</p>
+<h3 id="Dom-对象和-jQuery-对象互转"><a href="#Dom-对象和-jQuery-对象互转" class="headerlink" title="Dom 对象和 jQuery 对象互转"></a>Dom 对象和 jQuery 对象互转</h3><ul>
+<li><p>dom 对象转化为 jQuery 对象</p>
+<ul>
+<li>先有 DOM 对象</li>
+<li><code>$( DOM 对象 )</code>就可以转换成为 jQuery 对象</li>
+</ul>
+</li>
+<li><p>jQuery 对象转为 dom 对象</p>
+<ul>
+<li>先有 jQuery 对象</li>
+<li><code>jQuery 对象[下标]</code>取出相应的 DOM 对象  </li>
+</ul>
+</li>
+</ul>
+<h2 id="jQuery-选择器"><a href="#jQuery-选择器" class="headerlink" title="jQuery 选择器"></a>jQuery 选择器</h2><h3 id="1-基本选择器"><a href="#1-基本选择器" class="headerlink" title="1. 基本选择器"></a>1. 基本选择器</h3><ol>
+<li><code>#id</code> 选择器： 根据给定的ID匹配一个元素</li>
+<li>.class 选择器： 根据给定的类匹配元素</li>
+<li>element 选择器： 根据给定的元素名匹配所有元素</li>
+<li>* 选择器：匹配所有元素</li>
+<li>selector1， selector2 组合选择器： 将每一个选择器匹配到的元素合并后一起返回</li>
+</ol>
+<h3 id="2-层级选择器"><a href="#2-层级选择器" class="headerlink" title="2. 层级选择器"></a>2. 层级选择器</h3><ol>
+<li>ancestor descendant 后代选择器 ： 在给定的祖先元素下匹配所有的后代元素</li>
+<li>parent &gt; child 子元素选择器： 在给定的父元素下匹配所有的子元素</li>
+<li>prev + next 相邻元素选择器： 匹配所有紧接在 prev 元素后的 next 元素（同辈）</li>
+<li>prev ~ sibings 之后的兄弟元素选择器： 匹配 prev 元素之后的所有 siblings 元素（同辈）</li>
+</ol>
+<h3 id="3-过滤选择器"><a href="#3-过滤选择器" class="headerlink" title="3. 过滤选择器"></a>3. 过滤选择器</h3><p>标签名前置</p>
+<h4 id="3-1-基本过滤器"><a href="#3-1-基本过滤器" class="headerlink" title="3.1 基本过滤器"></a>3.1 基本过滤器</h4><ol>
+<li>:first 获取第一个元素</li>
+<li>:last 获取最后个元素</li>
+<li>:not(selector) 去除所有与给定选择器匹配的元素</li>
+<li>:even 匹配所有索引值为偶数的元素， 从 0 开始计数</li>
+<li>:odd 匹配所有索引值为奇数的元素， 从 0 开始计数</li>
+<li>:eq(index) 匹配一个给定索引值的元素</li>
+<li>:gt(index) 匹配所有大于给定索引值的元素</li>
+<li>:lt(index) 匹配所有小于给定索引值的元素</li>
+<li>:header 匹配如 h1, h2, h3 之类的标题元素</li>
+<li>:animated 匹配所有正在执行动画效果的元 元素</li>
+</ol>
+<h4 id="3-2-内容过滤器"><a href="#3-2-内容过滤器" class="headerlink" title="3.2 内容过滤器"></a>3.2 内容过滤器</h4><ol>
+<li>:contains(text) 匹配包含给定文本的元素</li>
+<li>:empty 匹配所有不包含子元素或者文本的空元素</li>
+<li>:parent 匹配含有子元素或者文本的元素</li>
+<li>:has(selector) 匹配含有选择器所匹配的元素的元素</li>
+</ol>
+<h4 id="3-3-属性过滤器"><a href="#3-3-属性过滤器" class="headerlink" title="3.3 属性过滤器"></a>3.3 属性过滤器</h4><ol>
+<li>[attribute] 匹配包含给定属性的元素。</li>
+<li>[attribute=value] 匹配给定的属性是某个特定值的元素</li>
+<li>[attribute!=value] 匹配所有不含有指定的属性， 或者属性不等于特定值的元素。</li>
+<li>[attribute^=value] 匹配给定的属性是以某些值开始的元素</li>
+<li>[attribute$=value] 匹配给定的属性是以某些值结尾的元素</li>
+<li>[attribute*=value] 匹配给定的属性是以包含某些值的元素</li>
+<li><code>[attrSel1][attrSel2][attrSelN]</code>复合属性选择器， 需要同时满足多个条件时使用</li>
+</ol>
+<h4 id="3-4-表单过滤器"><a href="#3-4-表单过滤器" class="headerlink" title="3.4 表单过滤器"></a>3.4 表单过滤器</h4><ol>
+<li>:input 匹配所有 input, textarea, select 和 button 元素</li>
+<li>:text 匹配所有 文本输入框</li>
+<li>:password 匹配所有的密码输入框</li>
+<li>:radio 匹配所有的单选框</li>
+<li>:checkbox 匹配所有的复选框</li>
+<li>:submit 匹配所有提交按钮</li>
+<li>:image 匹配所有 img 标签</li>
+<li>:reset 匹配所有重置按钮</li>
+<li>:button 匹配所有 input type=button <button>按钮</li>
+<li>:file 匹配所有 input type=file 文件上传</li>
+<li>:hidden 匹配所有不可见元素 display:none 或 input type=hidden</li>
+</ol>
+<h4 id="3-5-表单对象属性过滤器"><a href="#3-5-表单对象属性过滤器" class="headerlink" title="3.5 表单对象属性过滤器"></a>3.5 表单对象属性过滤器</h4><ol>
+<li>:enabled 匹配所有可用元素</li>
+<li>:disabled 匹配所有不可用元素</li>
+<li>:checked 匹配所有选中的单选， 复选， 和下拉列表中选中的 option 标签对象</li>
+<li>:selected 匹配所有选中的 option</li>
+</ol>
+<h4 id="3-6-jQuery元素筛选"><a href="#3-6-jQuery元素筛选" class="headerlink" title="3.6 jQuery元素筛选"></a>3.6 jQuery元素筛选</h4><ol>
+<li>eq() 获取给定索引的元素，功能跟:eq()一样</li>
+<li>first() 获取第一个元素，功能跟:first一样</li>
+<li>last() 获取最后一个元素，功能跟:last一样</li>
+<li>filter(exp)留下匹配的元素</li>
+<li>is(exp)判断是否匹配给定的选择器，只要有一个匹配就返回，true</li>
+<li>has(exp)返回包含有匹配选择器的元素的元素，功能跟:has一样</li>
+<li>not(exp)删除匹配选择器的元素，功能跟:not一样</li>
+<li>children(exp)返回匹配给定选择器的子元素，功能跟parent&gt;child一样</li>
+<li>find(exp)返回匹配给定选择器的后代元素，功能跟ancestor descendant一样</li>
+<li>next()返回当前元素的下一个兄弟元素</li>
+<li>nextAll()返回当前元素后面所有的兄弟元素</li>
+<li>nextUntil()返回当前元素到指定匹配的元素为止的后面元素</li>
+<li>parent()返回父元素</li>
+<li>prev(exp)返回当前元素的上一个兄弟元素</li>
+<li>prevAll()返回当前元素前面所有的兄弟元素</li>
+<li>prevUnit(exp)返回当前元素到指定匹配的元素为止的前面元素</li>
+<li>siblings(exp)返回所有兄弟元素</li>
+<li>add()把add匹配的选择器的元素添加到当前jquery对象中</li>
+</ol>
+<h2 id="jQuery的属性操作"><a href="#jQuery的属性操作" class="headerlink" title="jQuery的属性操作"></a>jQuery的属性操作</h2><ol>
+<li>html() 它可以设置和获取起始标签和结束标签中的内容。不传参数是获取，传参是设置。 跟 dom 属性 <code>innerHTML</code> 一样。</li>
+<li>text() 它可以设置和获取起始标签和结束标签中的文本。 跟 dom 属性 <code>innerText</code> 一样。</li>
+<li>val() 它可以设置和获取<strong>表单项</strong>的 value 属性值。 跟 dom 属性 <code>value</code> 一样。<strong>val 方法可以同时设置多个表单项的选中状态。</strong></li>
+<li>attr() 可以设置和获取属性的值， 不推荐操作 checked、 readOnly、 selected、 disabled 等等。attr 方法还可以操作非标准的属性。 比如自定义属性： abc,bbj。</li>
+<li>prop() 可以设置和获取属性的值,只推荐操作 checked、 readOnly、 selected、 disabled 等等。</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// val 方法同时设置多个表单项的选中状态</span><br><span class="line">$("#multiple,#single,:radio,:checkbox").val(["radio2","checkbox1","checkbox3","mul1","mul4","sin3"]);</span><br><span class="line"></span><br><span class="line">// 给全不选绑定单击事件</span><br><span class="line">$("#checkedNoBtn").click(function () &#123;</span><br><span class="line">$(":checkbox").prop("checked",false);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="DOM的增删改"><a href="#DOM的增删改" class="headerlink" title="DOM的增删改"></a>DOM的增删改</h2><h3 id="1-内部插入"><a href="#1-内部插入" class="headerlink" title="1. 内部插入"></a>1. 内部插入</h3><ol>
+<li>appendTo() a.appendTo(b) 把 a 插入到 b 子元素末尾， 成为最后一个子元素。a原来的位置删除。</li>
+<li>prependTo() a.prependTo(b) 把 a 插到 b 所有子元素前面， 成为第一个子元素</li>
+</ol>
+<h3 id="2-外部插入"><a href="#2-外部插入" class="headerlink" title="2. 外部插入"></a>2. 外部插入</h3><ol>
+<li>insertAfter() a.insertAfter(b) 得到 ba</li>
+<li>insertBefore() a.insertBefore(b) 得到 ab</li>
+</ol>
+<h3 id="3-替换"><a href="#3-替换" class="headerlink" title="3. 替换"></a>3. 替换</h3><ol>
+<li>replaceWith()  a.replaceWith(b) 用 b 替换掉 a</li>
+<li>replaceAll()  a.replaceAll(b) 用 a 替换掉所有 b</li>
+</ol>
+<h3 id="4-删除"><a href="#4-删除" class="headerlink" title="4. 删除"></a>4. 删除</h3><ol>
+<li>remove() a.remove(); 删除 a 标签</li>
+<li>empty() a.empty(); 清空 a 标签里的内容</li>
+</ol>
+<h2 id="CSS样式的操作"><a href="#CSS样式的操作" class="headerlink" title="CSS样式的操作"></a>CSS样式的操作</h2><ol>
+<li>addClass() 添加样式</li>
+<li>removeClass() 删除样式</li>
+<li>toggleClass() 有就删除， 没有就添加样式</li>
+<li>offset() 获取和设置元素的坐标</li>
+</ol>
+<h2 id="jQuery动画"><a href="#jQuery动画" class="headerlink" title="jQuery动画"></a>jQuery动画</h2><h3 id="基本动画"><a href="#基本动画" class="headerlink" title="基本动画"></a>基本动画</h3><ol>
+<li>show() 将隐藏的元素显示</li>
+<li>hide() 将可见的元素隐藏。</li>
+<li>toggle() 可见就隐藏， 不可见就显示。</li>
+</ol>
+<blockquote>
+<p>以上动画方法都可以添加参数。<br>1、 第一个参数是动画 执行的时长， 以毫秒为单位<br>2、 第二个参数是动画的回调函数 (动画完成后自动调用的函数)</p>
+</blockquote>
+<h3 id="淡入淡出动画"><a href="#淡入淡出动画" class="headerlink" title="淡入淡出动画"></a>淡入淡出动画</h3><ol>
+<li>fadeIn() 淡入（慢慢可见）</li>
+<li>fadeOut() 淡出（慢慢消失）</li>
+<li>fadeTo() 在指定时长内慢慢的将透明度修改到指定的值。 0 透明， 1 完成可见， 0.5 半透明</li>
+<li>fadeToggle() 淡入/淡出 切换</li>
+</ol>
+<h2 id="jQuery事件操作"><a href="#jQuery事件操作" class="headerlink" title="jQuery事件操作"></a>jQuery事件操作</h2><p><strong>$( function(){} ); 和 window.onload = function(){}的区别？</strong></p>
+<p>1.触发时间</p>
+<ul>
+<li>jQuery 的页面加载完成之后是浏览器的内核解析完页面的标签创建好 DOM 对象之后就会马上执行。</li>
+<li>原生 js 的页面加载完成之后， 除了要等浏览器内核解析完标签创建好 DOM 对象， 还要等标签显示时需要的内容加载<br>完成。  </li>
+</ul>
+<p>2.触发的顺序</p>
+<ul>
+<li>jQuery 页面加载完成之后先执行</li>
+<li>原生 js 的页面加载完成之后</li>
+</ul>
+<p>3.执行的次数</p>
+<ul>
+<li>原生 js 的页面加载完成之后， 只会执行最后一次的赋值函数。</li>
+<li>jQuery 的页面加载完成之后是全部把注册的 function 函数， 依次顺序全部执行。  </li>
+</ul>
+<h3 id="jQuery-中的常用事件处理方法"><a href="#jQuery-中的常用事件处理方法" class="headerlink" title="jQuery 中的常用事件处理方法"></a>jQuery 中的常用事件处理方法</h3><ol>
+<li>click() 它可以绑定单击事件， 以及触发单击事件</li>
+<li>mouseover() 鼠标移入事件</li>
+<li>mouseout() 鼠标移出事件</li>
+<li>bind() 可以给元素一次性绑定一个或多个事件</li>
+<li>one() 使用上跟 bind 一样。 但是 one 方法绑定的事件只会响应一次</li>
+<li>unbind() 跟 bind 方法相反的操作， 解除事件的绑定</li>
+<li>live() 也是用来绑定事件。 它可以用来绑定选择器匹配的所有元素的事件。 <strong>哪怕这个元素是后面动态创建出来的也有效</strong></li>
+</ol>
+<h3 id="事件的冒泡"><a href="#事件的冒泡" class="headerlink" title="事件的冒泡"></a>事件的冒泡</h3><ol>
+<li>事件的冒泡：父子元素同时监听同一个事件。 当触发子元素的事件的时候， 同一个事件也被传递到了父元素的事件里去<br>响应。</li>
+<li>如何阻止事件冒泡：在子元素事件函数体内， <code>return false;</code>可以阻止事件的冒泡传递。  </li>
+</ol>
+<h3 id="javaScript-事件对象"><a href="#javaScript-事件对象" class="headerlink" title="javaScript 事件对象"></a>javaScript 事件对象</h3><ol>
+<li>事件对象， 是封装有触发的事件信息的一个 javascript 对象。</li>
+<li>如何获取呢 javascript 事件对象呢？<br>在给元素绑定事件的时候， 在事件的<code>function( event )</code>参数列表中添加一个参数， 这个参数名， 我们习惯取名为 event。<br>这个 event 就是 javascript 传递参事件处理函数的事件对象。  </li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//1.原生javascript获取 事件对象</span><br><span class="line">	window.onload = function () &#123;</span><br><span class="line">		document.getElementById("areaDiv").onclick = function (event) &#123;</span><br><span class="line">		console.log(event);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">//2.JQuery代码获取 事件对象</span><br><span class="line">	$(function () &#123;</span><br><span class="line">		$("#areaDiv").click(function (event) &#123;</span><br><span class="line">			console.log(event);</span><br><span class="line">		 &#125;);</span><br><span class="line">//3.使用bind同时对多个事件绑定同一个函数。获取当前操作是什么事件</span><br><span class="line">	$("#areaDiv").bind("mouseover mouseout",function (event) &#123;</span><br><span class="line">		if (event.type == "mouseover") &#123;</span><br><span class="line">			console.log("鼠标移入");</span><br><span class="line">		&#125; else if (event.type == "mouseout") &#123;</span><br><span class="line">			console.log("鼠标移出");</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
       
 
 
@@ -196,11 +417,30 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaWeb</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/07/JavaWebjQuery/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/05/17/JavaWebjQuery/">展开全文 >></a>
         </p>
       
 
@@ -279,11 +519,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
         		</li>
       		
 		</ul>
@@ -479,11 +719,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -719,102 +959,6 @@
 
 
   
-    <article id="post-lMySQL7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/26/lMySQL7/">MySQL 视图</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/26/lMySQL7/" class="archive-article-date">
-  	<time datetime="2021-04-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ol>
-<li>含义：虚拟表，和普通表一样使用。MySQL5.1版本出现的新特性，是通过表动态生成的数据</li>
-<li>视图和表的区别：（1）使用方式完全相同；（2）视图不占用物理空间，仅仅保存的是sql逻辑。表保存数据（3）关键字：表table，视图view</li>
-<li>视图的好处：（1）sql语句提高重用性，效率高；（2）和表实现了分离，提高了安全性; （3）简化复杂的sql操作，不必知道他的查询细节</li>
-</ol>
-        
-          <a class="article-more-a" href="/2021/04/26/lMySQL7/#more">more >></a>
-        
-      
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">视图</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">view</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/26/lMySQL7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
     <article id="post-lMySQL6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -875,6 +1019,94 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/04/26/lMySQL6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-lMySQL8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/26/lMySQL8/">MySQL 变量</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/26/lMySQL8/" class="archive-article-date">
+  	<time datetime="2021-04-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>变量分为系统变量和自定义变量。其中，系统变量包含全局变量和会话变量；自定义变量包含用户变量和局部变量。</p>
+        
+          <a class="article-more-a" href="/2021/04/26/lMySQL8/#more">more >></a>
+        
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">变量</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/26/lMySQL8/">展开全文 >></a>
         </p>
       
 
@@ -1031,22 +1263,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">code</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -1055,7 +1271,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Arrays</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1075,6 +1307,18 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Collection</a>
               </li>
              
@@ -1088,18 +1332,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1155,6 +1387,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">IP</a>
               </li>
              
@@ -1168,10 +1404,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Socket</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1191,6 +1423,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Queue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Deque</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
               </li>
              
@@ -1203,11 +1443,43 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Queue</a>
+                <a href="javascript:void(0)" class="js-tag color1">Stack</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Deque</a>
+                <a href="javascript:void(0)" class="js-tag color3">线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">同步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">StringBuffer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">StringBuilder</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1227,47 +1499,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Stack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">String</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">StringBuffer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">StringBuilder</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">同步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1275,15 +1507,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">latex</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1296,6 +1520,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">latex</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1320,6 +1556,22 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">循环结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">insert</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">delete</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1351,30 +1603,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">insert</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">delete</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">view</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">数据库事务</a>
               </li>
              
@@ -1387,6 +1615,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">视图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">view</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">存储过程</a>
               </li>
              
@@ -1395,15 +1631,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">return</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
               </li>
              
               <li class="article-tag-list-item">
