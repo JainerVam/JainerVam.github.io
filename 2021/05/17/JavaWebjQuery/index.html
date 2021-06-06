@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
   <title>jQuery基础 | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jQuery介绍jQuery， 顾名思义， 也就是 JavaScript 和查询（Query） ， 它就是辅助 JavaScript 开发的 js 类库。jQuery 是免费、 开源的， jQuery 的语法设计可以使开发更加便捷， 例如操作文档对象、 选择 DOM 元素、制作动画效果、 事件处理、 使用 Ajax 以及其他功能。  注意： 使用 jQuery 一定要引入 jQuery 库">
+  <meta name="description" content="jQuery， 顾名思义， 也就是 JavaScript 和查询（Query） ， 它就是辅助 JavaScript 开发的 js 类库。jQuery 是免费、 开源的， jQuery 的语法设计可以使开发更加便捷， 例如操作文档对象、 选择 DOM 元素、制作动画效果、 事件处理、 使用 Ajax 以及其他功能。注意：使用 jQuery 一定要引入 jQuery 库。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery基础">
 <meta property="og:url" content="https://jainervam.github.io/2021/05/17/JavaWebjQuery/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="jQuery介绍jQuery， 顾名思义， 也就是 JavaScript 和查询（Query） ， 它就是辅助 JavaScript 开发的 js 类库。jQuery 是免费、 开源的， jQuery 的语法设计可以使开发更加便捷， 例如操作文档对象、 选择 DOM 元素、制作动画效果、 事件处理、 使用 Ajax 以及其他功能。  注意： 使用 jQuery 一定要引入 jQuery 库">
+<meta property="og:description" content="jQuery， 顾名思义， 也就是 JavaScript 和查询（Query） ， 它就是辅助 JavaScript 开发的 js 类库。jQuery 是免费、 开源的， jQuery 的语法设计可以使开发更加便捷， 例如操作文档对象、 选择 DOM 元素、制作动画效果、 事件处理、 使用 Ajax 以及其他功能。注意：使用 jQuery 一定要引入 jQuery 库。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-06T16:59:24.719Z">
+<meta property="article:modified_time" content="2021-06-06T17:04:41.668Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="JavaWeb">
 <meta property="article:tag" content="java">
@@ -182,22 +182,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h2><p>jQuery， 顾名思义， 也就是 JavaScript 和查询（Query） ， 它就是辅助 JavaScript 开发的 js 类库。<br>jQuery 是免费、 开源的， jQuery 的语法设计可以使开发更加便捷， 例如操作文档对象、 选择 DOM 元素、<br>制作动画效果、 事件处理、 使用 Ajax 以及其他功能。</p>
-<blockquote>
-<p>注意：</p>
-<p>使用 jQuery 一定要引入 jQuery 库  </p>
-</blockquote>
+        <p>jQuery， 顾名思义， 也就是 JavaScript 和查询（Query） ， 它就是辅助 JavaScript 开发的 js 类库。<br>jQuery 是免费、 开源的， jQuery 的语法设计可以使开发更加便捷， 例如操作文档对象、 选择 DOM 元素、<br>制作动画效果、 事件处理、 使用 Ajax 以及其他功能。<br>注意：使用 jQuery 一定要引入 jQuery 库。</p>
+<a id="more"></a>
+
 <h2 id="jQuery核心函数"><a href="#jQuery核心函数" class="headerlink" title="jQuery核心函数"></a>jQuery核心函数</h2><p><code>$</code> 是 jQuery 的核心函数， 能完成 jQuery 的很多功能。<code>$()</code>就是调用<code>$</code>这个函数  </p>
 <ol>
-<li><p>传入参数为 [ 函数 ] 时：表示页面加载完成之后（自动调用）。 相当于 <code>window.onload = function(){}</code></p>
-</li>
-<li><p>传入参数为 [ HTML 字符串 ] 时：会对我们创建这个 html 标签对象</p>
-</li>
-<li><p>传入参数为 [ DOM 对象 ] 时：会把这个 dom 对象转换为 jQuery 对</p>
-</li>
-<li><p>传入参数为 [ 选择器字符串 ] 时：</p>
-<p><code>$(“#id 属性值”);</code> id 选择器， 根据 id 查询标签对象<br><code>$(“标签名”);</code> 标签名选择器， 根据指定的标签名查询标签对象<br><code>$(“.class 属性值”);</code> 类型选择器， 可以根据 class 属性查询标签对象</p>
-</li>
+<li>传入参数为 [ 函数 ] 时：表示页面加载完成之后（自动调用）。 相当于 <code>window.onload = function(){}</code></li>
+<li>传入参数为 [ HTML 字符串 ] 时：会对我们创建这个 html 标签对象</li>
+<li>传入参数为 [ DOM 对象 ] 时：会把这个 dom 对象转换为 jQuery 对</li>
+<li>传入参数为 [ 选择器字符串 ] 时：<br><code>$(“#id 属性值”);</code> id 选择器， 根据 id 查询标签对象<br><code>$(“标签名”);</code> 标签名选择器， 根据指定的标签名查询标签对象<br><code>$(“.class 属性值”);</code> 类型选择器， 可以根据 class 属性查询标签对象</li>
 </ol>
 <p>jQuery代码示例：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Insert title here<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"../script/jquery-1.7.2.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">	<span class="comment">//使用$()代替window.onload</span></span></span><br><span class="line"><span class="javascript">	$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="comment">//使用选择器获取按钮对象，随后绑定单击响应函数</span></span></span><br><span class="line"><span class="javascript">		$(<span class="string">"#btnId"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="actionscript">			<span class="comment">//弹出Hello</span></span></span><br><span class="line"><span class="actionscript">			alert(<span class="string">'Hello'</span>);</span></span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;);</span><br><span class="line">    </span><br><span class="line"><span class="actionscript">    <span class="comment">//全写</span></span></span><br><span class="line"><span class="javascript">	$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="actionscript">		<span class="comment">// 代码...</span></span></span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnId"</span>&gt;</span>SayHello<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -570,7 +563,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery介绍"><span class="toc-number">1.</span> <span class="toc-text">jQuery介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery核心函数"><span class="toc-number">2.</span> <span class="toc-text">jQuery核心函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-对象与-dom-对象"><span class="toc-number">3.</span> <span class="toc-text">jQuery 对象与 dom 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-对象"><span class="toc-number">3.1.</span> <span class="toc-text">jQuery 对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dom-对象"><span class="toc-number">3.2.</span> <span class="toc-text">dom 对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-对象和-Dom-对象使用区别"><span class="toc-number">3.3.</span> <span class="toc-text">jQuery 对象和 Dom 对象使用区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dom-对象和-jQuery-对象互转"><span class="toc-number">3.4.</span> <span class="toc-text">Dom 对象和 jQuery 对象互转</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-选择器"><span class="toc-number">4.</span> <span class="toc-text">jQuery 选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-基本选择器"><span class="toc-number">4.1.</span> <span class="toc-text">1. 基本选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-层级选择器"><span class="toc-number">4.2.</span> <span class="toc-text">2. 层级选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-过滤选择器"><span class="toc-number">4.3.</span> <span class="toc-text">3. 过滤选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-基本过滤器"><span class="toc-number">4.3.1.</span> <span class="toc-text">3.1 基本过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-内容过滤器"><span class="toc-number">4.3.2.</span> <span class="toc-text">3.2 内容过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-属性过滤器"><span class="toc-number">4.3.3.</span> <span class="toc-text">3.3 属性过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-表单过滤器"><span class="toc-number">4.3.4.</span> <span class="toc-text">3.4 表单过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-表单对象属性过滤器"><span class="toc-number">4.3.5.</span> <span class="toc-text">3.5 表单对象属性过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-jQuery元素筛选"><span class="toc-number">4.3.6.</span> <span class="toc-text">3.6 jQuery元素筛选</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery的属性操作"><span class="toc-number">5.</span> <span class="toc-text">jQuery的属性操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM的增删改"><span class="toc-number">6.</span> <span class="toc-text">DOM的增删改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-内部插入"><span class="toc-number">6.1.</span> <span class="toc-text">1. 内部插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-外部插入"><span class="toc-number">6.2.</span> <span class="toc-text">2. 外部插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-替换"><span class="toc-number">6.3.</span> <span class="toc-text">3. 替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-删除"><span class="toc-number">6.4.</span> <span class="toc-text">4. 删除</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS样式的操作"><span class="toc-number">7.</span> <span class="toc-text">CSS样式的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery动画"><span class="toc-number">8.</span> <span class="toc-text">jQuery动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本动画"><span class="toc-number">8.1.</span> <span class="toc-text">基本动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#淡入淡出动画"><span class="toc-number">8.2.</span> <span class="toc-text">淡入淡出动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery事件操作"><span class="toc-number">9.</span> <span class="toc-text">jQuery事件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-中的常用事件处理方法"><span class="toc-number">9.1.</span> <span class="toc-text">jQuery 中的常用事件处理方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件的冒泡"><span class="toc-number">9.2.</span> <span class="toc-text">事件的冒泡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javaScript-事件对象"><span class="toc-number">9.3.</span> <span class="toc-text">javaScript 事件对象</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery核心函数"><span class="toc-number">1.</span> <span class="toc-text">jQuery核心函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-对象与-dom-对象"><span class="toc-number">2.</span> <span class="toc-text">jQuery 对象与 dom 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-对象"><span class="toc-number">2.1.</span> <span class="toc-text">jQuery 对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dom-对象"><span class="toc-number">2.2.</span> <span class="toc-text">dom 对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-对象和-Dom-对象使用区别"><span class="toc-number">2.3.</span> <span class="toc-text">jQuery 对象和 Dom 对象使用区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dom-对象和-jQuery-对象互转"><span class="toc-number">2.4.</span> <span class="toc-text">Dom 对象和 jQuery 对象互转</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-选择器"><span class="toc-number">3.</span> <span class="toc-text">jQuery 选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-基本选择器"><span class="toc-number">3.1.</span> <span class="toc-text">1. 基本选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-层级选择器"><span class="toc-number">3.2.</span> <span class="toc-text">2. 层级选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-过滤选择器"><span class="toc-number">3.3.</span> <span class="toc-text">3. 过滤选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-基本过滤器"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.1 基本过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-内容过滤器"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.2 内容过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-属性过滤器"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3 属性过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-表单过滤器"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.4 表单过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-表单对象属性过滤器"><span class="toc-number">3.3.5.</span> <span class="toc-text">3.5 表单对象属性过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-jQuery元素筛选"><span class="toc-number">3.3.6.</span> <span class="toc-text">3.6 jQuery元素筛选</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery的属性操作"><span class="toc-number">4.</span> <span class="toc-text">jQuery的属性操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM的增删改"><span class="toc-number">5.</span> <span class="toc-text">DOM的增删改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-内部插入"><span class="toc-number">5.1.</span> <span class="toc-text">1. 内部插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-外部插入"><span class="toc-number">5.2.</span> <span class="toc-text">2. 外部插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-替换"><span class="toc-number">5.3.</span> <span class="toc-text">3. 替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-删除"><span class="toc-number">5.4.</span> <span class="toc-text">4. 删除</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS样式的操作"><span class="toc-number">6.</span> <span class="toc-text">CSS样式的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery动画"><span class="toc-number">7.</span> <span class="toc-text">jQuery动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本动画"><span class="toc-number">7.1.</span> <span class="toc-text">基本动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#淡入淡出动画"><span class="toc-number">7.2.</span> <span class="toc-text">淡入淡出动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery事件操作"><span class="toc-number">8.</span> <span class="toc-text">jQuery事件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-中的常用事件处理方法"><span class="toc-number">8.1.</span> <span class="toc-text">jQuery 中的常用事件处理方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件的冒泡"><span class="toc-number">8.2.</span> <span class="toc-text">事件的冒泡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javaScript-事件对象"><span class="toc-number">8.3.</span> <span class="toc-text">javaScript 事件对象</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -712,6 +705,14 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ANN</a>
               </li>
              
@@ -720,19 +721,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">code</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ArrayList</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Arrays</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -752,42 +761,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Arrays</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">枚举类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">enum</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Collection</a>
               </li>
              
@@ -804,11 +777,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">File</a>
+                <a href="javascript:void(0)" class="js-tag color4">枚举类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">enum</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">泛型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">File</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -836,14 +833,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">IP</a>
               </li>
              
@@ -857,6 +846,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Socket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异常</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -884,42 +877,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Stack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Queue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Deque</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">String</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">StringBuffer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">StringBuilder</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Class</a>
               </li>
              
@@ -936,7 +893,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color2">String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">StringBuffer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">StringBuilder</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Queue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Deque</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Stack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -952,11 +929,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -968,7 +961,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -996,14 +989,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">单行函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">分组函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">流程控制</a>
               </li>
              
@@ -1013,6 +998,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">循环结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">单行函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">分组函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1036,11 +1029,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视图</a>
+                <a href="javascript:void(0)" class="js-tag color3">变量</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">view</a>
+                <a href="javascript:void(0)" class="js-tag color1">数据库事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TCL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1060,15 +1057,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">数据库事务</a>
+                <a href="javascript:void(0)" class="js-tag color3">视图</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCL</a>
+                <a href="javascript:void(0)" class="js-tag color5">view</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">变量</a>
+                <a href="javascript:void(0)" class="js-tag color2">return</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1080,11 +1077,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">return</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1092,7 +1085,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
