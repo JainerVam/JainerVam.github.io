@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://JainerVam.github.io">
-  <title>MATLAB中的集合运算函数 | JanierVan</title>
+  <title>Xml基础 | JanierVan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="matlab中的集合运算：交集、并集、差集等">
+  <meta name="description" content="xml 是可扩展的标记性语言。xml 的作用包括：用来保存数据， 而且这些数据具有自我描述性；它还可以做为项目或者模块的配置文件；还可以做为网络传输数据的格式（现在 JSON 为主）。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MATLAB中的集合运算函数">
-<meta property="og:url" content="https://jainervam.github.io/2020/10/13/MatlabR/index.html">
+<meta property="og:title" content="Xml基础">
+<meta property="og:url" content="https://jainervam.github.io/2021/05/19/JavaWebXml/index.html">
 <meta property="og:site_name" content="JanierVan">
-<meta property="og:description" content="matlab中的集合运算：交集、并集、差集等">
+<meta property="og:description" content="xml 是可扩展的标记性语言。xml 的作用包括：用来保存数据， 而且这些数据具有自我描述性；它还可以做为项目或者模块的配置文件；还可以做为网络传输数据的格式（现在 JSON 为主）。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-10-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-03-03T07:50:30.736Z">
+<meta property="article:published_time" content="2021-05-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-06T17:18:08.642Z">
 <meta property="article:author" content="JanierVan">
-<meta property="article:tag" content="matlab">
+<meta property="article:tag" content="JavaWeb">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="xml">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="JanierVan" type="application/atom+xml">
@@ -160,32 +162,97 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MatlabR" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaWebXml" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MATLAB中的集合运算函数
+      Xml基础
     </h1>
   
 
         
-        <a href="/2020/10/13/MatlabR/" class="archive-article-date">
-  	<time datetime="2020-10-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-13</time>
+        <a href="/2021/05/19/JavaWebXml/" class="archive-article-date">
+  	<time datetime="2021-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>matlab中的集合运算：交集、并集、差集等</p>
+        <p>xml 是可扩展的标记性语言。xml 的作用包括：用来保存数据， 而且这些数据具有自我描述性；它还可以做为项目或者模块的配置文件；还可以做为网络传输数据的格式（现在 JSON 为主）。 </p>
 <a id="more"></a>
 
-<p>intersect(A, B)：集合交集，A和B均为向量<br>union(A, B) ：集合并集<br>setdiff(A, B) ：集合A减集合B的差集(如果集合A中的元素都在B中存在，则结果为空)<br>ismember(a, A) ：判断是否是集合中的元素<br>sort(A)：对向量进行排序<br>issorted(A)：判断集合是否有序<br>setxor ：集合异或(在并集但不在交集中的元素)<br>unique ：返回集合的不重复元素(去掉相同元素)<br>例：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">A = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">B = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">C = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">D = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span>ersect(A,B); % ans = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">union(A,B);     % ans = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">setdiff(A,B)    % ans = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">setdiff(A,C)    % ans = Empty matrix: <span class="number">1</span>-by<span class="number">-0</span></span><br><span class="line">ismember(<span class="number">1</span>,A);  % ans = <span class="number">1</span></span><br><span class="line">sort(C);        % ans = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">issorted(A);    % ans = <span class="number">1</span></span><br><span class="line">setxor(A,B);    % ans = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">unique(D);      % ans = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-<p>转载自：<a href="https://blog.csdn.net/shengchaohua163/article/details/78938955" target="_blank" rel="noopener">https://blog.csdn.net/shengchaohua163/article/details/78938955</a></p>
+<h2 id="xml语法"><a href="#xml语法" class="headerlink" title="xml语法"></a>xml语法</h2><h3 id="1-文档声明"><a href="#1-文档声明" class="headerlink" title="1. 文档声明"></a>1. 文档声明</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><code>version</code> 是版本号</li>
+<li><code>encoding</code> 是 xml 的文件编码</li>
+<li><code>standalone=&quot;yes/no&quot;</code>表示这个 xml 文件是否是独立的 xml 文件</li>
+</ol>
+<h3 id="2-元素（标签）"><a href="#2-元素（标签）" class="headerlink" title="2. 元素（标签）"></a>2. 元素（标签）</h3><h4 id="XML元素"><a href="#XML元素" class="headerlink" title="XML元素"></a>XML元素</h4><p>XML 元素指的是从（且包括）开始标签直到（且包括）结束标签的部分。元素可包含其他元素、文本或者两者的混合物。元素也可以拥有属性。</p>
+<h4 id="XML-命名规则"><a href="#XML-命名规则" class="headerlink" title="XML 命名规则"></a>XML 命名规则</h4><p>XML 元素必须遵循以下命名规则：</p>
+<ul>
+<li>名称可以含字母、数字以及其他的字符 </li>
+<li>名称不能以数字或者标点符号开始 </li>
+<li><del>名称不能以字符 “xml”（或者 XML、Xml）开始</del> </li>
+<li>名称不能包含空格 </li>
+</ul>
+<p>可使用任何名称，没有保留的字词。</p>
+<blockquote>
+<p>xml 中的元素（ 标签） 也 分成 单标签和双标签。</p>
+</blockquote>
+<h3 id="3-xml-属性"><a href="#3-xml-属性" class="headerlink" title="3. xml 属性"></a>3. xml 属性</h3><ul>
+<li>xml 的标签属性和 html 的标签属性是非常类似的， <strong>属性可以提供元素的额外信息</strong></li>
+<li>在标签上可以书写属性：<ul>
+<li>一个标签上可以书写多个属性。 <strong>每个属性的值必须使用引号引起来</strong></li>
+<li>书写的规则和标签的书写规则一致</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-xml-注释"><a href="#4-xml-注释" class="headerlink" title="4. xml 注释"></a>4. xml 注释</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注释 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-文本区域（CDATA-区）"><a href="#5-文本区域（CDATA-区）" class="headerlink" title="5. 文本区域（CDATA 区）"></a>5. 文本区域（CDATA 区）</h3><p> CDATA 里的文本内容， 只是纯文本， 不需要 xml 语法解析  </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;![CDATA[ 这里可以把你输入的字符原样显示， 不会解析 xml ]]&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="语法规则"><a href="#语法规则" class="headerlink" title="语法规则"></a>语法规则</h3><ol>
+<li>所有 XML 元素都须有关闭标签（也就是闭合）  </li>
+<li>XML 标签对大小写敏感  </li>
+<li>XML 必须正确地嵌套  </li>
+<li>XML 文档必须有根元素。根元素是没有父标签的顶级元素， 而且是<strong>唯一</strong>一个才行  </li>
+<li>XML 的属性值须加引号  </li>
+<li>XML 中的特殊字符  </li>
+</ol>
+<h2 id="xml解析技术"><a href="#xml解析技术" class="headerlink" title="xml解析技术"></a>xml解析技术</h2><p>xml 可扩展的标记语言。不管是 html 文件还是 xml 文件它们都是标记型文档， 都可以使用 w3c 组织制定的 dom 技术来解析。  </p>
+<p>早期 JDK 为我们提供了两种 xml 解析技术 DOM 和 Sax （已经过时）</p>
+<ul>
+<li><strong>dom 解析技术</strong>是 W3C 组织制定的， 而所有的编程语言都对这个解析技术使用了自己语言的特点进行实现。</li>
+<li>sun 公司在 JDK5 版本对 dom 解析技术进行升级： SAX（ Simple API for XML ）<br><strong>SAX 解析</strong>， 它跟 W3C 制定的解析不太一样。 它是以类似事件机制通过回调告诉用户当前正在解析的内容。<strong>它是一行一行的读取 xml 文件进行解析的</strong>。 不会创建大量的 dom 对象。所以它在解析 xml 的时候， 在内存的使用上。 和性能上。 都优于 Dom 解析。</li>
+<li>第三方的解析：<ul>
+<li>jdom 在 dom 基础上进行了封装 、</li>
+<li>*<em>dom4j *</em>又对 jdom 进行了封装。</li>
+<li>pull 主要用在 Android 手机开发， 是在跟 sax 非常类似都是事件机制解析 xml 文件。</li>
+</ul>
+</li>
+</ul>
+<h3 id="dom4j-解析技术"><a href="#dom4j-解析技术" class="headerlink" title="dom4j 解析技术"></a>dom4j 解析技术</h3><p>Dom4j 是第三方的解析技术。 我们需要使用第三方给我们提供好的类库才可以解析 xml 文件 。</p>
+<h4 id="dom4j-编程步骤"><a href="#dom4j-编程步骤" class="headerlink" title="dom4j 编程步骤"></a>dom4j 编程步骤</h4><ol>
+<li>先加载 xml 文件创建 Document 对象</li>
+<li>通过 Document 对象拿到根元素对象</li>
+<li>通过根元素.elelemts(标签名); 可以返回一个集合， 这个集合里放着。 所有你指定的标签名的元素对象</li>
+<li>找到你想要修改、 删除的子元素， 进行相应在的操作</li>
+<li>保存到硬盘上  </li>
+</ol>
+<h5 id="1-获取Document-对象"><a href="#1-获取Document-对象" class="headerlink" title="1. 获取Document 对象"></a>1. 获取Document 对象</h5><p>创建一个 lib 目录， 添加 dom4j 的 jar 包，并添加到类路径。  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//解析XML</span></span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.dom4j.Document;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.DocumentException;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.io.SAXReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Document <span class="title">parse</span><span class="params">(URL url)</span> <span class="keyword">throws</span> DocumentException </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个SaxReader输入流，去读取 xml配置文件，生成Document对象</span></span><br><span class="line">        SAXReader reader = <span class="keyword">new</span> SAXReader();</span><br><span class="line">        Document document = reader.read(url);</span><br><span class="line">        <span class="keyword">return</span> document;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-读取-xml-文件中的内容"><a href="#2-读取-xml-文件中的内容" class="headerlink" title="2. 读取 xml 文件中的内容"></a>2. 读取 xml 文件中的内容</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 读取 xml 文件中的内容</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">readXML</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">       <span class="comment">// 第一步， 通过创建 SAXReader 对象。 来读取 xml 文件， 获取 Document 对象</span></span><br><span class="line">       SAXReader reader = <span class="keyword">new</span> SAXReader();</span><br><span class="line">       Document document = reader.read(<span class="string">"src/books.xml"</span>);</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 第二步， 通过 Document 对象。 拿到 XML 的根元素对象,使用到getRootElement()方法</span></span><br><span class="line">       Element root = document.getRootElement();</span><br><span class="line">       <span class="comment">// 打印测试</span></span><br><span class="line">           <span class="comment">// Element.asXML() 它将当前元素转换成为 String 对象</span></span><br><span class="line">        <span class="comment">//System.out.println( root.asXML() );</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">// 第三步， 通过根元素对象。 获取所有的 book 标签对象</span></span><br><span class="line">           <span class="comment">// Element.elements(标签名)它可以拿到当前元素下的指定的子元素的集合</span></span><br><span class="line">       List&lt;Element&gt; books = root.elements(<span class="string">"book"</span>);</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 第四步， 遍历每个 book 标签对象。 然后获取到 book 标签对象内的每一个元素，使用到element()方法</span></span><br><span class="line">       <span class="keyword">for</span> (Element book : books) &#123;</span><br><span class="line">           Element nameElement = book.element(<span class="string">"name"</span>);</span><br><span class="line">           <span class="comment">// getText():获取标签中的文本内容</span></span><br><span class="line">           String nameText = nameElement.getText();</span><br><span class="line"></span><br><span class="line">           String priceText = book.elementText(<span class="string">"price"</span>);</span><br><span class="line">           String authorText = book.elementText(<span class="string">"author"</span>);</span><br><span class="line"></span><br><span class="line">           <span class="comment">//attributeValue():获取属性值</span></span><br><span class="line">           String snValue = book.attributeValue(<span class="string">"sn"</span>);</span><br><span class="line"></span><br><span class="line">           System.out.println(<span class="keyword">new</span> Book(snValue,nameText, BigDecimal.valueOf(Double.parseDouble(priceText)),authorText));</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
 
       
 
@@ -197,7 +264,7 @@
     
     <br>
     <strong>本文链接：</strong>
-    https://jainervam.github.io/2020/10/13/MatlabR/
+    https://jainervam.github.io/2021/05/19/JavaWebXml/
     <br>
     <strong>版权声明：</strong>
     本作品采用
@@ -249,7 +316,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaWeb</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">xml</a>
         		</li>
       		
 		</ul>
@@ -305,7 +380,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2020/10/13/MatlabR/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jainervam.github.io/2021/05/19/JavaWebXml/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -319,18 +394,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/10/30/MatlabRunTime/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MATLAB统计运行时间的四种方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/10/13/MatlabStruct/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MATLAB中的数据结构</div>
+    <a href="/2021/05/17/JavaWebjQuery/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery基础</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -357,7 +423,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#xml语法"><span class="toc-number">1.</span> <span class="toc-text">xml语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-文档声明"><span class="toc-number">1.1.</span> <span class="toc-text">1. 文档声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-元素（标签）"><span class="toc-number">1.2.</span> <span class="toc-text">2. 元素（标签）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#XML元素"><span class="toc-number">1.2.1.</span> <span class="toc-text">XML元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XML-命名规则"><span class="toc-number">1.2.2.</span> <span class="toc-text">XML 命名规则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-xml-属性"><span class="toc-number">1.3.</span> <span class="toc-text">3. xml 属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-xml-注释"><span class="toc-number">1.4.</span> <span class="toc-text">4. xml 注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-文本区域（CDATA-区）"><span class="toc-number">1.5.</span> <span class="toc-text">5. 文本区域（CDATA 区）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法规则"><span class="toc-number">1.6.</span> <span class="toc-text">语法规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xml解析技术"><span class="toc-number">2.</span> <span class="toc-text">xml解析技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dom4j-解析技术"><span class="toc-number">2.1.</span> <span class="toc-text">dom4j 解析技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#dom4j-编程步骤"><span class="toc-number">2.1.1.</span> <span class="toc-text">dom4j 编程步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-获取Document-对象"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">1. 获取Document 对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-读取-xml-文件中的内容"><span class="toc-number">2.1.1.2.</span> <span class="toc-text">2. 读取 xml 文件中的内容</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
