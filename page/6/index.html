@@ -163,124 +163,37 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-JavaOOP10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaNet" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/29/JavaOOP10/">Java面向对象编程(10)</a>
+      <a class="article-title" href="/2021/04/09/JavaNet/">Java 网络编程</a>
     </h1>
   
 
         
-        <a href="/2021/03/29/JavaOOP10/" class="archive-article-date">
-  	<time datetime="2021-03-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-29</time>
+        <a href="/2021/04/09/JavaNet/" class="archive-article-date">
+  	<time datetime="2021-04-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="异常的概述与异常体系结构"><a href="#异常的概述与异常体系结构" class="headerlink" title="异常的概述与异常体系结构"></a>异常的概述与异常体系结构</h2><h3 id="异常概述"><a href="#异常概述" class="headerlink" title="异常概述"></a>异常概述</h3><p>在Java语言中， 将程序执行中发生的不正常情况称为“异常” 。<br>(开发过程中的语法错误和逻辑错误不是异常)</p>
-        
-          <a class="article-more-a" href="/2021/03/29/JavaOOP10/#more">more >></a>
-        
-      
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">异常</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/29/JavaOOP10/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-JavaOOP9" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/28/JavaOOP9/">Java面向对象编程(9)--类的成员之五-内部类</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/28/JavaOOP9/" class="archive-article-date">
-  	<time datetime="2021-03-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="类的成员之五：内部类（Inner-class）"><a href="#类的成员之五：内部类（Inner-class）" class="headerlink" title="类的成员之五：内部类（Inner class）"></a>类的成员之五：内部类（Inner class）</h2><ol>
-<li>在Java中，允许一个类A的定义位于另一个类B的内部，前者称为内部类，后者称为外部类。</li>
-<li>分类：成员内部类（静态的、非静态的）、局部内部类（方法内、代码块内、构造器内）</li>
+        <h2 id="网络编程概述"><a href="#网络编程概述" class="headerlink" title="网络编程概述"></a>网络编程概述</h2><p>网络编程中有两个主要的问题：</p>
+<ol>
+<li>如何准确地定位网络上一台或多台主机；定位主机上的特定的应用</li>
+<li>找到主机后如何可靠高效地进行数据传输</li>
+</ol>
+<h2 id="网络编程中的两个要素"><a href="#网络编程中的两个要素" class="headerlink" title="网络编程中的两个要素"></a>网络编程中的两个要素</h2><ol>
+<li>IP和端口号</li>
+<li>网络通信协议</li>
 </ol>
         
-          <a class="article-more-a" href="/2021/03/28/JavaOOP9/#more">more >></a>
+          <a class="article-more-a" href="/2021/04/09/JavaNet/#more">more >></a>
         
       
 
@@ -303,11 +216,19 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">IP</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">内部类</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">TCP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">UDP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Socket</a>
         		</li>
       		
 		</ul>
@@ -317,7 +238,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/28/JavaOOP9/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/09/JavaNet/">展开全文 >></a>
         </p>
       
 
@@ -350,29 +271,34 @@
 
 
   
-    <article id="post-JavaOOP8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaFile" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/26/JavaOOP8/">Java面向对象编程(8)--抽象类和接口</a>
+      <a class="article-title" href="/2021/04/08/JavaFile/">Java File类的使用和常用方法</a>
     </h1>
   
 
         
-        <a href="/2021/03/26/JavaOOP8/" class="archive-article-date">
-  	<time datetime="2021-03-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
+        <a href="/2021/04/08/JavaFile/" class="archive-article-date">
+  	<time datetime="2021-04-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="抽象类与抽象方法"><a href="#抽象类与抽象方法" class="headerlink" title="抽象类与抽象方法"></a>抽象类与抽象方法</h2><h2 id="关键字abstract"><a href="#关键字abstract" class="headerlink" title="关键字abstract"></a>关键字abstract</h2><p>abstract（抽象的）<strong>可以用来修饰类、方法</strong>。不能修饰属性、构造器等结构。并且不能修饰私有方法、静态方法、final的方法。</p>
+        <h2 id="File类的使用"><a href="#File类的使用" class="headerlink" title="File类的使用"></a>File类的使用</h2><ul>
+<li><code>java.io.File</code>类： 文件和文件目录路径的抽象表示形式，与平台无关</li>
+<li>File 能新建、删除、重命名文件和目录，但 File 不写入或读取文件内容。如果需要访问文件内容本身，则需要使用输入/输出流。</li>
+<li>想要在Java程序中表示一个真实存在的文件或目录，那么必须有一个File对象，但是Java程序中的一个File对象，可能没有一个真实存在的文件或目录。</li>
+<li>File对象可以作为参数传递给流的构造器，指明读取或写入的“终点”。</li>
+</ul>
         
-          <a class="article-more-a" href="/2021/03/26/JavaOOP8/#more">more >></a>
+          <a class="article-more-a" href="/2021/04/08/JavaFile/#more">more >></a>
         
       
 
@@ -395,15 +321,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">抽象类</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">接口</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">File</a>
         		</li>
       		
 		</ul>
@@ -413,7 +331,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/26/JavaOOP8/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/08/JavaFile/">展开全文 >></a>
         </p>
       
 
@@ -446,29 +364,38 @@
 
 
   
-    <article id="post-JavaOOP7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaIO" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/25/JavaOOP7/">Java面向对象编程(7)</a>
+      <a class="article-title" href="/2021/04/08/JavaIO/">Java IO流</a>
     </h1>
   
 
         
-        <a href="/2021/03/25/JavaOOP7/" class="archive-article-date">
-  	<time datetime="2021-03-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-25</time>
+        <a href="/2021/04/08/JavaIO/" class="archive-article-date">
+  	<time datetime="2021-04-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这章主要内容是关键字<code>static</code>，<code>final</code>的用法，以及类的成员之四–代码块。</p>
+        <h2 id="Java-IO"><a href="#Java-IO" class="headerlink" title="Java IO"></a>Java IO</h2><ul>
+<li>I/O是Input/Output的缩写， I/O技术是非常实用的技术，用于处理设备之间的数据传输。如读/写文件，网络通讯等。</li>
+<li>Java程序中，对于数据的输入/输出操作以“流(stream)” 的方式进行。</li>
+<li><code>java.io</code>包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过标准的方法输入或输出数据。</li>
+</ul>
+<h3 id="流的分类"><a href="#流的分类" class="headerlink" title="流的分类"></a>流的分类</h3><ol>
+<li>按<strong>操作数据单位</strong>不同分为： 字节流(8 bit)，字符流(16 bit)</li>
+<li>按<strong>数据流的流向</strong>不同分为： 输入流，输出流</li>
+<li>按<strong>流的角色</strong>的不同分为： 节点流，处理流</li>
+</ol>
         
-          <a class="article-more-a" href="/2021/03/25/JavaOOP7/#more">more >></a>
+          <a class="article-more-a" href="/2021/04/08/JavaIO/#more">more >></a>
         
       
 
@@ -491,19 +418,27 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">IO</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">static</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">InputStream</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">final</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OutputStream</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">代码块</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Reader</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Writer</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Serializable</a>
         		</li>
       		
 		</ul>
@@ -513,7 +448,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/25/JavaOOP7/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/08/JavaIO/">展开全文 >></a>
         </p>
       
 
@@ -546,31 +481,60 @@
 
 
   
-    <article id="post-JavaStack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaCollectionMap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/10/JavaStack/">Java Stack类</a>
+      <a class="article-title" href="/2021/04/07/JavaCollectionMap/">Java集合</a>
     </h1>
   
 
         
-        <a href="/2021/03/10/JavaStack/" class="archive-article-date">
-  	<time datetime="2021-03-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
+        <a href="/2021/04/07/JavaCollectionMap/" class="archive-article-date">
+  	<time datetime="2021-04-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><p>栈是Vector的一个子类，它实现了一个标准的后进先出(FILO, First In Last Out)的栈。<br>堆栈只定义了默认构造函数，用来创建一个空栈。</p>
-<p>堆栈除了包括由Vector定义的所有方法，也定义了自己的一些方法。</p>
-<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p>Stack只有一个默认构造函数：<code>Stack()</code></p>
+        <h2 id="Java集合框架概述"><a href="#Java集合框架概述" class="headerlink" title="Java集合框架概述"></a>Java集合框架概述</h2><p>1.集合、框架都是对多个数据进行存储的结构，简称Java容器。（此时的存储，主要指的是内存层面的存储，不涉及到持久化的存储）<br>2.数组</p>
+<ul>
+<li>数组在内存存储方面的特点：<ul>
+<li>数组初始化以后，长度就确定了。</li>
+<li>数组声明的类型，就决定了进行元素初始化时的类型。</li>
+</ul>
+</li>
+<li>数组在存储数据方面的弊端：<ul>
+<li>数组初始化以后，长度就不可变了，不便于扩展</li>
+<li>数组中提供的属性和方法少，不便于进行添加、删除、插入等操作，且效率不高。同时无法直接获取实际存储元素的个数。</li>
+<li>数组存储的数据是有序的、可以重复的。 —-&gt;存储数据的特点单一</li>
+</ul>
+</li>
+</ul>
+<p>3.Java 集合可分为 <code>Collection</code> 和 <code>Map</code> 两种体系</p>
+<ul>
+<li>Collection接口： 单列数据， 定义了存取一组对象的方法的集合<ul>
+<li>List： 元素有序、可重复的集合(“动态”数组)<ul>
+<li>ArrayList, LinkedList, Vector</li>
+</ul>
+</li>
+<li>Set： 元素无序、不可重复的集合<ul>
+<li>HashSet, LinkedHashSet, TreeSet</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Map接口： 双列数据，保存具有映射关系“key-value对”的集合<ul>
+<li>HashMap, LinkedHashMap, TreeMap, HashTable, Properties</li>
+</ul>
+</li>
+</ul>
         
-          <a class="article-more-a" href="/2021/03/10/JavaStack/#more">more >></a>
+          <a class="article-more-a" href="/2021/04/07/JavaCollectionMap/#more">more >></a>
         
       
 
@@ -593,7 +557,19 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Stack</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Collection</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">List</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Set</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Map</a>
         		</li>
       		
 		</ul>
@@ -603,7 +579,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/10/JavaStack/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/07/JavaCollectionMap/">展开全文 >></a>
         </p>
       
 
@@ -636,29 +612,29 @@
 
 
   
-    <article id="post-JavaOOP6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaFanxing" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/08/JavaOOP6/">Java面向对象编程(6)</a>
+      <a class="article-title" href="/2021/04/07/JavaFanxing/">Java 泛型</a>
     </h1>
   
 
         
-        <a href="/2021/03/08/JavaOOP6/" class="archive-article-date">
-  	<time datetime="2021-03-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-08</time>
+        <a href="/2021/04/07/JavaFanxing/" class="archive-article-date">
+  	<time datetime="2021-04-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>以笔记/大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括Java中的常用类：Object类（包括<code>equals()</code>方法和<code>toString()</code>方法等）和包装类。</p>
+        <p>集合容器类在设计阶段/声明阶段不能确定这个容器到底实际存的是什么类型的对象，所以在JDK1.5之前只能把元素类型设计为<code>Object</code>，JDK1.5之后使用泛型来解决，因为这个时候除了元素的类型不确定， 其他的部分是确定的， 例如关于这个元素如何保存， 如何管理等是确定的， 因此此时把元素的类型设计成一个参数， 这个类型参数叫做泛型。 Collection<E>， List<E>， ArrayList<E> 这个<E>就是类型参数， 即泛型。</p>
         
-          <a class="article-more-a" href="/2021/03/08/JavaOOP6/#more">more >></a>
+          <a class="article-more-a" href="/2021/04/07/JavaFanxing/#more">more >></a>
         
       
 
@@ -681,7 +657,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">泛型</a>
         		</li>
       		
 		</ul>
@@ -691,7 +667,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/08/JavaOOP6/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/07/JavaFanxing/">展开全文 >></a>
         </p>
       
 
@@ -724,159 +700,59 @@
 
 
   
-    <article id="post-JavaArrayList" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaEnum" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/05/JavaArrayList/">Java ArrayList类</a>
+      <a class="article-title" href="/2021/04/05/JavaEnum/">Java枚举类</a>
     </h1>
   
 
         
-        <a href="/2021/03/05/JavaArrayList/" class="archive-article-date">
-  	<time datetime="2021-03-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-05</time>
+        <a href="/2021/04/05/JavaEnum/" class="archive-article-date">
+  	<time datetime="2021-04-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ArrayList 类是一个可以动态修改的数组，是一个数组队列。与普通数组相比，没有固定大小的限制，可以添加或删除元素。</p>
-<p>ArrayList 继承了 AbstractList ，并实现了 List 接口。</p>
-        
-          <a class="article-more-a" href="/2021/03/05/JavaArrayList/#more">more >></a>
-        
-      
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ArrayList</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/05/JavaArrayList/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-JavaArrays" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/05/JavaArrays/">Java中Arrays类的使用</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/05/JavaArrays/" class="archive-article-date">
-  	<time datetime="2021-03-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Arrays的使用"><a href="#Arrays的使用" class="headerlink" title="Arrays的使用"></a>Arrays的使用</h2><p><code>java.util.Arrays</code></p>
-<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><table>
+        <p>类的对象只有有限个，确定的时，使用枚举类。JDK1.5之前需要自定义枚举类，JDK 1.5 新增的 <code>enum</code> 关键字用于定义枚举类。若枚举只有一个对象,则可以作为一种单例模式的实现方式。</p>
+<h2 id="自定义枚举类"><a href="#自定义枚举类" class="headerlink" title="自定义枚举类"></a>自定义枚举类</h2><ol>
+<li>私有化类的构造器，保证不能在类的外部创建其对象</li>
+<li>在类的内部创建枚举类的实例。声明为： <code>public static final</code></li>
+<li>对象如果有实例变量，应该声明为<code>private final</code>，并在构造器中初始化</li>
+</ol>
+<h2 id="enum关键字定义枚举类"><a href="#enum关键字定义枚举类" class="headerlink" title="enum关键字定义枚举类"></a>enum关键字定义枚举类</h2><p>使用 <code>enum</code> 定义的枚举类默认继承了 <code>java.lang.Enum</code>类，因此不能再继承其他类。</p>
+<h3 id="使用enum定义枚举类"><a href="#使用enum定义枚举类" class="headerlink" title="使用enum定义枚举类"></a>使用enum定义枚举类</h3><p>提供当前枚举类的对象，多个对象之间用’,’隔开，末尾对象’;’结束。列出的实例系统会自动添加 public static final 修饰。<strong>必须在枚举类的第一行声明枚举类对象</strong>。</p>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><table>
 <thead>
 <tr>
-<th align="center">方法</th>
-<th align="center">说明</th>
+<th align="left">方法名</th>
+<th align="left">说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">Arrays.sort()</td>
-<td align="center">对数组的排序(从小到大)</td>
+<td align="left">values()方法</td>
+<td align="left">返回枚举类型的对象数组。该方法可以很方便地遍历所有的枚举值。</td>
 </tr>
 <tr>
-<td align="center">Arrays.binarySerch()</td>
-<td align="center">二分查找，找到则定位元素下标</td>
+<td align="left">valueOf(String str)</td>
+<td align="left">可以把一个字符串转为对应的枚举类对象。要求字符串必须是枚举类对象的“名字”。如不是，会有运行时异常：IllegalArgumentException。</td>
 </tr>
 <tr>
-<td align="center">Arrays.toString()</td>
-<td align="center">数组的打印</td>
-</tr>
-<tr>
-<td align="center">Arrays.fill()</td>
-<td align="center">数组的填充</td>
-</tr>
-<tr>
-<td align="center">Arrays.equals()</td>
-<td align="center">判断两个数组大小是否相等</td>
-</tr>
-<tr>
-<td align="center">Arrays.asList()</td>
-<td align="center">查看数组中的特定值</td>
-</tr>
-<tr>
-<td align="center">Arrays.copyOf</td>
-<td align="center">数组的拷贝</td>
-</tr>
-<tr>
-<td align="center">Arrays.copyOfRange(Object,begin,end)</td>
-<td align="center">指定范围的数组的拷贝</td>
+<td align="left">toString()</td>
+<td align="left">返回当前枚举类对象常量的名称</td>
 </tr>
 </tbody></table>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><a href="https://blog.csdn.net/weixin_44789861/article/details/95204295" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44789861/article/details/95204295</a></li>
-</ol>
+<h3 id="实现接口"><a href="#实现接口" class="headerlink" title="实现接口"></a>实现接口</h3><ul>
+<li>和普通 Java 类一样，枚举类可以实现一个或多个接口</li>
+<li>若每个枚举值在调用实现的接口方法呈现相同的行为方式，则只要统一实现抽象方法即可。</li>
+<li>若需要每个枚举值在调用实现的接口方法呈现出不同的行为方式,则可以让每个枚举值分别来实现接口中的抽象方法</li>
+</ul>
 
       
 
@@ -899,7 +775,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Arrays</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">枚举类</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">enum</a>
         		</li>
       		
 		</ul>
@@ -909,7 +789,199 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/05/JavaArrays/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/05/JavaEnum/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-JavaClass" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/JavaClass/">Java常用类</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/JavaClass/" class="archive-article-date">
+  	<time datetime="2021-04-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java其他常用类的使用：System、Math、BigInteger和BidDecimal。</p>
+        
+          <a class="article-more-a" href="/2021/04/04/JavaClass/#more">more >></a>
+        
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">System</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Math</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">BigInteger</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">BidDecimal</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/JavaClass/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-JavaCompare" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/04/JavaCompare/">Java中的对象排序</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/04/JavaCompare/" class="archive-article-date">
+  	<time datetime="2021-04-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在Java中经常会涉及到对象数组的排序问题，那么就涉及到对象之间的比较问题。Java实现对象排序的方式有两种：自然排序（java.lang.Comparable）、定制排序（java.util.Comparator）</p>
+        
+          <a class="article-more-a" href="/2021/04/04/JavaCompare/#more">more >></a>
+        
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Comparable</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Comparator</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/04/JavaCompare/">展开全文 >></a>
         </p>
       
 
@@ -944,7 +1016,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/7/">下一页;</a>
+      <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/7/">下一页;</a>
     </nav>
   
 
@@ -1066,19 +1138,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">code</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1087,6 +1151,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ArrayList</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1110,6 +1182,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Collection</a>
               </li>
              
@@ -1126,23 +1206,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1154,7 +1218,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1162,7 +1234,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
+                <a href="javascript:void(0)" class="js-tag color3">IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Socket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1190,22 +1278,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Socket</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
@@ -1226,14 +1298,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">接口</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">内部类</a>
               </li>
              
@@ -1246,19 +1310,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Class</a>
+                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Reflection</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ClassLoader</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
+                <a href="javascript:void(0)" class="js-tag color3">接口</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1290,11 +1346,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Class</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Reflection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ClassLoader</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1310,6 +1382,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">EL表达式</a>
               </li>
              
@@ -1318,15 +1394,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Filter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1339,6 +1407,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">i18n</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1358,6 +1430,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">xml</a>
               </li>
              
@@ -1366,7 +1442,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1382,19 +1466,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Spring5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AOP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">IOC容器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SpringMVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JdbcTemplate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RESTful</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HttpMessageConverter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1406,15 +1506,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">流程控制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">分支结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">循环结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">Spring事务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1423,10 +1515,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">分组函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查询</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1443,6 +1531,26 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">delete</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">视图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">view</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">流程控制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">分支结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">循环结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1470,18 +1578,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">view</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">变量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">存储过程</a>
               </li>
              
@@ -1490,7 +1586,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
+                <a href="javascript:void(0)" class="js-tag color3">查询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">变量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1498,7 +1598,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
+                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1514,23 +1614,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Spring5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">IOC容器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AOP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JdbcTemplate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Spring事务</a>
+                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
               </li>
             
             <div class="clearfix"></div>

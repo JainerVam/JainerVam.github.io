@@ -16,7 +16,7 @@
 <meta property="og:description" content="IOC容器概念与原理什么是IOC（控制反转） 把对象创建和对象之间的调用过程，交给Spring进行管理 使用IOC目的：为了降低耦合度  IOC底层原理 xml解析、工厂模式、反射 IOC 思想基于 IOC 容器完成， IOC 容器底层就是对象工厂  Spring提供的IOC容器实现的两种方式（两个接口） BeanFactory接口：IOC容器基本实现，是Spring内部接口的使用接口，不提供">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-09T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-23T13:56:42.101Z">
+<meta property="article:modified_time" content="2021-08-23T14:18:16.012Z">
 <meta property="article:author" content="JanierVan">
 <meta property="article:tag" content="Spring5">
 <meta property="article:tag" content="IOC容器">
@@ -282,10 +282,8 @@
 
 <h6 id="FactoryBean"><a href="#FactoryBean" class="headerlink" title="FactoryBean"></a>FactoryBean</h6><p> Spring 有两种类型 bean，一种普通 bean，另外一种工厂 bean（FactoryBean）</p>
 <ul>
-<li><p>普通 bean：在配置文件中定义 bean 类型就是返回类型</p>
-</li>
-<li><p>工厂 bean：在配置文件定义 bean 类型可以和返回类型不一样 </p>
-<ul>
+<li>普通 bean：在配置文件中定义 bean 类型就是返回类型</li>
+<li>工厂 bean：在配置文件定义 bean 类型可以和返回类型不一样 <ul>
 <li>第一步 创建类，让这个类作为工厂 bean，实现接口 <code>FactoryBean</code> </li>
 <li>第二步 实现接口里面的方法，在实现的方法中定义返回的 bean 类型</li>
 </ul>
@@ -315,10 +313,8 @@
 </li>
 </ul>
 <h6 id="Bean生命周期"><a href="#Bean生命周期" class="headerlink" title="Bean生命周期"></a>Bean生命周期</h6><ul>
-<li><p>生命周期 ：从对象创建到对象销毁的过程</p>
-</li>
-<li><p>bean 生命周期</p>
-<ul>
+<li>生命周期 ：从对象创建到对象销毁的过程</li>
+<li>bean 生命周期<ul>
 <li>通过构造器创建 bean 实例（无参数构造）</li>
 <li>为 bean 的属性设置值和对其他 bean 引用（调用 set 方法）</li>
 <li>调用 bean 的初始化的方法（需要进行配置初始化的方法）</li>
@@ -326,8 +322,7 @@
 <li>当容器关闭时候，调用 bean 的销毁的方法（需要进行配置销毁的方法）</li>
 </ul>
 </li>
-<li><p>演示 bean 生命周期 ：</p>
-</li>
+<li>演示 bean 生命周期 ：</li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Bean.xml--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Orders类中有无参构造器，set方法，初始化方法 initMethod 和 销毁的方法 destroyMethod--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"orders"</span> <span class="attr">class</span>=<span class="string">"com.atguigu.spring5.bean.Orders"</span> <span class="attr">initmethod</span>=<span class="string">"initMethod"</span> <span class="attr">destroy-method</span>=<span class="string">"destroyMethod"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"oname"</span> <span class="attr">value</span>=<span class="string">"手机"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -369,10 +364,14 @@
 </ul>
 </li>
 </ul>
-<h6 id="外部属性文件"><a href="#外部属性文件" class="headerlink" title="外部属性文件"></a>外部属性文件</h6><p><strong>方式一：直接配置数据库信息</strong> ：（1）配置Druid（德鲁伊）连接池 （2）引入Druid（德鲁伊）连接池依赖 jar 包</p>
+<h6 id="外部属性文件"><a href="#外部属性文件" class="headerlink" title="外部属性文件"></a>外部属性文件</h6><ul>
+<li><strong>方式一：直接配置数据库信息</strong> ：（1）配置Druid（德鲁伊）连接池 （2）引入Druid（德鲁伊）连接池依赖 jar 包</li>
+</ul>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Bean.xml--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--直接配置连接池--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSource"</span> <span class="attr">class</span>=<span class="string">"com.alibaba.druid.pool.DruidDataSource"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driverClassName"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql://localhost:3306/userDb"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"root"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>方式二：引入外部属性文件配置数据库连接池</strong></p>
+<ul>
+<li><strong>方式二：引入外部属性文件配置数据库连接池</strong></li>
+</ul>
 <p>（1）创建外部属性文件，properties 格式文件，写数据库信息</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//jdbc.properties</span></span><br><span class="line">	<span class="keyword">prop</span>.driverClass=com.mysql.jdbc.Driver</span><br><span class="line">    <span class="keyword">prop</span>.url=jdbc:mysql:<span class="comment">//localhost:3306/userDb</span></span><br><span class="line">    <span class="keyword">prop</span>.userName=root</span><br><span class="line">    <span class="keyword">prop</span>.password=root</span><br></pre></td></tr></table></figure>
 
@@ -415,20 +414,16 @@
 <h6 id="开启组件扫描细节配置"><a href="#开启组件扫描细节配置" class="headerlink" title="开启组件扫描细节配置"></a>开启组件扫描细节配置</h6><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--示例 1</span></span><br><span class="line"><span class="comment"> use-default-filters="false" 表示现在不使用默认 filter，自己配置 filter</span></span><br><span class="line"><span class="comment"> context:include-filter ，设置扫描哪些内容</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.atguigu"</span> <span class="attr">use-defaultfilters</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag"><span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Controller"</span>/&gt;</span><span class="comment">&lt;!--代表只扫描Controller注解的类--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--示例 2</span></span><br><span class="line"><span class="comment"> 下面配置扫描包所有内容</span></span><br><span class="line"><span class="comment"> context:exclude-filter： 设置哪些内容不进行扫描</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.atguigu"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">context:exclude-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag"><span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Controller"</span>/&gt;</span><span class="comment">&lt;!--表示Controller注解的类之外一切都进行扫描--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h6 id="注入属性-1"><a href="#注入属性-1" class="headerlink" title="注入属性"></a>注入属性</h6><ul>
-<li><p>@Autowired：根据属性类型进行自动装配</p>
-<ul>
+<li>@Autowired：根据属性类型进行自动装配<ul>
 <li>把 service 和 dao 对象创建，在 service 和 dao 类添加创建对象注解</li>
 <li>在 service 注入 dao 对象，在 service 类添加 dao 类型属性，在属性上面使用注解</li>
 </ul>
 </li>
-<li><p>@Qualifier：根据名称进行注入，这个@Qualifier 注解的使用，和上面@Autowired 一起使用</p>
-</li>
-<li><p>@Resource：可以根据类型注入，也可以根据名称注入</p>
-</li>
-<li><p>@Value：注入普通类型属性</p>
-</li>
+<li>@Qualifier：根据名称进行注入，这个@Qualifier 注解的使用，和上面@Autowired 一起使用</li>
+<li>@Resource：可以根据类型注入，也可以根据名称注入</li>
+<li>@Value：注入普通类型属性</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//UserService.java</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">	 <span class="comment">//定义 dao 类型属性</span></span><br><span class="line">	 <span class="comment">//不需要添加 set 方法</span></span><br><span class="line">	 <span class="comment">//添加注入属性注解</span></span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> UserDao userDao;</span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">    <span class="meta">@Autowired</span> <span class="comment">//根据类型进行注入</span></span><br><span class="line">    <span class="meta">@Qualifier</span>(value = <span class="string">"userDaoImpl1"</span>) <span class="comment">//根据名称进行注入（有多个实现类的情况）</span></span><br><span class="line">	<span class="keyword">private</span> UserDao userDao;</span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">    <span class="comment">//@Resource //根据类型进行注入</span></span><br><span class="line">	<span class="meta">@Resource</span>(name = <span class="string">"userDaoImpl1"</span>) <span class="comment">//根据名称进行注入</span></span><br><span class="line">	<span class="keyword">private</span> UserDao userDao;</span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">    <span class="meta">@Value</span>(value = <span class="string">"abc"</span>)</span><br><span class="line">	<span class="keyword">private</span> String name</span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		 System.out.println(<span class="string">"service add......."</span>);</span><br><span class="line">		 userDao.add();</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//UserDaoImpl.java</span></span><br><span class="line"><span class="comment">//Dao实现类</span></span><br><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="comment">//@Repository(value = "userDaoImpl1")</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoImpl</span> <span class="keyword">implements</span> <span class="title">UserDao</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"dao add....."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//UserService.java</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">	 <span class="comment">//定义 dao 类型属性</span></span><br><span class="line">	 <span class="comment">//不需要添加 set 方法</span></span><br><span class="line">	 <span class="comment">//添加注入属性注解</span></span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> UserDao userDao;</span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">    <span class="meta">@Autowired</span> <span class="comment">//根据类型进行注入</span></span><br><span class="line">    <span class="meta">@Qualifier</span>(value = <span class="string">"userDaoImpl1"</span>) <span class="comment">//根据名称进行注入（有多个实现类的情况）</span></span><br><span class="line">	<span class="keyword">private</span> UserDao userDao;</span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">    <span class="comment">//@Resource //根据类型进行注入</span></span><br><span class="line">	<span class="meta">@Resource</span>(name = <span class="string">"userDaoImpl1"</span>) <span class="comment">//根据名称进行注入</span></span><br><span class="line">	<span class="keyword">private</span> UserDao userDao;</span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">    <span class="meta">@Value</span>(value = <span class="string">"abc"</span>)</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">/*----------------------------------------------------------------*/</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		 System.out.println(<span class="string">"service add......."</span>);</span><br><span class="line">		 userDao.add();</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//UserDaoImpl.java</span></span><br><span class="line"><span class="comment">//Dao实现类</span></span><br><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="comment">//@Repository(value = "userDaoImpl1")</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoImpl</span> <span class="keyword">implements</span> <span class="title">UserDao</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"dao add....."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h6 id="完全注解开发"><a href="#完全注解开发" class="headerlink" title="完全注解开发"></a>完全注解开发</h6><p>创建配置类，替代 xml 配置文件</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//SpringConfig.java</span></span><br><span class="line"><span class="meta">@Configuration</span> <span class="comment">//作为配置类，替代 xml 配置文件</span></span><br><span class="line"><span class="meta">@ComponentScan</span>(basePackages = &#123;<span class="string">"com.atguigu"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringConfig</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Test.java</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testService2</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> 	<span class="comment">//加载配置类</span></span><br><span class="line"> 	ApplicationContext context = <span class="keyword">new</span> AnnotationConfigApplicationContext(SpringConfig<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"> 	UserService userService = context.getBean(<span class="string">"userService"</span>,UserService<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"> 	System.out.println(userService);</span><br><span class="line">	userService.add();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -570,18 +565,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/08/11/SpringTrans/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/08/10/SpringAOP/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Spring学习（5）-- 事务操作
+          Spring学习（3）-- AOP
         
       </div>
     </a>
   
   
-    <a href="/2021/08/10/SpringAOP/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Spring学习（3）-- AOP</div>
+    <a href="/2021/08/09/Spring1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring学习（1）-- 前导</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -750,19 +745,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">code</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -771,6 +758,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ArrayList</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -794,6 +789,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Collection</a>
               </li>
              
@@ -810,23 +813,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -838,7 +825,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -846,7 +841,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
+                <a href="javascript:void(0)" class="js-tag color3">IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Socket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -874,22 +885,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Socket</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
@@ -910,14 +905,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">接口</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">内部类</a>
               </li>
              
@@ -930,19 +917,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Class</a>
+                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Reflection</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ClassLoader</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
+                <a href="javascript:void(0)" class="js-tag color3">接口</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -974,11 +953,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Class</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Reflection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ClassLoader</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -994,6 +989,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">EL表达式</a>
               </li>
              
@@ -1002,15 +1001,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Filter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1023,6 +1014,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">i18n</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1042,6 +1037,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">xml</a>
               </li>
              
@@ -1050,7 +1049,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1066,19 +1073,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Spring5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AOP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">IOC容器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SpringMVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JdbcTemplate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RESTful</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HttpMessageConverter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1090,15 +1113,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">流程控制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">分支结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">循环结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">Spring事务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1107,10 +1122,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">分组函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查询</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1127,6 +1138,26 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">delete</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">视图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">view</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">流程控制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">分支结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">循环结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1154,18 +1185,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">view</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">变量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">存储过程</a>
               </li>
              
@@ -1174,7 +1193,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
+                <a href="javascript:void(0)" class="js-tag color3">查询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">变量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1182,7 +1205,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
+                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1198,23 +1221,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Spring5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">IOC容器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AOP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JdbcTemplate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Spring事务</a>
+                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
               </li>
             
             <div class="clearfix"></div>

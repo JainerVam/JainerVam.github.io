@@ -163,29 +163,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-MatlabStruct" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaQueue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/13/MatlabStruct/">MATLAB中的数据结构</a>
+      <a class="article-title" href="/2021/01/19/JavaQueue/">Java中的Queue和Deque</a>
     </h1>
   
 
         
-        <a href="/2020/10/13/MatlabStruct/" class="archive-article-date">
-  	<time datetime="2020-10-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-13</time>
+        <a href="/2021/01/19/JavaQueue/" class="archive-article-date">
+  	<time datetime="2021-01-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>matlab有四种数据结构</p>
+        <p>在Java里面Queue是一个接口，它只是定义了一个基本的Queue应该有哪些功能规约。实际上有多个Queue的实现，有的是采用线性表实现，有的基于链表实现。还有的适用于多线程的环境。Java中具有Queue功能的类主要有如下几个：AbstractQueue, ArrayBlockingQueue, ConcurrentLinkedQueue, LinkedBlockingQueue, DelayQueue, LinkedList, PriorityBlockingQueue, PriorityQueue和ArrayDqueue。</p>
         
-          <a class="article-more-a" href="/2020/10/13/MatlabStruct/#more">more >></a>
+          <a class="article-more-a" href="/2021/01/19/JavaQueue/#more">more >></a>
         
       
 
@@ -204,7 +204,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Queue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Deque</a>
         		</li>
       		
 		</ul>
@@ -214,7 +222,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/13/MatlabStruct/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/01/19/JavaQueue/">展开全文 >></a>
         </p>
       
 
@@ -247,32 +255,511 @@
 
 
   
-    <article id="post-return" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaHashMap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/20/return/">return的用法</a>
+      <a class="article-title" href="/2021/01/18/JavaHashMap/">Java中HashMap的使用</a>
     </h1>
   
 
         
-        <a href="/2020/09/20/return/" class="archive-article-date">
-  	<time datetime="2020-09-20T14:35:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-20</time>
+        <a href="/2021/01/18/JavaHashMap/" class="archive-article-date">
+  	<time datetime="2021-01-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h2><p>表示从被调函数返回到主调函数继续执行，返回时可附带一个返回值，由return后面的参数指定。<br>return通常是必要的，因为函数调用的时候计算结果通常是通过返回值带出的。 如果函数执行不需要返回计算结果，也经常需要返回一个状态码来表示函数执行的顺利与否（-1和0就是最常用的状态码）， 主调函数可以通过返回值判断被调函数的执行情况。</p>
-<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>结束正在运行的函数，并返回函数值</p>
-<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>计算结果、一个状态码来表示函数执行的顺利与否（-1和0）</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>return之后，函数后面的部分将不再执行</p>
-<hr>
+        <h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><table>
+<thead>
+<tr>
+<th align="center">方法名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">import java.util.HashMap</td>
+<td align="center">导入</td>
+</tr>
+<tr>
+<td align="center">HashMap&lt;K, V&gt; map=new HashMap&lt;K, V&gt;()</td>
+<td align="center">定义map，K和V是类，不允许基本类型</td>
+</tr>
+<tr>
+<td align="center">void clear()</td>
+<td align="center">清空</td>
+</tr>
+<tr>
+<td align="center">put(K,V)</td>
+<td align="center">设置K键的值为V</td>
+</tr>
+<tr>
+<td align="center">V get(K)</td>
+<td align="center">获取K键的值</td>
+</tr>
+<tr>
+<td align="center">boolean isEmpty()</td>
+<td align="center">判空</td>
+</tr>
+<tr>
+<td align="center">int size()</td>
+<td align="center">获取map的大小</td>
+</tr>
+<tr>
+<td align="center">V remove(K)</td>
+<td align="center">删除K键的值，返回的是V，可以不接收</td>
+</tr>
+<tr>
+<td align="center">boolean containsKey(K)</td>
+<td align="center">判断是否有K键的值</td>
+</tr>
+<tr>
+<td align="center">boolean containsValue(V)</td>
+<td align="center">判断是否有值是V</td>
+</tr>
+<tr>
+<td align="center">Object clone()</td>
+<td align="center">浅克隆，类型需要强转；如HashMap&lt;String , Integer&gt; map2=(HashMap&lt;String, Integer&gt;) map.clone();</td>
+</tr>
+</tbody></table>
+<p>参考链接：</p>
+<ol>
+<li><a href="https://www.cnblogs.com/shoulinniao/p/11966194.html" target="_blank" rel="noopener">https://www.cnblogs.com/shoulinniao/p/11966194.html</a></li>
+</ol>
 
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">HashMap</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/18/JavaHashMap/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-JavaOOP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/30/JavaOOP/">Java面向对象编程(1)</a>
+    </h1>
+  
+
+        
+        <a href="/2020/12/30/JavaOOP/" class="archive-article-date">
+  	<time datetime="2020-12-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以笔记/大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括面向对象的基本概念和应用。</p>
+        
+          <a class="article-more-a" href="/2020/12/30/JavaOOP/#more">more >></a>
+        
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/30/JavaOOP/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-JavaBase3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/23/JavaBase3/">Java数组</a>
+    </h1>
+  
+
+        
+        <a href="/2020/12/23/JavaBase3/" class="archive-article-date">
+  	<time datetime="2020-12-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以笔记/大纲的形式记录大纲和自己不熟的点，方便以后查阅。本章是关于数组的内容。</p>
+        
+          <a class="article-more-a" href="/2020/12/23/JavaBase3/#more">more >></a>
+        
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/23/JavaBase3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-JavaBase2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/14/JavaBase2/">Java基本语法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/12/14/JavaBase2/" class="archive-article-date">
+  	<time datetime="2020-12-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以笔记/大纲的形式记录大纲和自己不熟的点，方便以后查阅。这章主要内容包括关键字、变量、控制流程等。</p>
+        
+          <a class="article-more-a" href="/2020/12/14/JavaBase2/#more">more >></a>
+        
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/14/JavaBase2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-JavaBase" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/13/JavaBase/">Java语言概述</a>
+    </h1>
+  
+
+        
+        <a href="/2020/12/13/JavaBase/" class="archive-article-date">
+  	<time datetime="2020-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>范范的Java学习之路～这真的是初学者了，Matlab选手学什么都跟初学一样，太惨了ww。本章主要内容是JAVA的安装及环境的配置，以及JAVA编程的最最基础的知识。</p>
+        
+          <a class="article-more-a" href="/2020/12/13/JavaBase/#more">more >></a>
+        
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/13/JavaBase/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-MacBase-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/13/MacBase-1/">Mac终端基础</a>
+    </h1>
+  
+
+        
+        <a href="/2020/12/13/MacBase-1/" class="archive-article-date">
+  	<time datetime="2020-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Mac终端操作，做个备忘，方便查阅。</p>
+        
+          <a class="article-more-a" href="/2020/12/13/MacBase-1/#more">more >></a>
+        
       
 
 
@@ -294,7 +781,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">return</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
         		</li>
       		
 		</ul>
@@ -304,7 +791,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/20/return/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/12/13/MacBase-1/">展开全文 >></a>
         </p>
       
 
@@ -337,117 +824,29 @@
 
 
   
-    <article id="post-Intro2Algorithm1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Mac终端命令大全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/12/Intro2Algorithm1/">算法导论学习笔记(1)</a>
+      <a class="article-title" href="/2020/12/12/Mac%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">Mac终端命令大全</a>
     </h1>
   
 
         
-        <a href="/2020/09/12/Intro2Algorithm1/" class="archive-article-date">
-  	<time datetime="2020-09-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-12</time>
+        <a href="/2020/12/12/Mac%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="archive-article-date">
+  	<time datetime="2020-12-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一直跟别人说我是做算法做算法，不能连算法是个啥都不知道吧，该学的还是要学～现在还不知道能不能坚持学下去，如果我能多学几章的话，再做一个单独的汇总页233</p>
+        <p>买了Mac快一年了还没整明白终端命令操作，做个备忘，方便查阅。</p>
         
-          <a class="article-more-a" href="/2020/09/12/Intro2Algorithm1/#more">more >></a>
-        
-      
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/12/Intro2Algorithm1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-np" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/12/np/">P问题、NP问题、NP完全问题和NP难问题</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/12/np/" class="archive-article-date">
-  	<time datetime="2020-09-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>NP完全问题在实际应用也很常见，对于NP完全问题，是否存在解决其的有效算法是未知的</p>
-        
-          <a class="article-more-a" href="/2020/09/12/np/#more">more >></a>
+          <a class="article-more-a" href="/2020/12/12/Mac%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/#more">more >></a>
         
       
 
@@ -470,7 +869,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">NP问题</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">mac</a>
         		</li>
       		
 		</ul>
@@ -480,375 +879,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/12/np/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-PythonHard6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/04/PythonHard6/">入门Python--“笨方法”学Python学习笔记(6)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/04/PythonHard6/" class="archive-article-date">
-  	<time datetime="2020-09-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里是我自己在习题48-习题49的笔记，方便以后查阅。主要内容为测试、异常、进阶编程。</p>
-        
-          <a class="article-more-a" href="/2020/09/04/PythonHard6/#more">more >></a>
-        
-      
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/04/PythonHard6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-PythonHard7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/04/PythonHard7/">入门Python--“笨方法”学Python学习笔记(7)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/04/PythonHard7/" class="archive-article-date">
-  	<time datetime="2020-09-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里是我自己在习题50的笔记，方便以后查阅。主要内容为创建网站。</p>
-        
-          <a class="article-more-a" href="/2020/09/04/PythonHard7/#more">more >></a>
-        
-      
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/04/PythonHard7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-PythonHard5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/25/PythonHard5/">入门Python--“笨方法”学Python学习笔记(5)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/25/PythonHard5/" class="archive-article-date">
-  	<time datetime="2020-08-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里是我自己在习题45-习题47的笔记，方便以后查阅。主要内容为实战、建立项目骨架及应用。</p>
-        
-          <a class="article-more-a" href="/2020/08/25/PythonHard5/#more">more >></a>
-        
-      
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/25/PythonHard5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-PythonHard4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/08/PythonHard4/">入门Python--“笨方法”学Python学习笔记(4)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/08/PythonHard4/" class="archive-article-date">
-  	<time datetime="2020-08-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里是我自己在习题38-习题44的笔记，方便以后查阅。主要内容为列表、模块、类、对象等，难度较高。</p>
-        
-          <a class="article-more-a" href="/2020/08/08/PythonHard4/#more">more >></a>
-        
-      
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/08/PythonHard4/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/12/12/Mac%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">展开全文 >></a>
         </p>
       
 
@@ -883,7 +914,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/10/">下一页;</a>
+      <a class="extend prev" rel="prev" href="/page/8/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/10/">下一页;</a>
     </nav>
   
 
@@ -1005,19 +1036,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">code</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1026,6 +1049,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ArrayList</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ANN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">嗑盐</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1049,6 +1080,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Collection</a>
               </li>
              
@@ -1065,23 +1104,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comparator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日期时间</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1093,7 +1116,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Keys</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1101,7 +1132,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
+                <a href="javascript:void(0)" class="js-tag color3">IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Socket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1129,22 +1176,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TCP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">UDP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Socket</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
@@ -1165,14 +1196,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">接口</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">内部类</a>
               </li>
              
@@ -1185,19 +1208,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Class</a>
+                <a href="javascript:void(0)" class="js-tag color4">抽象类</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Reflection</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ClassLoader</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
+                <a href="javascript:void(0)" class="js-tag color3">接口</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1229,11 +1244,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Class</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Reflection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ClassLoader</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1249,6 +1280,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">EL表达式</a>
               </li>
              
@@ -1257,15 +1292,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Filter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1278,6 +1305,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">i18n</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1297,6 +1328,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">xml</a>
               </li>
              
@@ -1305,7 +1340,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mac</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1321,19 +1364,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mac</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Spring5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AOP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">IOC容器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SpringMVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JdbcTemplate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RESTful</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HttpMessageConverter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1345,15 +1404,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">流程控制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">分支结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">循环结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">Spring事务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1362,10 +1413,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">分组函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查询</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1382,6 +1429,26 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">delete</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">视图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">view</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">流程控制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">分支结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">循环结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1409,18 +1476,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">视图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">view</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">变量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">存储过程</a>
               </li>
              
@@ -1429,7 +1484,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
+                <a href="javascript:void(0)" class="js-tag color3">查询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">变量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1437,7 +1496,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
+                <a href="javascript:void(0)" class="js-tag color5">NP问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1453,23 +1512,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Spring5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">IOC容器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AOP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JdbcTemplate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Spring事务</a>
+                <a href="javascript:void(0)" class="js-tag color3">Macbook</a>
               </li>
             
             <div class="clearfix"></div>
